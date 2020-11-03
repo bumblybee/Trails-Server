@@ -18,6 +18,7 @@ exports.getData = async (req, res) => {
 
   const data = response.data;
   const places = data.places;
+
   let result = [];
   for (let i = 0; i < places.length; i++) {
     if (places[i].country !== "United States") {
@@ -28,16 +29,11 @@ exports.getData = async (req, res) => {
       continue;
     }
 
-    const {
-      name,
-      country,
-      city,
-      lat,
-      lon,
-      description,
-      directions,
-      activities,
-    } = places[i];
+    const activities = getActivities(places[i].activities);
+
+    const { name, country, city, lat, lon, description, directions } = places[
+      i
+    ];
 
     const newSchema = {
       name,
@@ -51,22 +47,25 @@ exports.getData = async (req, res) => {
     };
     result.push(newSchema);
   }
-  // places.forEach((place) => {
-  //   //TODO: destructure activities for relevant data
-  //   if (place.country !== "United States") {
-  //   }
-  //   const { name, city, lat, lon, description, directions, activities } = place;
-  //   const newSchema = {
-  //     name,
-  //     city,
-  //     lat,
-  //     lon,
-  //     description,
-  //     directions,
-  //     activities,
-  //   };
-  //   result.push(newSchema);
-  // });
 
   res.json(result);
+};
+
+const getActivities = (activities) => {
+  return activities.map((activity) => {
+    const {
+      activity_type_name,
+      thumbnail,
+      description,
+      length,
+      rating,
+    } = activity;
+    return {
+      type: activity_type_name,
+      image: thumbnail,
+      description: description,
+      length: length,
+      rating: rating,
+    };
+  });
 };
