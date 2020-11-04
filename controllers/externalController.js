@@ -1,12 +1,13 @@
 const axios = require("axios");
 
+//TODO: This prob shouldn't be connected to a route when adding to db - call function and store data sans route
 exports.getData = async (req, res) => {
   const options = {
     method: "GET",
     url: "https://rapidapi.p.rapidapi.com/",
     params: {
       "q-country_cont": "null",
-      limit: "10",
+      limit: "20",
     },
     headers: {
       "x-rapidapi-key": process.env.TRAILS_API_KEY,
@@ -29,19 +30,20 @@ exports.getData = async (req, res) => {
       continue;
     }
 
+    if (places[i].lat === 0 || places[i].lon === 0) {
+      continue;
+    }
+
     const activities = getActivities(places[i].activities);
 
-    const { name, country, city, lat, lon, description, directions } = places[
-      i
-    ];
+    let { name, city, state, lat, lon, directions } = places[i];
 
     const newSchema = {
       name,
-      country,
       city,
+      state,
       lat,
       lon,
-      description,
       directions,
       activities,
     };
