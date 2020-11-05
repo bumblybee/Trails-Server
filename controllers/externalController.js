@@ -19,7 +19,7 @@ exports.getData = async (req, res) => {
 
   const data = response.data;
   const places = data.places;
-
+  // let description = "";
   let result = [];
   for (let i = 0; i < places.length; i++) {
     if (places[i].country !== "United States") {
@@ -34,9 +34,13 @@ exports.getData = async (req, res) => {
       continue;
     }
 
+    if (places[i].description === null) {
+      places[i].description = places[i].activities[0].description;
+    }
+
     const activities = getActivities(places[i].activities);
 
-    let { name, city, state, lat, lon, directions } = places[i];
+    let { name, city, state, lat, lon, description, directions } = places[i];
 
     const newSchema = {
       name,
@@ -44,6 +48,7 @@ exports.getData = async (req, res) => {
       state,
       lat,
       lon,
+      description,
       directions,
       activities,
     };
@@ -54,20 +59,55 @@ exports.getData = async (req, res) => {
 };
 
 const getActivities = (activities) => {
-  return activities.map((activity) => {
-    const {
-      activity_type_name,
-      thumbnail,
-      description,
-      length,
-      rating,
-    } = activity;
-    return {
-      type: activity_type_name,
-      image: thumbnail,
-      description: description,
-      length: length,
-      rating: rating,
-    };
-  });
+  let hiking = false,
+    biking = false,
+    camping = false,
+    image,
+    trail_length,
+    ratings;
+
+  for (let i = 0; i < activities.length; i++) {
+    const { activity_type_name, thumbnail, length, rating } = activities[i];
+
+    image = thumbnail;
+    trail_length = length;
+    ratings = rating;
+
+    if (activity_type_name === "hiking") {
+      hiking = true;
+    }
+
+    if (activity_type_name == "mountain biking") {
+      biking = true;
+    }
+
+    if (activity_type_name === "camping") {
+      camping = true;
+    }
+  }
+  return {
+    hiking,
+    biking,
+    camping,
+    image,
+    length: trail_length,
+    rating: ratings,
+  };
+
+  // return activities.map((activity) => {
+  //   const {
+  //     activity_type_name,
+  //     thumbnail,
+  //     description,
+  //     length,
+  //     rating,
+  //   } = activity;
+  //   return {
+  //     type: activity_type_name,
+  //     image: thumbnail,
+  //     description: description,
+  //     length: length,
+  //     rating: rating,
+  //   };
+  // });
 };
