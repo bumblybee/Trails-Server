@@ -49,7 +49,7 @@ exports.getData = async (req, res) => {
       city,
       state,
       lat,
-      lon,
+      lng: lon,
       hiking: activities.hiking,
       biking: activities.biking,
       image: activities.image,
