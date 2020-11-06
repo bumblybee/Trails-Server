@@ -50,9 +50,13 @@ exports.getData = async (req, res) => {
       state,
       lat,
       lon,
+      hiking: activities.hiking,
+      biking: activities.biking,
+      image: activities.image,
+      length: activities.length,
+      rating: activities.rating,
       description,
       directions,
-      activities,
     };
     result.push(newSchema);
   }
