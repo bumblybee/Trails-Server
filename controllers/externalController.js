@@ -7,7 +7,7 @@ exports.getData = async (req, res) => {
     url: "https://rapidapi.p.rapidapi.com/",
     params: {
       "q-country_cont": "null",
-      limit: "20",
+      limit: "25",
     },
     headers: {
       "x-rapidapi-key": process.env.TRAILS_API_KEY,
@@ -77,37 +77,25 @@ const getActivities = (activities) => {
       hiking = true;
     }
 
+    if (activity_type_name === "camping") {
+      hiking = true;
+    }
+
     if (activity_type_name == "mountain biking") {
       biking = true;
     }
-
-    if (activity_type_name === "camping") {
-      camping = true;
-    }
   }
-  return {
-    hiking,
-    biking,
-    camping,
-    image,
-    length: trail_length,
-    rating: ratings,
-  };
-
-  // return activities.map((activity) => {
-  //   const {
-  //     activity_type_name,
-  //     thumbnail,
-  //     description,
-  //     length,
-  //     rating,
-  //   } = activity;
-  //   return {
-  //     type: activity_type_name,
-  //     image: thumbnail,
-  //     description: description,
-  //     length: length,
-  //     rating: rating,
-  //   };
-  // });
+  //TODO: figure out how to skip campgrounds
+  if (hiking === false && biking == false) {
+    return;
+  } else {
+    return {
+      hiking,
+      biking,
+      camping,
+      image,
+      length: trail_length,
+      rating: ratings,
+    };
+  }
 };
