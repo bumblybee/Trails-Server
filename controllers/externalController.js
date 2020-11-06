@@ -41,6 +41,8 @@ exports.getData = async (req, res) => {
     const activities = getActivities(places[i].activities);
 
     let { name, city, state, lat, lon, description, directions } = places[i];
+    //if place has no activities, skip it
+    if (!activities) continue;
 
     const newSchema = {
       name,
@@ -61,7 +63,6 @@ exports.getData = async (req, res) => {
 const getActivities = (activities) => {
   let hiking = false,
     biking = false,
-    camping = false,
     image,
     trail_length,
     ratings;
@@ -77,22 +78,18 @@ const getActivities = (activities) => {
       hiking = true;
     }
 
-    if (activity_type_name === "camping") {
-      hiking = true;
-    }
-
     if (activity_type_name == "mountain biking") {
       biking = true;
     }
   }
-  //TODO: figure out how to skip campgrounds
+  //Weed out camping
   if (hiking === false && biking == false) {
     return;
   } else {
     return {
       hiking,
       biking,
-      camping,
+
       image,
       length: trail_length,
       rating: ratings,
