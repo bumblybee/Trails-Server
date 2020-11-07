@@ -7,6 +7,4 @@ router.get("/", trailsController.getTrails);
 
 router.post("/", upload.single("file"), trailsController.createTrail);
 
-// router.get("/biking", trailsController.getBikingTrails);
-
 module.exports = router;

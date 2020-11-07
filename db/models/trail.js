@@ -1,7 +1,7 @@
 "use strict";
 
 //TODO: Double check lat and lng validation
-//TODO: Figure out how to handle images
+//TODO: Figure out how to handle images - need to match url structure of data coming from external api
 
 module.exports = (sequelize, DataTypes) => {
   const Trail = sequelize.define(
@@ -10,58 +10,66 @@ module.exports = (sequelize, DataTypes) => {
       name: {
         type: DataTypes.STRING,
         allowNull: false,
+        unique: true,
+        field: "name",
       },
       city: {
         type: DataTypes.STRING,
         allowNull: false,
+        field: "city",
       },
       state: {
         type: DataTypes.STRING,
         allowNull: false,
+        field: "state",
       },
       lat: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
         allowNull: false,
+        field: "lat",
         validate: { min: -90, max: 90 },
       },
       lng: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
         allowNull: false,
+        field: "lng",
         validate: { min: -180, max: 180 },
       },
+
       hiking: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
+        field: "hiking",
       },
       biking: {
         type: DataTypes.BOOLEAN,
         allowNull: false,
+        field: "biking",
       },
       image: {
         type: DataTypes.STRING,
-        name: {
-          type: DataTypes.STRING,
-        },
-        data: {
-          type: DataTypes.BLOB("long"),
-        },
+        field: "image",
       },
       length: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
         allowNull: true,
+        field: "length",
       },
       rating: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.DECIMAL,
         allowNull: false,
+        field: "rating",
         validate: { min: 0, max: 5 },
       },
       description: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
+        field: "description",
       },
       directions: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: true,
+        field: "directions",
       },
     },
     {

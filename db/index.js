@@ -1,5 +1,5 @@
 "use strict";
-
+//TODO: Add relationships
 const Sequelize = require("sequelize");
 const UserModel = require("./models/user.js");
 const TrailModel = require("./models/trail");
