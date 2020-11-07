@@ -1,7 +1,5 @@
 "use strict";
 
-const { DataTypes } = require("sequelize/types");
-
 //TODO: Double check lat and lng validation
 //TODO: Figure out how to handle images
 
@@ -40,8 +38,13 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
       },
       image: {
-        type: DataTypes.BLOB,
-        allowNull: true,
+        type: DataTypes.STRING,
+        name: {
+          type: DataTypes.STRING,
+        },
+        data: {
+          type: DataTypes.BLOB("long"),
+        },
       },
       length: {
         type: DataTypes.INTEGER,
