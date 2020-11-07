@@ -18,7 +18,7 @@ exports.getTrails = (req, res) => {
 
   res.json(trails);
 };
-
+//TODO: Next -- handle image save and store in db
 exports.createTrail = async (req, res) => {
   const {
     userId,
