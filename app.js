@@ -50,6 +50,7 @@ app.use("/external", externalRouter);
 //   res.status(err.status || 500);
 // });
 app.use(errorHandlers.notFound);
+app.use(errorHandlers.sequelizeErrorHandler);
 
 if (app.get("env") === "development") {
   app.use(errorHandlers.developmentErrors);

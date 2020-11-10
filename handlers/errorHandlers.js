@@ -1,3 +1,5 @@
+const Sequelize = require("sequelize");
+
 exports.developmentErrors = (err, req, res, next) => {
   err.stack = err.stack || "";
   const errorDetails = {
@@ -18,4 +20,16 @@ exports.notFound = (req, res, next) => {
   const err = new Error("Not Found");
   err.status = 404;
   next(err);
+};
+
+exports.sequelizeErrorHandler = (err, req, res, next) => {
+  if (err instanceof Sequelize.ValidationError) {
+    const errorCodes = err.errors.map((error) => error.message);
+    res.status(400).json({
+      errors: errorCodes,
+    });
+    return;
+  } else {
+    next(err);
+  }
 };
