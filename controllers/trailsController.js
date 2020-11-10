@@ -18,7 +18,7 @@ exports.getTrails = (req, res) => {
 
   res.json(trails);
 };
-//TODO: Next -- handle image save and store url in db
+//TODO: Change http in images from external api to https so don't run into cors issues later in prod
 exports.createTrail = async (req, res) => {
   const {
     userId,

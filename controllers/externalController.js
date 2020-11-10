@@ -1,7 +1,7 @@
 // Using controller and route so I can view data in browser before db storage
 
 const Trail = require("../db").Trail;
-const { grabData, grabRecData } = require("../services/dataGrabService");
+const { grabData } = require("../services/dataGrabService");
 
 //TODO: This prob shouldn't be connected to a route when adding to db - call function and store data sans route
 exports.getData = async (req, res) => {
@@ -38,13 +38,14 @@ exports.getData = async (req, res) => {
     //Grab data from props
     let { name, city, state, lat, lon, description, directions } = trails[i];
 
+    const point = { type: "Point", coordinates: [lon, lat] };
+
     //create schema to push to db
     const newTrail = {
       name,
       city,
       state,
-      lat,
-      lng: lon,
+      lnglat: point,
       hiking: activities.hiking,
       biking: activities.biking,
       image: activities.image,
@@ -54,7 +55,7 @@ exports.getData = async (req, res) => {
       directions,
     };
 
-    //add to db here
+    //push to db here
     // const createdTrail = await Trail.create(newTrail);
 
     //For browser view -- check actual length of results available
@@ -72,7 +73,7 @@ const getActivities = (activities) => {
     trail_length,
     ratings;
 
-  // loop acitivities array
+  // loop activities array
   for (let i = 0; i < activities.length; i++) {
     //grab props from activity
     const { activity_type_name, thumbnail, length, rating } = activities[i];
