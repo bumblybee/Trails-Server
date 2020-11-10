@@ -6,7 +6,7 @@ const options = {
   url: "https://rapidapi.p.rapidapi.com/",
   params: {
     "q-country_cont": "null",
-    limit: "1000",
+    limit: "100",
   },
   headers: {
     "x-rapidapi-key": process.env.TRAILS_API_KEY,
@@ -14,7 +14,7 @@ const options = {
   },
 };
 
-const grabData = async () => {
+exports.grabData = async () => {
   const res = await axios.request(options);
 
   if (res.error) {
@@ -26,5 +26,3 @@ const grabData = async () => {
 
   return trails;
 };
-
-module.exports = grabData;

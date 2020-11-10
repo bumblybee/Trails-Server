@@ -1,7 +1,7 @@
 // Using controller and route so I can view data in browser before db storage
 
 const Trail = require("../db").Trail;
-const grabData = require("../services/dataGrabService");
+const { grabData, grabRecData } = require("../services/dataGrabService");
 
 //TODO: This prob shouldn't be connected to a route when adding to db - call function and store data sans route
 exports.getData = async (req, res) => {
@@ -55,10 +55,10 @@ exports.getData = async (req, res) => {
     };
 
     //add to db here
+    // const createdTrail = await Trail.create(newTrail);
 
-    const createdTrail = await Trail.create(newTrail);
     //For browser view -- check actual length of results available
-    results.push(createdTrail);
+    results.push(newTrail);
   }
 
   res.json(results);

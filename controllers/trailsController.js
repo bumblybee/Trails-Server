@@ -18,7 +18,7 @@ exports.getTrails = (req, res) => {
 
   res.json(trails);
 };
-//TODO: Next -- handle image save and store in db
+//TODO: Next -- handle image save and store url in db
 exports.createTrail = async (req, res) => {
   const {
     userId,
@@ -35,11 +35,10 @@ exports.createTrail = async (req, res) => {
     directions,
   } = req.body;
 
-  const image = {
-    type: req.file.mimetype,
-    name: req.file.originalname,
-    data: req.file.buffer,
-  };
+  console.log(req.file);
+
+  const url = `${req.protocol}://${req.get("host")}`;
+  const imagePath = `${url}/${req.file.filename}`;
 
   const newTrail = {
     userId,
@@ -50,14 +49,14 @@ exports.createTrail = async (req, res) => {
     lng,
     hiking,
     biking,
-    image,
+    image: imagePath,
     length,
     rating,
     description,
     directions,
   };
 
-  const trail = await Trail.create(newTrail);
+  // const trail = await Trail.create(newTrail);
 
   res.status(200).json({ newTrail });
 };
