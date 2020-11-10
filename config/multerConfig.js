@@ -20,8 +20,12 @@ const storage = multer.diskStorage({
   },
 });
 
+//Set image size limit to 5mb and make sure it's an image
 const options = {
   storage: storage,
+  limits: {
+    fileSize: 1024 * 1024 * 5,
+  },
   fileFilter: (req, file, next) => {
     const isPhoto = file.mimetype.startsWith("image/");
     if (isPhoto) {
