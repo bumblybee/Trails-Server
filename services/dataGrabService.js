@@ -6,7 +6,7 @@ const options = {
   url: "https://rapidapi.p.rapidapi.com/",
   params: {
     "q-country_cont": "null",
-    limit: "1000",
+    limit: "1500",
   },
   headers: {
     "x-rapidapi-key": process.env.TRAILS_API_KEY,

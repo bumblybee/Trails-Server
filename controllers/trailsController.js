@@ -40,13 +40,14 @@ exports.createTrail = async (req, res) => {
   const url = `${req.protocol}://${req.get("host")}`;
   const imagePath = `${url}/${req.file.filename}`;
 
+  const point = { type: "Point", coordinates: [lng, lat] };
+
   const newTrail = {
     userId,
     name,
     city,
     state,
-    lat,
-    lng,
+    lnglat: point,
     hiking,
     biking,
     image: imagePath,

@@ -53,10 +53,11 @@ exports.getData = async (req, res) => {
       rating: activities.rating,
       description,
       directions,
+      userId: "0",
     };
 
     //push to db here
-    // const createdTrail = await Trail.create(newTrail);
+    const createdTrail = await Trail.create(newTrail);
 
     //For browser view -- check actual length of results available
     results.push(newTrail);

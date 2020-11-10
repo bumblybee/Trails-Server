@@ -23,6 +23,9 @@ if (env !== "production") {
 const User = UserModel(sequelize, Sequelize);
 const Trail = TrailModel(sequelize, Sequelize);
 
+User.hasMany(Trail);
+Trail.belongsTo(User);
+
 // authenticate db
 sequelize
   .authenticate()
