@@ -1,108 +1,103 @@
 // Using controller and route so I can view data in browser before db storage
+const seedService = require("../services/seedService");
 
-const Trail = require("../db").Trail;
-const { grabData } = require("../services/dataGrabService");
+const {
+  grabCombinedData,
+  grabSingleStateData,
+} = require("../services/dataGrabService");
 
-//TODO: This prob shouldn't be connected to a route when adding to db - call function and store data sans route
-exports.getData = async (req, res) => {
-  const trails = await grabData();
-  const results = [];
+exports.getCombinedTrails = async (req, res) => {
+  const data = await grabCombinedData();
+
+  const trails = await seedService.storeCombinedTrailsInDb(data);
+
+  res.json(trails);
+};
+
+exports.getTrailsByState = async (req, res) => {
+  const trails = [];
+
+  const kentucky = { lat: 35.6528, lng: -97.4781 };
+  const iowa = { lat: 42.4928, lng: -92.3426 };
+  const kansas = { lat: 38.8403, lng: -97.6114 };
+  const southDakota = { lat: 44.3668, lng: -100.3538 };
+  const louisiana = { lat: 31.3113, lng: -92.4451 };
+  const nebraska = { lat: 40.7808, lng: -99.7415 };
+  const mississippi = { lat: 32.2988, lng: -90.1848 };
+
+  // const kentuckyData = await grabSingleStateData(kentucky.lat, kentucky.lng);
+  const iowaData = await grabSingleStateData(iowa.lat, iowa.lng);
+  const kansasData = await grabSingleStateData(kansas.lat, kansas.lng);
+  const southDakotaData = grabSingleStateData(southDakota.lat, southDakota.lng);
+  const louisianaData = await grabSingleStateData(louisiana.lat, louisiana.lng);
+  const nebraskaData = await grabSingleStateData(nebraska.lat, nebraska.lng);
+  const mississippiData = await grabSingleStateData(
+    mississippi.lat,
+    mississippi.lng
+  );
+
+  // const kentuckyTrails = parseTrails(kentuckyData);
+  const iowaTrails = parseTrails(iowaData);
+  const kansasTrails = parseTrails(kansasData);
+  const southDakotaTrails = parseTrails(southDakotaData);
+  const louisianaTrails = parseTrails(louisianaData);
+  const nebraskaTrails = parseTrails(nebraskaData);
+  const mississippiTrails = parseTrails(mississippiData);
+
+  trails.push(
+    // ...kentuckyTrails
+    ...iowaTrails,
+    ...kansasTrails,
+    ...southDakotaTrails,
+    ...louisianaTrails,
+    ...nebraskaTrails,
+    ...mississippiTrails
+  );
+
+  const storedTrails = await seedService.storeTrailsByStateInDb(trails);
+  res.json(storedTrails);
+};
+
+const parseTrails = (trails) => {
+  const result = [];
 
   for (let i = 0; i < trails.length; i++) {
-    // Exclude results outside US
-    if (trails[i].country !== "United States") {
+    if (trails[i].description === "") {
       continue;
     }
 
-    //Get activities from array
-    const activities = getActivities(trails[i].activities);
-
-    //if place has no activities, skip it
-    if (!activities) continue;
-
-    //if lat and lng not provided, don't include
-    if (trails[i].lat === 0 || trails[i].lon === 0) {
-      continue;
+    if (trails[i].thumbnail === null || !trails[i].thumbnail.includes("http")) {
+      trails[i].thumbnail = null;
     }
 
-    //Use trail activity description if no default description
-    if (trails[i].description === null) {
-      trails[i].description = trails[i].activities[0].description;
-    }
-
-    // If no image url aka the image is stored on the external api server, set to null
-    if (activities.image === null || !activities.image.includes("http")) {
-      activities.image = null;
-    }
-
-    //Grab data from props
-    let { name, city, state, lat, lon, description, directions } = trails[i];
+    const {
+      name,
+      city,
+      region,
+      lat,
+      lon,
+      description,
+      directions,
+      length,
+      rating,
+      thumbnail,
+    } = trails[i];
 
     const point = { type: "Point", coordinates: [lon, lat] };
 
-    //create schema to push to db
-    const newTrail = {
+    result.push({
       name,
       city,
-      state,
+      state: region,
       lnglat: point,
-      hiking: activities.hiking,
-      biking: activities.biking,
-      image: activities.image,
-      length: activities.length,
-      rating: activities.rating,
       description,
       directions,
-    };
-
-    //push to db here
-    // const createdTrail = await Trail.create(newTrail);
-
-    //For browser view -- check actual length of results available
-    results.push(newTrail);
+      length,
+      rating,
+      image: thumbnail,
+      biking: true,
+      hiking: false,
+    });
   }
-
-  res.json(results);
-};
-
-const getActivities = (activities) => {
-  // define object props
-  let hiking = false,
-    biking = false,
-    image,
-    trail_length,
-    ratings;
-
-  // loop activities array
-  for (let i = 0; i < activities.length; i++) {
-    //grab props from activity
-    const { activity_type_name, thumbnail, length, rating } = activities[i];
-
-    // set return object props to props from external api activity object
-    image = thumbnail;
-    trail_length = length;
-    ratings = rating;
-
-    if (activity_type_name === "hiking") {
-      hiking = true;
-    }
-
-    if (activity_type_name == "mountain biking") {
-      biking = true;
-    }
-  }
-
-  // Don't return object at all if no hiking or biking
-  if (hiking === false && biking == false) {
-    return;
-  } else {
-    // return object to store to Trail model
-    return {
-      hiking,
-      biking,
-      image,
-      length: trail_length,
-      rating: ratings,
-    };
-  }
+  return result;
 };
