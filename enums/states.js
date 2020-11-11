@@ -5,5 +5,6 @@ module.exports = {
   louisiana: { lat: 31.3113, lng: -92.4451 },
   nebraska: { lat: 40.7808, lng: -99.7415 },
   mississippi: { lat: 32.2988, lng: -90.1848 },
+  missouri: { lat: 38.5767, lng: -92.1735 },
   southDakota: { lat: 44.3668, lng: -100.3538 },
 };

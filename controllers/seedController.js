@@ -43,70 +43,23 @@ exports.getTrailsByState = async (req, res) => {
     states.mississippi.lat,
     states.mississippi.lng
   );
-
-  const kentuckyTrails = parseTrails(kentuckyData);
-  const iowaTrails = parseTrails(iowaData);
-  const kansasTrails = parseTrails(kansasData);
-  const southDakotaTrails = parseTrails(southDakotaData);
-  const louisianaTrails = parseTrails(louisianaData);
-  const nebraskaTrails = parseTrails(nebraskaData);
-  const mississippiTrails = parseTrails(mississippiData);
+  const missouriData = await grabSingleStateData(
+    states.missouri.lat,
+    states.missouri.lng
+  );
 
   trails.push(
-    ...kentuckyTrails,
-    ...iowaTrails,
-    ...kansasTrails,
-    ...southDakotaTrails,
-    ...louisianaTrails,
-    ...nebraskaTrails,
-    ...mississippiTrails
+    ...kentuckyData,
+    ...iowaData,
+    ...kansasData,
+    ...southDakotaData,
+    ...louisianaData,
+    ...nebraskaData,
+    ...mississippiData,
+    ...missouriData
   );
 
   const storedTrails = await seedService.storeTrailsByStateInDb(trails);
 
   res.json(storedTrails);
-};
-
-const parseTrails = (trails) => {
-  const result = [];
-
-  for (let i = 0; i < trails.length; i++) {
-    if (trails[i].description === "") {
-      continue;
-    }
-
-    if (trails[i].thumbnail === null || !trails[i].thumbnail.includes("http")) {
-      trails[i].thumbnail = null;
-    }
-
-    const {
-      name,
-      city,
-      region,
-      lat,
-      lon,
-      description,
-      directions,
-      length,
-      rating,
-      thumbnail,
-    } = trails[i];
-
-    const point = { type: "Point", coordinates: [lon, lat] };
-
-    result.push({
-      name,
-      city,
-      state: region,
-      lnglat: point,
-      description,
-      directions,
-      length,
-      rating,
-      image: thumbnail,
-      biking: true,
-      hiking: false,
-    });
-  }
-  return result;
 };

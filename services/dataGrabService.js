@@ -6,18 +6,8 @@ const combinedOptions = {
   url: "https://rapidapi.p.rapidapi.com/",
   params: {
     "q-country_cont": "null",
-    limit: "100",
+    limit: "1400",
   },
-  headers: {
-    "x-rapidapi-key": process.env.TRAILS_API_KEY,
-    "x-rapidapi-host": "trailapi-trailapi.p.rapidapi.com",
-  },
-};
-
-const singleStateOptions = {
-  method: "GET",
-  url: "https://trailapi-trailapi.p.rapidapi.com/trails/explore/",
-  // params: { lat: "35.6528", lon: "-97.4781", radius: "100" },
   headers: {
     "x-rapidapi-key": process.env.TRAILS_API_KEY,
     "x-rapidapi-host": "trailapi-trailapi.p.rapidapi.com",

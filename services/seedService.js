@@ -42,7 +42,8 @@ const parseActivities = (activities) => {
   }
 };
 
-exports.storeCombinedTrailsInDb = async (trails) => {
+const parseCombinedTrails = (trails) => {
+  const result = [];
   for (let i = 0; i < trails.length; i++) {
     // Exclude results outside US
     if (trails[i].country !== "United States") {
@@ -76,7 +77,7 @@ exports.storeCombinedTrailsInDb = async (trails) => {
     const point = { type: "Point", coordinates: [lon, lat] };
 
     //create schema to push to db
-    const newTrail = {
+    result.push({
       name,
       city,
       state,
@@ -88,18 +89,72 @@ exports.storeCombinedTrailsInDb = async (trails) => {
       rating: activities.rating,
       description,
       directions,
-    };
-
-    //push to db here
-    const createdTrail = await Trail.create(newTrail);
-
-    return createdTrail;
+    });
   }
+  return result;
+};
+
+const parseTrailsByState = (trails) => {
+  const result = [];
+
+  for (let i = 0; i < trails.length; i++) {
+    if (trails[i].description === "") {
+      continue;
+    }
+
+    if (trails[i].thumbnail === null || !trails[i].thumbnail.includes("http")) {
+      trails[i].thumbnail = null;
+    }
+
+    const {
+      name,
+      city,
+      region,
+      lat,
+      lon,
+      description,
+      directions,
+      length,
+      rating,
+      thumbnail,
+    } = trails[i];
+
+    const point = { type: "Point", coordinates: [lon, lat] };
+
+    result.push({
+      name,
+      city,
+      state: region,
+      lnglat: point,
+      description,
+      directions,
+      length,
+      rating,
+      image: thumbnail,
+      biking: true,
+      hiking: false,
+    });
+  }
+  return result;
+};
+
+exports.storeCombinedTrailsInDb = async (trails) => {
+  const parsedTrails = parseCombinedTrails(trails);
+
+  //push to db
+  const createdTrails = await Trail.bulkCreate([...parsedTrails], {
+    ignoreDuplicates: true,
+  });
+
+  return createdTrails;
 };
 
 exports.storeTrailsByStateInDb = async (trails) => {
-  const createdTrails = await Trail.bulkCreate([...trails], {
+  const parsedTrails = parseTrailsByState(trails);
+
+  const createdTrails = await Trail.bulkCreate([...parsedTrails], {
     ignoreDuplicates: true,
   });
+
   return createdTrails;
 };

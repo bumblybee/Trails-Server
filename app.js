@@ -9,7 +9,7 @@ const errorHandlers = require("./handlers/errorHandlers");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 const trailsRouter = require("./routes/trails");
-const externalRouter = require("./routes/external");
+const seedRouter = require("./routes/seed");
 
 var app = express();
 
@@ -35,7 +35,7 @@ app.use(cookieParser());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/trails", trailsRouter);
-app.use("/external", externalRouter);
+app.use("/seed", seedRouter);
 
 app.use(errorHandlers.notFound);
 app.use(errorHandlers.sequelizeErrorHandler);
