@@ -1,5 +1,6 @@
 // Using controller and route so I can view data in browser before db storage
 const seedService = require("../services/seedService");
+const states = require("../enums/states");
 
 const {
   grabCombinedData,
@@ -17,26 +18,33 @@ exports.getCombinedTrails = async (req, res) => {
 exports.getTrailsByState = async (req, res) => {
   const trails = [];
 
-  const kentucky = { lat: 35.6528, lng: -97.4781 };
-  const iowa = { lat: 42.4928, lng: -92.3426 };
-  const kansas = { lat: 38.8403, lng: -97.6114 };
-  const southDakota = { lat: 44.3668, lng: -100.3538 };
-  const louisiana = { lat: 31.3113, lng: -92.4451 };
-  const nebraska = { lat: 40.7808, lng: -99.7415 };
-  const mississippi = { lat: 32.2988, lng: -90.1848 };
-
-  // const kentuckyData = await grabSingleStateData(kentucky.lat, kentucky.lng);
-  const iowaData = await grabSingleStateData(iowa.lat, iowa.lng);
-  const kansasData = await grabSingleStateData(kansas.lat, kansas.lng);
-  const southDakotaData = grabSingleStateData(southDakota.lat, southDakota.lng);
-  const louisianaData = await grabSingleStateData(louisiana.lat, louisiana.lng);
-  const nebraskaData = await grabSingleStateData(nebraska.lat, nebraska.lng);
+  const kentuckyData = await grabSingleStateData(
+    states.kentucky.lat,
+    states.kentucky.lng
+  );
+  const iowaData = await grabSingleStateData(states.iowa.lat, states.iowa.lng);
+  const kansasData = await grabSingleStateData(
+    states.kansas.lat,
+    states.kansas.lng
+  );
+  const southDakotaData = await grabSingleStateData(
+    states.southDakota.lat,
+    states.southDakota.lng
+  );
+  const louisianaData = await grabSingleStateData(
+    states.louisiana.lat,
+    states.louisiana.lng
+  );
+  const nebraskaData = await grabSingleStateData(
+    states.nebraska.lat,
+    states.nebraska.lng
+  );
   const mississippiData = await grabSingleStateData(
-    mississippi.lat,
-    mississippi.lng
+    states.mississippi.lat,
+    states.mississippi.lng
   );
 
-  // const kentuckyTrails = parseTrails(kentuckyData);
+  const kentuckyTrails = parseTrails(kentuckyData);
   const iowaTrails = parseTrails(iowaData);
   const kansasTrails = parseTrails(kansasData);
   const southDakotaTrails = parseTrails(southDakotaData);
@@ -45,7 +53,7 @@ exports.getTrailsByState = async (req, res) => {
   const mississippiTrails = parseTrails(mississippiData);
 
   trails.push(
-    // ...kentuckyTrails
+    ...kentuckyTrails,
     ...iowaTrails,
     ...kansasTrails,
     ...southDakotaTrails,
@@ -55,6 +63,7 @@ exports.getTrailsByState = async (req, res) => {
   );
 
   const storedTrails = await seedService.storeTrailsByStateInDb(trails);
+
   res.json(storedTrails);
 };
 

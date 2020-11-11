@@ -91,7 +91,9 @@ exports.storeCombinedTrailsInDb = async (trails) => {
     };
 
     //push to db here
-    // const createdTrail = await Trail.create(newTrail);
+    const createdTrail = await Trail.create(newTrail);
+
+    return createdTrail;
   }
 };
 
