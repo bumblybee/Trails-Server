@@ -1,4 +1,5 @@
 const Trail = require("../db").Trail;
+const sequelize = require("sequelize");
 
 exports.getTrails = (req, res) => {
   const trails = [
@@ -60,4 +61,35 @@ exports.createTrail = async (req, res) => {
   // const trail = await Trail.create(newTrail);
 
   res.status(200).json({ newTrail });
+};
+
+exports.checkLocation = async (req, res) => {
+  const location = sequelize.literal(
+    `ST_GeomFromText('POINT(-92.4356 42.5678)', 4326)`
+  );
+
+  const distance = sequelize.fn(
+    "ST_Distance",
+    sequelize.literal("lnglat"),
+    location
+  );
+
+  const trails = await Trail.findAll({
+    attributes: {
+      include: [
+        [
+          sequelize.fn(
+            "ST_DistanceSphere",
+            sequelize.literal("lnglat"),
+            location
+          ),
+          "distance",
+        ],
+      ],
+    },
+    order: distance,
+    limit: 10,
+  });
+
+  res.json(trails);
 };
