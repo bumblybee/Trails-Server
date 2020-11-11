@@ -64,8 +64,11 @@ exports.createTrail = async (req, res) => {
 };
 
 exports.checkLocation = async (req, res) => {
+  //sent via query with Postman, will likely send req.body with React
+  console.log(req.query);
+  const { lng, lat } = req.query;
   const location = sequelize.literal(
-    `ST_GeomFromText('POINT(-92.4356 42.5678)', 4326)`
+    `ST_GeomFromText('POINT(${lng} ${lat})', 4326)`
   );
 
   const distance = sequelize.fn(
