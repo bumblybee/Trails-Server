@@ -8,6 +8,4 @@ router.get("/", trailsController.getTrails);
 
 router.post("/", upload, errorWrapper(trailsController.createTrail));
 
-router.get("/location", errorWrapper(trailsController.checkLocation));
-
 module.exports = router;
