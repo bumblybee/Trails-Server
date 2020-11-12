@@ -1,5 +1,5 @@
 const Trail = require("../db").Trail;
-
+//TODO: Change http to https
 const parseActivities = (activities) => {
   // define object props
   let hiking = false,
@@ -72,7 +72,7 @@ const parseCombinedTrails = (trails) => {
     }
 
     //Grab data from api props
-    let { name, city, state, lat, lon, description, directions } = trails[i];
+    let { name, city, state, lat, lon, description } = trails[i];
 
     // store lng and lat in db as type Point
     const point = { type: "Point", coordinates: [lon, lat] };
@@ -89,13 +89,13 @@ const parseCombinedTrails = (trails) => {
       length: activities.length,
       rating: activities.rating,
       description,
-      directions,
+      difficulty: null,
     });
   }
   return result;
 };
 
-const parseTrailsByState = (trails) => {
+const parseBikingTrails = (trails) => {
   const result = [];
 
   for (let i = 0; i < trails.length; i++) {
@@ -108,6 +108,10 @@ const parseTrailsByState = (trails) => {
       trails[i].thumbnail = null;
     }
 
+    if (trails[i].difficulty === "") {
+      trails[i].difficulty = null;
+    }
+
     const {
       name,
       city,
@@ -115,7 +119,7 @@ const parseTrailsByState = (trails) => {
       lat,
       lon,
       description,
-      directions,
+      difficulty,
       length,
       rating,
       thumbnail,
@@ -130,12 +134,74 @@ const parseTrailsByState = (trails) => {
       state: region,
       lnglat: point,
       description,
-      directions,
       length,
       rating,
+      difficulty,
       image: thumbnail,
       biking: true,
       hiking: false,
+    });
+  }
+  return result;
+};
+
+const parseHikingTrails = (trails) => {
+  const result = [];
+  for (let i = 0; i < trails.length; i++) {
+    if (!trails[i].name) {
+      continue;
+    }
+
+    let {
+      name,
+      location,
+      latitude,
+      longitude,
+      summary,
+      difficulty,
+      length,
+      stars,
+      imgMedium,
+    } = trails[i];
+
+    switch (difficulty) {
+      case "green":
+        difficulty = "beginner";
+        break;
+      case "greenBlue":
+        difficulty = "beginner";
+        break;
+      case "blue":
+        difficulty = "intermediate";
+        break;
+      case "blueBlack":
+        difficulty = "intermediate";
+        break;
+      case "black":
+        difficulty = "advanced";
+        break;
+      case "blackBlack":
+        difficulty = "expert";
+        break;
+      default:
+        difficulty = null;
+    }
+
+    const point = { type: "Point", coordinates: [longitude, latitude] };
+
+    // push schema into result and return
+    result.push({
+      name,
+      city: location.split(",")[0],
+      state: location.split(",")[1].trim(),
+      lnglat: point,
+      description: summary,
+      length,
+      rating: stars,
+      difficulty,
+      image: imgMedium,
+      biking: false,
+      hiking: true,
     });
   }
   return result;
@@ -154,8 +220,18 @@ exports.storeCombinedTrailsInDb = async (trails) => {
   return createdTrails;
 };
 
-exports.storeTrailsByStateInDb = async (trails) => {
-  const parsedTrails = parseTrailsByState(trails);
+exports.storeBikingTrailsInDb = async (trails) => {
+  const parsedTrails = parseBikingTrails(trails);
+
+  // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
+  //   ignoreDuplicates: true,
+  // });
+
+  return parsedTrails;
+};
+
+exports.storeHikingTrailsInDb = async (trails) => {
+  const parsedTrails = parseHikingTrails(trails);
 
   const createdTrails = await Trail.bulkCreate([...parsedTrails], {
     ignoreDuplicates: true,

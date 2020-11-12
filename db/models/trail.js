@@ -1,8 +1,5 @@
 "use strict";
 
-//TODO: Double check lat and lng validation
-//TODO: Figure out how to handle images - need to match url structure of data coming from external api
-
 module.exports = (sequelize, DataTypes) => {
   const Trail = sequelize.define(
     "trail",
@@ -41,6 +38,11 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         field: "image",
       },
+      difficulty: {
+        type: DataTypes.STRING,
+        allowNull: true,
+        field: "difficulty",
+      },
       length: {
         type: DataTypes.DECIMAL,
         allowNull: true,
@@ -56,11 +58,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.TEXT,
         allowNull: false,
         field: "description",
-      },
-      directions: {
-        type: DataTypes.TEXT,
-        allowNull: true,
-        field: "directions",
       },
     },
     {
