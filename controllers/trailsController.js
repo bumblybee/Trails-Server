@@ -2,7 +2,7 @@ const Trail = require("../db").Trail;
 const sequelize = require("sequelize");
 
 exports.getTrails = async (req, res) => {
-  //sent via query with Postman, will likely send req.body with React
+  //dev testing with Postman query param
   console.log(req.query);
 
   const { lng, lat } = req.query;

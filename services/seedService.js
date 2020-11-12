@@ -50,13 +50,13 @@ const parseCombinedTrails = (trails) => {
       continue;
     }
 
-    //Get activities from array
+    //parse activities in nested activities array
     const activities = parseActivities(trails[i].activities);
 
-    //if place has no activities, skip it
+    //if place has no activities, i.e. no hiking or biking, skip it
     if (!activities) continue;
 
-    //if lat and lng not provided, don't include
+    //if lat and lng not provided, skip
     if (trails[i].lat === 0 || trails[i].lon === 0) {
       continue;
     }
@@ -66,14 +66,15 @@ const parseCombinedTrails = (trails) => {
       trails[i].description = trails[i].activities[0].description;
     }
 
-    // If no image url aka the image is stored on the external api server, set to null
+    // If no image url, aka the image is stored on the external api server, set to null
     if (activities.image === null || !activities.image.includes("http")) {
       activities.image = null;
     }
 
-    //Grab data from props
+    //Grab data from api props
     let { name, city, state, lat, lon, description, directions } = trails[i];
 
+    // store lng and lat in db as type Point
     const point = { type: "Point", coordinates: [lon, lat] };
 
     //create schema to push to db
@@ -102,6 +103,7 @@ const parseTrailsByState = (trails) => {
       continue;
     }
 
+    // if image doesn't have url and is instead stored on external api server, set to null - will add default fallback image(s)
     if (trails[i].thumbnail === null || !trails[i].thumbnail.includes("http")) {
       trails[i].thumbnail = null;
     }
@@ -121,6 +123,7 @@ const parseTrailsByState = (trails) => {
 
     const point = { type: "Point", coordinates: [lon, lat] };
 
+    // push schema into result and return
     result.push({
       name,
       city,
@@ -139,13 +142,15 @@ const parseTrailsByState = (trails) => {
 };
 
 exports.storeCombinedTrailsInDb = async (trails) => {
+  // grab parsed trails from above
   const parsedTrails = parseCombinedTrails(trails);
 
-  //push to db
+  //push to db in bulk, ignoring any duplicates
   const createdTrails = await Trail.bulkCreate([...parsedTrails], {
     ignoreDuplicates: true,
   });
 
+  //return db data to controller to view as json
   return createdTrails;
 };
 

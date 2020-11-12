@@ -1,6 +1,5 @@
 const axios = require("axios");
 
-//TODO: Figure out if can grab more than 1000 in some way
 const combinedOptions = {
   method: "GET",
   url: "https://rapidapi.p.rapidapi.com/",
@@ -29,7 +28,6 @@ exports.grabSingleStateData = async (lat, lng) => {
     console.log(error);
   }
 
-  const data = res.data;
   const trails = res.data.data;
 
   return trails;

@@ -1,4 +1,3 @@
-// Using controller and route so I can view data in browser before db storage
 const seedService = require("../services/seedService");
 const states = require("../enums/states");
 
@@ -10,7 +9,7 @@ const {
 exports.getCombinedTrails = async (req, res) => {
   const data = await grabCombinedData();
 
-  const trails = await seedService.storeCombinedTrailsInDb(data);
+  // const trails = await seedService.storeCombinedTrailsInDb(data);
 
   res.json(trails);
 };
@@ -59,7 +58,7 @@ exports.getTrailsByState = async (req, res) => {
     ...missouriData
   );
 
-  const storedTrails = await seedService.storeTrailsByStateInDb(trails);
+  // const storedTrails = await seedService.storeTrailsByStateInDb(trails);
 
   res.json(storedTrails);
 };
