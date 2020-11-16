@@ -1,5 +1,6 @@
 const Trail = require("../db").Trail;
-//TODO: Change http to https
+
+//TODO: lowercase difficulty and combine easiest and beginner
 const parseActivities = (activities) => {
   // define object props
   let hiking = false,
@@ -8,12 +9,9 @@ const parseActivities = (activities) => {
     trail_length,
     ratings;
 
-  // loop activities array
-  for (let i = 0; i < activities.length; i++) {
-    //grab props from activity
-    const { activity_type_name, thumbnail, length, rating } = activities[i];
+  activities.forEach((activity) => {
+    const { activity_type_name, thumbnail, length, rating } = activity;
 
-    // set return object props to props from external api activity object
     image = thumbnail;
     trail_length = length;
     ratings = rating;
@@ -25,9 +23,8 @@ const parseActivities = (activities) => {
     if (activity_type_name == "mountain biking") {
       biking = true;
     }
-  }
+  });
 
-  // Don't return object at all if no hiking or biking
   if (hiking === false && biking == false) {
     return;
   } else {
@@ -70,8 +67,9 @@ const parseCombinedTrails = (trails) => {
     if (activities.image === null || !activities.image.includes("http")) {
       activities.image = null;
     }
+    //TODO: Change http to https
 
-    //Grab data from api props
+    // destructure api props
     let { name, city, state, lat, lon, description } = trails[i];
 
     // store lng and lat in db as type Point
@@ -223,11 +221,11 @@ exports.storeCombinedTrailsInDb = async (trails) => {
 exports.storeBikingTrailsInDb = async (trails) => {
   const parsedTrails = parseBikingTrails(trails);
 
-  // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
-  //   ignoreDuplicates: true,
-  // });
+  const createdTrails = await Trail.bulkCreate([...parsedTrails], {
+    ignoreDuplicates: true,
+  });
 
-  return parsedTrails;
+  return createdTrails;
 };
 
 exports.storeHikingTrailsInDb = async (trails) => {

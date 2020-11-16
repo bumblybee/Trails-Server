@@ -30,11 +30,14 @@ var server = http.createServer(app);
  */
 
 let forceDbReset = false;
-
 db.sequelize.sync({ force: forceDbReset }).then(async () => {
   server.listen(port);
   server.on("error", onError);
   server.on("listening", onListening);
+
+  // seed db with trail data
+  // await seedController.getCombinedTrails(
+  // );
 });
 
 /**

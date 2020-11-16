@@ -1,9 +1,8 @@
 const Trail = require("../db").Trail;
 const sequelize = require("sequelize");
 
-exports.getTrails = async (req, res) => {
-  //dev testing with Postman query param
-  console.log(req.query);
+exports.searchTrails = async (req, res) => {
+  //TODO: Check using query vs params
 
   const { lng, lat } = req.query;
 
@@ -11,27 +10,19 @@ exports.getTrails = async (req, res) => {
     `ST_GeomFromText('POINT(${lng} ${lat})', 4326)`
   );
 
+  //TODO: figure out fn for max distance
   const distance = sequelize.fn(
-    "ST_Distance",
+    "ST_DistanceSphere",
     sequelize.literal("lnglat"),
     location
   );
 
   const trails = await Trail.findAll({
     attributes: {
-      include: [
-        [
-          sequelize.fn(
-            "ST_DistanceSphere",
-            sequelize.literal("lnglat"),
-            location
-          ),
-          "distance",
-        ],
-      ],
+      include: [[distance, "distance"]],
     },
     order: distance,
-    limit: 10,
+    limit: 25,
   });
 
   res.json(trails);

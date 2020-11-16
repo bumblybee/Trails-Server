@@ -48,15 +48,15 @@ exports.getBikingByState = async (req, res) => {
   trails.push(
     ...kentuckyData,
     ...iowaData,
-    ...kansasData
-    // ...southDakotaData,
-    // ...louisianaData,
-    // ...nebraskaData,
-    // ...mississippiData,
-    // ...missouriData
+    ...kansasData,
+    ...southDakotaData,
+    ...louisianaData,
+    ...nebraskaData,
+    ...mississippiData,
+    ...missouriData
   );
 
-  const storedTrails = await seedService.storeBikingTrailsInDb(trails);
+  // const storedTrails = await seedService.storeBikingTrailsInDb(trails);
 
   res.json(storedTrails);
 };
@@ -102,7 +102,7 @@ exports.getHikingByState = async (req, res) => {
     ...missouriData
   );
 
-  const storedTrails = await seedService.storeHikingTrailsInDb(trails);
+  // const storedTrails = await seedService.storeHikingTrailsInDb(trails);
 
   res.json(storedTrails);
 };

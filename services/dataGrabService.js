@@ -5,7 +5,8 @@ const combinedOptions = {
   url: "https://rapidapi.p.rapidapi.com/",
   params: {
     "q-country_cont": "null",
-    limit: "1400",
+    //TODO: change to 1500 when doing final store
+    limit: "400",
   },
   headers: {
     "x-rapidapi-key": process.env.TRAILS_API_KEY,
