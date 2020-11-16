@@ -87,7 +87,7 @@ const parseCombinedTrails = (trails) => {
       length: activities.length,
       rating: activities.rating,
       description,
-      difficulty: null,
+      difficulty: "unknown",
     });
   }
   return result;
@@ -107,7 +107,11 @@ const parseBikingTrails = (trails) => {
     }
 
     if (trails[i].difficulty === "") {
-      trails[i].difficulty = null;
+      trails[i].difficulty = "unknown";
+    }
+
+    if (trails[i].difficulty.toLowerCase() === "easiest") {
+      trails[i].difficulty = "beginner";
     }
 
     const {
@@ -134,7 +138,7 @@ const parseBikingTrails = (trails) => {
       description,
       length,
       rating,
-      difficulty,
+      difficulty: difficulty.toLowerCase(),
       image: thumbnail,
       biking: true,
       hiking: false,
@@ -182,7 +186,7 @@ const parseHikingTrails = (trails) => {
         difficulty = "expert";
         break;
       default:
-        difficulty = null;
+        difficulty = "unknown";
     }
 
     const point = { type: "Point", coordinates: [longitude, latitude] };
@@ -221,11 +225,11 @@ exports.storeCombinedTrailsInDb = async (trails) => {
 exports.storeBikingTrailsInDb = async (trails) => {
   const parsedTrails = parseBikingTrails(trails);
 
-  const createdTrails = await Trail.bulkCreate([...parsedTrails], {
-    ignoreDuplicates: true,
-  });
+  // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
+  //   ignoreDuplicates: true,
+  // });
 
-  return createdTrails;
+  return parsedTrails;
 };
 
 exports.storeHikingTrailsInDb = async (trails) => {

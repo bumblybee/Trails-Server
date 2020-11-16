@@ -56,7 +56,7 @@ exports.getBikingByState = async (req, res) => {
     ...missouriData
   );
 
-  // const storedTrails = await seedService.storeBikingTrailsInDb(trails);
+  const storedTrails = await seedService.storeBikingTrailsInDb(trails);
 
   res.json(storedTrails);
 };
