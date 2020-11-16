@@ -35,9 +35,7 @@ db.sequelize.sync({ force: forceDbReset }).then(async () => {
   server.on("error", onError);
   server.on("listening", onListening);
 
-  // seed db with trail data
-  // await seedController.getCombinedTrails(
-  // );
+  // seed db with trail data?
 });
 
 /**

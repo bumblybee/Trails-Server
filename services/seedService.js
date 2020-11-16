@@ -1,6 +1,5 @@
 const Trail = require("../db").Trail;
 
-//TODO: lowercase difficulty and combine easiest and beginner
 const parseActivities = (activities) => {
   // define object props
   let hiking = false,
@@ -101,20 +100,7 @@ const parseBikingTrails = (trails) => {
       continue;
     }
 
-    // if image doesn't have url and is instead stored on external api server, set to null - will add default fallback image(s)
-    if (trails[i].thumbnail === null || !trails[i].thumbnail.includes("http")) {
-      trails[i].thumbnail = null;
-    }
-
-    if (trails[i].difficulty === "") {
-      trails[i].difficulty = "unknown";
-    }
-
-    if (trails[i].difficulty.toLowerCase() === "easiest") {
-      trails[i].difficulty = "beginner";
-    }
-
-    const {
+    let {
       name,
       city,
       region,
@@ -126,6 +112,14 @@ const parseBikingTrails = (trails) => {
       rating,
       thumbnail,
     } = trails[i];
+
+    if (difficulty === "") {
+      difficulty = "unknown";
+    }
+
+    if (difficulty.toLowerCase() === "easiest") {
+      difficulty = "beginner";
+    }
 
     const point = { type: "Point", coordinates: [lon, lat] };
 
@@ -228,7 +222,7 @@ exports.storeBikingTrailsInDb = async (trails) => {
   // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
   //   ignoreDuplicates: true,
   // });
-
+  // return createdTrails;
   return parsedTrails;
 };
 

@@ -5,7 +5,7 @@ const combinedOptions = {
   url: "https://rapidapi.p.rapidapi.com/",
   params: {
     "q-country_cont": "null",
-    //TODO: change to 1500 when doing final store
+    //TODO: change to max 1500 when doing final store
     limit: "400",
   },
   headers: {
@@ -18,11 +18,10 @@ exports.grabCombinedData = async () => {
   const res = await axios.request(combinedOptions);
 
   if (res.error) {
-    console.log(error);
+    console.log(res.error);
   }
 
-  const data = res.data;
-  const trails = data.places;
+  const trails = res.data.places;
 
   return trails;
 };
