@@ -208,12 +208,14 @@ exports.storeCombinedTrailsInDb = async (trails) => {
   const parsedTrails = parseCombinedTrails(trails);
 
   //push to db in bulk, ignoring any duplicates
-  const createdTrails = await Trail.bulkCreate([...parsedTrails], {
-    ignoreDuplicates: true,
-  });
+  // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
+  //   ignoreDuplicates: true,
+  // });
 
   //return db data to controller to view as json
-  return createdTrails;
+  // return createdTrails;
+
+  return parsedTrails;
 };
 
 exports.storeBikingTrailsInDb = async (trails) => {
@@ -222,7 +224,10 @@ exports.storeBikingTrailsInDb = async (trails) => {
   // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
   //   ignoreDuplicates: true,
   // });
+
+  //return db data to controller to view as json
   // return createdTrails;
+
   return parsedTrails;
 };
 

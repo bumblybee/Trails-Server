@@ -10,7 +10,7 @@ const {
 exports.getCombinedTrails = async (req, res) => {
   const data = await grabCombinedData();
 
-  // const trails = await seedService.storeCombinedTrailsInDb(data);
+  const trails = await seedService.storeCombinedTrailsInDb(data);
 
   res.json(trails);
 };

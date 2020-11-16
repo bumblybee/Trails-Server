@@ -10,7 +10,7 @@ const combinedOptions = {
   },
   headers: {
     "x-rapidapi-key": process.env.TRAILS_API_KEY,
-    "x-rapidapi-host": "trailapi-trailapi.p.rapidapi.com",
+    "x-rapidapi-host": process.env.TRAILS_API_HOST,
   },
 };
 
@@ -33,7 +33,7 @@ exports.grabBikingData = async (lat, lng) => {
     params: { lat: lat, lon: lng, radius: "100" },
     headers: {
       "x-rapidapi-key": process.env.TRAILS_API_KEY,
-      "x-rapidapi-host": "trailapi-trailapi.p.rapidapi.com",
+      "x-rapidapi-host": process.env.TRAILS_API_HOST,
     },
   });
 
