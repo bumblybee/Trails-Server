@@ -3,7 +3,6 @@ const crypto = require("crypto");
 
 const randomId = crypto.randomBytes(2).toString("hex");
 
-//TODO: manipulate filename before storing, maybe use uuid
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "uploads");
