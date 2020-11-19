@@ -1,4 +1,5 @@
 const axios = require("axios");
+// const { trails } = require("../controllers/seedController");
 
 const combinedOptions = {
   method: "GET",
@@ -30,7 +31,7 @@ exports.grabBikingData = async (lat, lng) => {
   const res = await axios.request({
     method: "GET",
     url: "https://trailapi-trailapi.p.rapidapi.com/trails/explore/",
-    params: { lat: lat, lon: lng, radius: "100" },
+    params: { lat: lat, lon: lng, radius: "100", per_page: "5" },
     headers: {
       "x-rapidapi-key": process.env.TRAILS_API_KEY,
       "x-rapidapi-host": process.env.TRAILS_API_HOST,
@@ -64,4 +65,12 @@ exports.grabHikingData = async (lat, lng) => {
 
   const trails = res.data.trails;
   return trails;
+};
+
+exports.grabAllBikingData = async (trails) => {
+  const mappedStates = trails.map((state) =>
+    this.grabBikingData(state.lat, state.lng)
+  );
+  const res = await axios.all(mappedStates);
+  return res;
 };

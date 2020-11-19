@@ -5,6 +5,7 @@ const {
   grabCombinedData,
   grabBikingData,
   grabHikingData,
+  grabAllBikingData,
 } = require("../services/dataGrabService");
 
 exports.getCombinedTrails = async (req, res) => {
@@ -17,48 +18,62 @@ exports.getCombinedTrails = async (req, res) => {
 
 exports.getBikingByState = async (req, res) => {
   const trails = [];
+  // const kentuckyData = await grabBikingData(
+  //   states.kentucky.lat,
+  //   states.kentucky.lng
+  // );
+  // const iowaData = await grabBikingData(states.iowa.lat, states.iowa.lng);
+  // const kansasData = await grabBikingData(states.kansas.lat, states.kansas.lng);
+  // const southDakotaData = await grabBikingData(
+  //   states.southDakota.lat,
+  //   states.southDakota.lng
+  // );
+  // const louisianaData = await grabBikingData(
+  //   states.louisiana.lat,
+  //   states.louisiana.lng
+  // );
+  // const nebraskaData = await grabBikingData(
+  //   states.nebraska.lat,
+  //   states.nebraska.lng
+  // );
+  // const mississippiData = await grabBikingData(
+  //   states.mississippi.lat,
+  //   states.mississippi.lng
+  // );
+  // const missouriData = await grabBikingData(
+  //   states.missouri.lat,
+  //   states.missouri.lng
+  // );
 
-  const kentuckyData = await grabBikingData(
-    states.kentucky.lat,
-    states.kentucky.lng
-  );
-  const iowaData = await grabBikingData(states.iowa.lat, states.iowa.lng);
-  const kansasData = await grabBikingData(states.kansas.lat, states.kansas.lng);
-  const southDakotaData = await grabBikingData(
-    states.southDakota.lat,
-    states.southDakota.lng
-  );
-  const louisianaData = await grabBikingData(
-    states.louisiana.lat,
-    states.louisiana.lng
-  );
-  const nebraskaData = await grabBikingData(
-    states.nebraska.lat,
-    states.nebraska.lng
-  );
-  const mississippiData = await grabBikingData(
-    states.mississippi.lat,
-    states.mississippi.lng
-  );
-  const missouriData = await grabBikingData(
-    states.missouri.lat,
-    states.missouri.lng
-  );
+  states.map((state) => {
+    // const data = await grabBikingData(state.lat, state.lng);
+    // trails.push(...data);
+    const entries = Object.values(state);
 
-  trails.push(
-    ...kentuckyData,
-    ...iowaData,
-    ...kansasData,
-    ...southDakotaData,
-    ...louisianaData,
-    ...nebraskaData,
-    ...mississippiData,
-    ...missouriData
-  );
+    trails.push(...entries);
+  });
 
-  const storedTrails = await seedService.storeBikingTrailsInDb(trails);
+  // res.json((mapped = trails.map((trail) => trail)));
 
-  res.json(storedTrails);
+  // trails.push(
+  //   ...kentuckyData,
+  //   ...iowaData,
+  //   ...kansasData,
+  //   ...southDakotaData,
+  //   ...louisianaData,
+  //   ...nebraskaData,
+  //   ...mississippiData,
+  //   ...missouriData
+  // );
+
+  // Promise.all(trails).then(async (res) => {
+  //   const data = await res;
+  //   res.json(data);
+  // });
+
+  // const storedTrails = await seedService.storeBikingTrailsInDb(trails);
+  const data = await grabAllBikingData(trails);
+  res.json(data);
 };
 
 exports.getHikingByState = async (req, res) => {
