@@ -52,6 +52,8 @@ exports.grabAllHikingData = async (stateLatLng) => {
     grabHikingData(state.lat, state.lng)
   );
   const res = await axios.all(mappedStates);
+
+  if (res.error) console.log(res.error);
   return res;
 };
 

@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Vickery Creek",
+    "city": "Roswell",
+    "state": "Georgia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -84.3509,
+        34.0075
+      ]
+    },
+    "description": "Enjoy views of a creek and dam spill from both the trail and a scenic covered footbridge in this lovely 4-mile hike.",
+    "length": 4.1,
+    "rating": 4,
+    "difficulty": "intermediate",
+    "image": "https://cdn2.apstatic.com/photos/hike/7059495_medium_1560691891.jpg",
+    "biking": false,
+    "hiking": true
+  },
+  {
+    "name": "Pine Mountain Trail",
+    "city": "Manchester",
+    "state": "Georgia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -84.7015,
+        32.8524
+      ]
+    },
+    "description": "A 23 mile point-to-point trail that follows the Pine Mountain ridge in west-central Georgia.",
+    "length": 23.3,
+    "rating": 4.5,
+    "difficulty": "intermediate",
+    "image": "https://cdn2.apstatic.com/photos/hike/7009964_medium_1554397520.jpg",
+    "biking": false,
+    "hiking": true
+  },
+  {
+    "name": "East Palisades Route",
+    "city": "Vinings",
+    "state": "Georgia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -84.442,
+        33.8784
+      ]
+    },
+    "description": "A lovely hike including sweeping views of the Chattahoochee and a hidden gem - a bamboo forest!",
+    "length": 4.2,
+    "rating": 4.4,
+    "difficulty": "intermediate",
+    "image": "https://cdn2.apstatic.com/photos/hike/7023297_medium_1554844842.jpg",
+    "biking": false,
+    "hiking": true
+  },
+  {
+    "name": "Sweetwater Creek Loop",
+    "city": "Austell",
+    "state": "Georgia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -84.6284,
+        33.7526
+      ]
+    },
+    "description": "A loop combining the White Trail and Red Trail for all the best that Sweetwater has to offer.",
+    "length": 4.1,
+    "rating": 4.3,
+    "difficulty": "intermediate",
+    "image": "https://cdn2.apstatic.com/photos/hike/7048542_medium_1555539402.jpg",
+    "biking": false,
+    "hiking": true
+  },
+  {
+    "name": "Kennesaw Mountain Full Loop",
+    "city": "Marietta",
+    "state": "Georgia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -84.5785,
+        33.9832
+      ]
+    },
+    "description": "A great hike with singletrack, rock gardens, and gravel roads.",
+    "length": 17,
+    "rating": 4.2,
+    "difficulty": "intermediate",
+    "image": "https://cdn2.apstatic.com/photos/hike/7024143_medium_1554846342.jpg",
+    "biking": false,
+    "hiking": true
+  },
+  {
+    "name": "Indian Seats Loop",
+    "city": "Cumming",
+    "state": "Georgia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -84.1389,
+        34.2548
+      ]
+    },
+    "description": "A moderate trail with plenty of amazing views to reward you for your effort! It is especially stunning in the fall.",
+    "length": 3.9,
+    "rating": 4.1,
+    "difficulty": "intermediate",
+    "image": "https://cdn2.apstatic.com/photos/hike/7025187_medium_1554911715.jpg",
+    "biking": false,
+    "hiking": true
+  },
+  {
+    "name": "Sipsey Big Tree Loop",
+    "city": "Phil Campbell",
+    "state": "Alabama",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -87.4713,
+        34.3409
+      ]
+    },
+    "description": "Shortest, but not easiest, route to get from the road to the Big Tree and back again.",
+    "length": 8.1,
+    "rating": 5,
+    "difficulty": "advanced",
+    "image": "https://cdn2.apstatic.com/photos/hike/7032407_medium_1554933151.jpg",
+    "biking": false,
+    "hiking": true
+  },
+  {
+    "name": "Blevins Gap",
+    "city": "Huntsville",
+    "state": "Alabama",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -86.5305,
+        34.6735
+      ]
+    },
+    "description": "Great hike that covers Blevins Gap from end to end.",
+    "length": 11.2,
+    "rating": 4.8,
+    "difficulty": "advanced",
+    "image": "https://cdn2.apstatic.com/photos/hike/7005282_medium_1554311819.jpg",
+    "biking": false,
+    "hiking": true
+  },
+  {
+    "name": "Canyon Loop Trail",
+    "city": "Lumpkin",
+    "state": "Georgia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -84.9134,
+        32.069
+      ]
+    },
+    "description": "An easy loop from the visitor center to see the \"Little Grand Canyon\" of the southeast.",
+    "length": 2.4,
+    "rating": 4.7,
+    "difficulty": "intermediate",
+    "image": "https://cdn2.apstatic.com/photos/hike/7050814_medium_1555691474.jpg",
+    "biking": false,
+    "hiking": true
+  },
+  {
+    "name": "Mt. Cheaha Route",
+    "city": "Oxford",
+    "state": "Alabama",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -85.8213,
+        33.4745
+      ]
+    },
+    "description": "A great hike to the highest point in Alabama, full of views and interesting rock formations.",
+    "length": 5.9,
+    "rating": 4.8,
+    "difficulty": "intermediate",
+    "image": "https://cdn2.apstatic.com/photos/hike/7032012_medium_1554932317.jpg",
+    "biking": false,
+    "hiking": true
+  }
+]

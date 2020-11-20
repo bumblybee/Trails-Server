@@ -1,4 +1,5 @@
 const Trail = require("../db").Trail;
+const fs = require("fs");
 
 const parseActivities = (activities) => {
   // define object props
@@ -203,40 +204,58 @@ const parseHikingTrails = (trails) => {
   return result;
 };
 
-exports.storeCombinedTrailsInDb = async (trails) => {
-  // grab parsed trails from above
-  const parsedTrails = parseCombinedTrails(trails);
+// exports.storeCombinedTrailsInDb = async (trails) => {
+//   // grab parsed trails from above
+//   const parsedTrails = parseCombinedTrails(trails);
 
-  //push to db in bulk, ignoring any duplicates
-  // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
-  //   ignoreDuplicates: true,
-  // });
+//   //push to db in bulk, ignoring any duplicates
+//   // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
+//   //   ignoreDuplicates: true,
+//   // });
 
-  //return db data to controller to view as json
-  // return createdTrails;
+//   //return db data to controller to view as json
+//   // return createdTrails;
+
+//   return parsedTrails;
+// };
+
+// exports.storeBikingTrailsInDb = async (trails) => {
+//   const parsedTrails = parseBikingTrails(trails);
+
+//   // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
+//   //   ignoreDuplicates: true,
+//   // });
+
+//   //return db data to controller to view as json
+//   // return createdTrails;
+
+//   return parsedTrails;
+// };
+
+// exports.storeHikingTrailsInDb = async (trails) => {
+//   const parsedTrails = parseHikingTrails(trails);
+
+//   const createdTrails = await Trail.bulkCreate([...parsedTrails], {
+//     ignoreDuplicates: true,
+//   });
+
+//   return createdTrails;
+// };
+
+exports.storeHikingTrailsInJSON = (trails) => {
+  const parsedTrails = parseHikingTrails(...trails);
+
+  //!! may not need to turn into json, may already come that way
+  const jsonHikingTrails = JSON.stringify(parsedTrails, null, 2);
+
+  fs.writeFile(
+    "../trails-server/db/json/hikingTrails.json",
+    jsonHikingTrails,
+    (err) => {
+      if (err) console.log(err);
+      console.log("Data written to json file");
+    }
+  );
 
   return parsedTrails;
-};
-
-exports.storeBikingTrailsInDb = async (trails) => {
-  const parsedTrails = parseBikingTrails(trails);
-
-  // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
-  //   ignoreDuplicates: true,
-  // });
-
-  //return db data to controller to view as json
-  // return createdTrails;
-
-  return parsedTrails;
-};
-
-exports.storeHikingTrailsInDb = async (trails) => {
-  const parsedTrails = parseHikingTrails(trails);
-
-  const createdTrails = await Trail.bulkCreate([...parsedTrails], {
-    ignoreDuplicates: true,
-  });
-
-  return createdTrails;
 };
