@@ -1,7 +1,6 @@
 const Trail = require("../db").Trail;
 const fs = require("fs");
-const trailFile = "../trails-server/db/json/hikingTrails.json";
-const jsonTrails = require("../db/json/hikingTrails.json");
+const trailFileName = "../trails-server/db/json/hikingTrails.json";
 
 const parseActivities = (activities) => {
   // define object props
@@ -244,7 +243,32 @@ const parseHikingTrails = (trails) => {
 //   return createdTrails;
 // };
 
+exports.storeCombinedTrailsInJSON = (trails) => {
+  const parsedTrails = parseCombinedTrails(trails);
+
+  const stringifiedTrails = JSON.stringify(parsedTrails, null, 2);
+
+  fs.writeFile(trailFileName, stringifiedTrails, (err) => {
+    if (err) console.log(err);
+    console.log("Data written to json file");
+  });
+
+  return parsedTrails;
+};
+
 exports.storeHikingTrailsInJSON = (trails) => {
+  // const parsedTrails = parseHikingTrails(...trails);
+
+  // const jsonHikingTrails = JSON.stringify(parsedTrails, null, 2);
+
+  // fs.writeFile(trailFileName, jsonHikingTrails, (err) => {
+  //   if (err) console.log(err);
+  //   console.log("Data written to json file");
+  // });
+
+  // return parsedTrails;
+  const jsonTrails = require("../db/json/hikingTrails.json");
+
   const parsedTrails = parseHikingTrails(...trails);
 
   jsonTrails.push(parsedTrails);

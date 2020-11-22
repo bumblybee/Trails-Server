@@ -1,4 +1,5 @@
 /node_modules
 npm-debug.log
+hikingTrails.json
 /*.env
 .vscode

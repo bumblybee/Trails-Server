@@ -7,7 +7,7 @@ const combinedOptions = {
   params: {
     "q-country_cont": "null",
     //TODO: change to max 1500 when doing final store
-    limit: "400",
+    limit: "100",
   },
   headers: {
     "x-rapidapi-key": process.env.TRAILS_API_KEY,
