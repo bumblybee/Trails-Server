@@ -188,5 +188,197 @@
     "image": "https://cdn2.apstatic.com/photos/hike/7032012_medium_1554932317.jpg",
     "biking": false,
     "hiking": true
-  }
+  },
+  [
+    {
+      "name": "Half Dome",
+      "city": "Yosemite Valley",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": [
+          -119.5583,
+          37.7325
+        ]
+      },
+      "description": "THE premier route in Yosemite. Hike to the top of the most iconic granite dome in the USA.",
+      "length": 14.5,
+      "rating": 4.9,
+      "difficulty": "advanced",
+      "image": "https://cdn2.apstatic.com/photos/hike/7003987_medium_1554236134.jpg",
+      "biking": false,
+      "hiking": true
+    },
+    {
+      "name": "Vernal and Nevada Falls Loop",
+      "city": "Yosemite Valley",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": [
+          -119.5583,
+          37.7326
+        ]
+      },
+      "description": "A splendid loop past two of Yosemite's most powerful cascades.",
+      "length": 6.2,
+      "rating": 4.8,
+      "difficulty": "advanced",
+      "image": "https://cdn2.apstatic.com/photos/hike/7003987_medium_1554236134.jpg",
+      "biking": false,
+      "hiking": true
+    },
+    {
+      "name": "Lower Yosemite Fall Trail",
+      "city": "Yosemite Valley",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": [
+          -119.5962,
+          37.7464
+        ]
+      },
+      "description": "Revel in stunning views of Yosemite Falls in its entirety and walk to the base of the Lower Fall.",
+      "length": 1,
+      "rating": 4.4,
+      "difficulty": "beginner",
+      "image": "https://cdn2.apstatic.com/photos/hike/7003948_medium_1554236020.jpg",
+      "biking": false,
+      "hiking": true
+    },
+    {
+      "name": "Clouds Rest Viewpoint Trail",
+      "city": "Yosemite Valley",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": [
+          -119.47,
+          37.8257
+        ]
+      },
+      "description": "Incredibly stupendous side-on views of Half Dome are the highlight of this hike.",
+      "length": 12.4,
+      "rating": 4.8,
+      "difficulty": "advanced",
+      "image": "https://cdn2.apstatic.com/photos/hike/7018146_medium_1554830392.jpg",
+      "biking": false,
+      "hiking": true
+    },
+    {
+      "name": "Sentinel Dome",
+      "city": "Yosemite Valley",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": [
+          -119.5867,
+          37.7129
+        ]
+      },
+      "description": "An easy trail with some great westward sunset views on top of the dome.",
+      "length": 2.1,
+      "rating": 4.7,
+      "difficulty": "intermediate",
+      "image": "https://cdn2.apstatic.com/photos/hike/7004023_medium_1554236250.jpg",
+      "biking": false,
+      "hiking": true
+    },
+    {
+      "name": "Mirror Lake Loop",
+      "city": "Yosemite Valley",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": [
+          -119.5603,
+          37.7393
+        ]
+      },
+      "description": "A beautiful loop through Tenaya Canyon.",
+      "length": 4.7,
+      "rating": 3.9,
+      "difficulty": "beginner",
+      "image": "https://cdn2.apstatic.com/photos/hike/7003961_medium_1554236057.jpg",
+      "biking": false,
+      "hiking": true
+    },
+    {
+      "name": "Mount Tallac",
+      "city": "South Lake Tahoe",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": [
+          -120.0682,
+          38.9214
+        ]
+      },
+      "description": "An excellent hike with lots of variety and stunning views.",
+      "length": 9.9,
+      "rating": 4.8,
+      "difficulty": "advanced",
+      "image": "https://cdn2.apstatic.com/photos/hike/7007938_medium_1554323883.jpg",
+      "biking": false,
+      "hiking": true
+    },
+    {
+      "name": "Upper Yosemite Falls and Yosemite Point Hike",
+      "city": "Yosemite Valley",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": [
+          -119.6022,
+          37.7424
+        ]
+      },
+      "description": "Hike to the top of Yosemite Falls, and then to Yosemite Point for amazing views of the valley and surrounding mountains.",
+      "length": 8,
+      "rating": 4.8,
+      "difficulty": "advanced",
+      "image": "https://cdn2.apstatic.com/photos/hike/7004881_medium_1554310989.jpg",
+      "biking": false,
+      "hiking": true
+    },
+    {
+      "name": "Bridalveil Falls Trail",
+      "city": "Yosemite Valley",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": [
+          -119.6509,
+          37.7168
+        ]
+      },
+      "description": "A short jaunt to one of Yosemite's most accessible marvels, the 600' Bridalveil Falls.",
+      "length": 0.4,
+      "rating": 4.3,
+      "difficulty": "beginner",
+      "image": "https://cdn2.apstatic.com/photos/hike/7003576_medium_1554234562.jpg",
+      "biking": false,
+      "hiking": true
+    },
+    {
+      "name": "Berry Creek Falls Loop",
+      "city": "Boulder Creek",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": [
+          -122.2224,
+          37.1721
+        ]
+      },
+      "description": "Great hike for waterfalls, redwoods, enjoying the little creatures and plants around you, and not needing much sunscreen!",
+      "length": 9.7,
+      "rating": 4.7,
+      "difficulty": "intermediate",
+      "image": "https://cdn2.apstatic.com/photos/hike/7027026_medium_1554915336.jpg",
+      "biking": false,
+      "hiking": true
+    }
+  ]
 ]
