@@ -25,12 +25,13 @@ exports.getBikingByState = async (req, res) => {
     stateLatLng.push(...entries);
   });
 
-  // const data = await grabAllBikingData(stateLatLng);
-  const trails = [...data];
+  const data = await grabAllBikingData(stateLatLng);
 
   // const storedTrails = await seedService.storeBikingTrailsInDb(trails);
 
-  res.json(trails);
+  const storedTrails = seedService.storeBikingTrailsInJSON(data);
+
+  res.json(storedTrails);
 };
 
 exports.getHikingByState = async (req, res) => {

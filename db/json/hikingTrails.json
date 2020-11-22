@@ -5,10 +5,7 @@
     "state": "Wisconsin",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -88.634643,
-        43.650227
-      ]
+      "coordinates": [-88.634643, 43.650227]
     },
     "hiking": true,
     "biking": false,
@@ -24,10 +21,7 @@
     "state": "Puerto Rico",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -66.13781,
-        18.40554
-      ]
+      "coordinates": [-66.13781, 18.40554]
     },
     "hiking": true,
     "biking": true,
@@ -43,10 +37,7 @@
     "state": "California",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -122.029191,
-        37.62799
-      ]
+      "coordinates": [-122.029191, 37.62799]
     },
     "hiking": true,
     "biking": true,
@@ -62,10 +53,7 @@
     "state": "Florida",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -87.24247,
-        30.5516
-      ]
+      "coordinates": [-87.24247, 30.5516]
     },
     "hiking": true,
     "biking": true,
@@ -81,10 +69,7 @@
     "state": "North Dakota",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -99.070516,
-        48.043225
-      ]
+      "coordinates": [-99.070516, 48.043225]
     },
     "hiking": true,
     "biking": false,
@@ -100,10 +85,7 @@
     "state": "Arizona",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -111.82848,
-        34.84703
-      ]
+      "coordinates": [-111.82848, 34.84703]
     },
     "hiking": true,
     "biking": false,
@@ -119,10 +101,7 @@
     "state": "New Mexico",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -106.77148,
-        32.40945
-      ]
+      "coordinates": [-106.77148, 32.40945]
     },
     "hiking": false,
     "biking": true,
@@ -138,10 +117,7 @@
     "state": "Connecticut",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -73.29773,
-        41.8289
-      ]
+      "coordinates": [-73.29773, 41.8289]
     },
     "hiking": false,
     "biking": true,
@@ -157,10 +133,7 @@
     "state": "Illinois",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -87.953586,
-        41.841215
-      ]
+      "coordinates": [-87.953586, 41.841215]
     },
     "hiking": true,
     "biking": false,
@@ -176,10 +149,7 @@
     "state": "Arkansas",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -92.105976,
-        35.508351
-      ]
+      "coordinates": [-92.105976, 35.508351]
     },
     "hiking": true,
     "biking": false,
@@ -195,10 +165,7 @@
     "state": "West Virginia",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -81.08087,
-        37.75481
-      ]
+      "coordinates": [-81.08087, 37.75481]
     },
     "hiking": true,
     "biking": true,
@@ -214,10 +181,7 @@
     "state": "Colorado",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -106.06724,
-        39.4874
-      ]
+      "coordinates": [-106.06724, 39.4874]
     },
     "hiking": true,
     "biking": true,
@@ -233,10 +197,7 @@
     "state": "North Carolina",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -80.939891,
-        35.666867
-      ]
+      "coordinates": [-80.939891, 35.666867]
     },
     "hiking": true,
     "biking": true,
@@ -252,10 +213,7 @@
     "state": "Montana",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -110.94402,
-        45.48359
-      ]
+      "coordinates": [-110.94402, 45.48359]
     },
     "hiking": true,
     "biking": true,
@@ -271,10 +229,7 @@
     "state": "California",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -122.26391,
-        37.90821
-      ]
+      "coordinates": [-122.26391, 37.90821]
     },
     "hiking": false,
     "biking": true,
@@ -290,10 +245,7 @@
     "state": "Maryland",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -76.48403,
-        39.04721
-      ]
+      "coordinates": [-76.48403, 39.04721]
     },
     "hiking": true,
     "biking": true,
@@ -309,10 +261,7 @@
     "state": "North Carolina",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -80.6561,
-        35.31769
-      ]
+      "coordinates": [-80.6561, 35.31769]
     },
     "hiking": false,
     "biking": true,
@@ -328,10 +277,7 @@
     "state": "Massachusetts",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -70.8737,
-        42.25835
-      ]
+      "coordinates": [-70.8737, 42.25835]
     },
     "hiking": false,
     "biking": true,
@@ -347,10 +293,7 @@
     "state": "New York",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -74.1053,
-        43.71001
-      ]
+      "coordinates": [-74.1053, 43.71001]
     },
     "hiking": false,
     "biking": true,
@@ -366,10 +309,7 @@
     "state": "Alaska",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -151.004623,
-        59.287943
-      ]
+      "coordinates": [-151.004623, 59.287943]
     },
     "hiking": true,
     "biking": false,
@@ -385,10 +325,7 @@
     "state": "Oregon",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -122.291439,
-        42.395848
-      ]
+      "coordinates": [-122.291439, 42.395848]
     },
     "hiking": true,
     "biking": false,
@@ -404,10 +341,7 @@
     "state": "Washington",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -123.232831,
-        46.629197
-      ]
+      "coordinates": [-123.232831, 46.629197]
     },
     "hiking": true,
     "biking": false,
@@ -423,10 +357,7 @@
     "state": "California",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -117.81529,
-        34.07794
-      ]
+      "coordinates": [-117.81529, 34.07794]
     },
     "hiking": false,
     "biking": true,
@@ -442,10 +373,7 @@
     "state": "Colorado",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -105.73665,
-        39.98636
-      ]
+      "coordinates": [-105.73665, 39.98636]
     },
     "hiking": false,
     "biking": true,
@@ -461,10 +389,7 @@
     "state": "California",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -120.06704,
-        38.68386
-      ]
+      "coordinates": [-120.06704, 38.68386]
     },
     "hiking": true,
     "biking": true,
@@ -480,10 +405,7 @@
     "state": "Colorado",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -105.46947,
-        40.17093
-      ]
+      "coordinates": [-105.46947, 40.17093]
     },
     "hiking": false,
     "biking": true,
@@ -499,10 +421,7 @@
     "state": "Idaho",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -115.60563,
-        44.02384
-      ]
+      "coordinates": [-115.60563, 44.02384]
     },
     "hiking": true,
     "biking": true,
@@ -518,10 +437,7 @@
     "state": "Michigan",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -88.648165,
-        46.361027
-      ]
+      "coordinates": [-88.648165, 46.361027]
     },
     "hiking": true,
     "biking": false,
@@ -537,10 +453,7 @@
     "state": "Illinois",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -88.052399,
-        41.915841
-      ]
+      "coordinates": [-88.052399, 41.915841]
     },
     "hiking": true,
     "biking": false,
@@ -556,10 +469,7 @@
     "state": "New Jersey",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -74.646668,
-        39.644031
-      ]
+      "coordinates": [-74.646668, 39.644031]
     },
     "hiking": true,
     "biking": true,
@@ -575,10 +485,7 @@
     "state": "Virginia",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -77.36156,
-        38.9056
-      ]
+      "coordinates": [-77.36156, 38.9056]
     },
     "hiking": true,
     "biking": true,
@@ -594,10 +501,7 @@
     "state": "Arizona",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -110.71986,
-        32.33613
-      ]
+      "coordinates": [-110.71986, 32.33613]
     },
     "hiking": false,
     "biking": true,
@@ -613,10 +517,7 @@
     "state": "New York",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -75.677606,
-        44.552452
-      ]
+      "coordinates": [-75.677606, 44.552452]
     },
     "hiking": true,
     "biking": false,
@@ -632,10 +533,7 @@
     "state": "North Carolina",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -83.424836,
-        35.611077
-      ]
+      "coordinates": [-83.424836, 35.611077]
     },
     "hiking": true,
     "biking": false,
@@ -651,10 +549,7 @@
     "state": "New Mexico",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -105.324274,
-        35.25668
-      ]
+      "coordinates": [-105.324274, 35.25668]
     },
     "hiking": true,
     "biking": false,
@@ -670,10 +565,7 @@
     "state": "North Carolina",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -83.235098,
-        35.068188
-      ]
+      "coordinates": [-83.235098, 35.068188]
     },
     "hiking": true,
     "biking": false,
@@ -689,10 +581,7 @@
     "state": "Colorado",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -105.23302,
-        39.92897
-      ]
+      "coordinates": [-105.23302, 39.92897]
     },
     "hiking": false,
     "biking": true,
@@ -708,10 +597,7 @@
     "state": "New York",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -73.214465,
-        40.890889
-      ]
+      "coordinates": [-73.214465, 40.890889]
     },
     "hiking": true,
     "biking": false,
@@ -727,10 +613,7 @@
     "state": "Georgia",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -85.19113,
-        34.2901
-      ]
+      "coordinates": [-85.19113, 34.2901]
     },
     "hiking": true,
     "biking": true,
@@ -746,10 +629,7 @@
     "state": "Minnesota",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -94.688046,
-        46.727888
-      ]
+      "coordinates": [-94.688046, 46.727888]
     },
     "hiking": true,
     "biking": false,
@@ -765,10 +645,7 @@
     "state": "Oregon",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -122.047119,
-        45.599284
-      ]
+      "coordinates": [-122.047119, 45.599284]
     },
     "hiking": true,
     "biking": false,
@@ -784,10 +661,7 @@
     "state": "California",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -123.805294,
-        39.445723
-      ]
+      "coordinates": [-123.805294, 39.445723]
     },
     "hiking": true,
     "biking": false,
@@ -803,10 +677,7 @@
     "state": "Kentucky",
     "lnglat": {
       "type": "Point",
-      "coordinates": [
-        -87.997584,
-        36.795021
-      ]
+      "coordinates": [-87.997584, 36.795021]
     },
     "hiking": true,
     "biking": true,
@@ -815,5 +686,87 @@
     "rating": 0,
     "description": "Lake Barkley was named for former Vice-President Alben Barkley. Land Between the Lakes (US Forest Service) and Fort Donelson National Military Park are on Lake Barkley's western shore.",
     "difficulty": "unknown"
-  }
+  },
+  [
+    {
+      "name": "Woodward Park",
+      "city": "Fresno",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": ["-119.78479", "36.86603"]
+      },
+      "description": "Progressive freeride area in Fresno city park. Trail and features designed by Hillclimb with progressively more difficult sections throughout the area. $3 per vehicle, more info at woodwardmtbpark.com.",
+      "length": "2.0",
+      "rating": 0,
+      "difficulty": "unknown",
+      "image": "https://images.singletracks.com/blog/wp-content/uploads/2013/07/Best-Fresno-1_19_08-34-0-orig.jpg",
+      "biking": true,
+      "hiking": false
+    },
+    {
+      "name": "San Joaquin River Trail",
+      "city": "Auberry",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": ["-119.48541", "37.08078"]
+      },
+      "description": "This scenic area straddles the San Joaquin River just upstream from Millerton Lake State Park Recreation Area and includes lands in Fresno and Madera Counties. The management area is bounded by Kerckhoff Reservoir and the Sierra National Forest on the eastern boundary. Hikers, bicyclists and horseback riders who use the San Joaquin River Gorge trails have access to several thousand acres of public land.",
+      "length": "7.0",
+      "rating": 3.83,
+      "difficulty": "beginner",
+      "image": "https://images.singletracks.com/blog/wp-content/uploads/2017/12/20171230_113155-orig-scaled.jpg",
+      "biking": true,
+      "hiking": false
+    },
+    {
+      "name": "Cherry Gap",
+      "city": "Hume Lake",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": ["-118.95694", "36.77770"]
+      },
+      "description": "Very good trail for beginners. It is also very easy for more experienced riders. I started out riding this trail, fun at first, but gets boring after going on some advanced trails. When the trail comes down to the road. You have two choices. Take the road which will take you back to Hume Lake. Or take the trail to the right. DO NOT TAKE THIS TRAIL IF YOU ARE A BEGINNER!!!!! This is a hard trail called Sunshine. (I also posted Sunshine Trail. Check it out.)",
+      "length": "7.0",
+      "rating": 0,
+      "difficulty": "unknown",
+      "image": null,
+      "biking": true,
+      "hiking": false
+    },
+    {
+      "name": "Dinky Creek Trail",
+      "city": "Shaver Lake",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": ["-119.15529", "37.11599"]
+      },
+      "description": "The Dinkey Creek trail is 11.7 miles long. It begins at Cow Creek Quarry and ends at Deer Creek. The trail is open for the following uses: Hiking, Backpacking, Mountain Biking. source: fs.usda.gov",
+      "length": "12.0",
+      "rating": 0,
+      "difficulty": "unknown",
+      "image": null,
+      "biking": true,
+      "hiking": false
+    },
+    {
+      "name": "Hume Lake Trail",
+      "city": "Hume Lake",
+      "state": "California",
+      "lnglat": {
+        "type": "Point",
+        "coordinates": ["-118.91118", "36.78751"]
+      },
+      "description": "A fun little trail if you don't want to go to far from the lake. It is easy, but worth it. Watch out for pedestrians and animals. Don't be loud or they will kick you off (How would I know?) Just have fun and respect others",
+      "length": "5.0",
+      "rating": 0,
+      "difficulty": "unknown",
+      "image": "https://images.singletracks.com/blog/wp-content/uploads/2011/06/20110609_84-0-orig.jpg",
+      "biking": true,
+      "hiking": false
+    }
+  ]
 ]

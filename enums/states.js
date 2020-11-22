@@ -5,7 +5,7 @@ module.exports = [
   // { arkansas: { lat: 34.7999, lng: -92.1999 } },
   { california: { lat: 36.7782, lng: -119.4179 } },
   { colorado: { lat: 39.113, lng: -105.3588 } },
-  { connecticut: { lat: 41.5999, lng: -72.6999 } },
+  // { connecticut: { lat: 41.5999, lng: -72.6999 } },
   // { delaware: { lat: 39.0, lng: -75.5 } },
   // { florida: { lat: 27.9944, lng: -81.7602 } },
   // { georgia: { lat: 33.2478, lng: -83.4411 } },
