@@ -73,6 +73,15 @@ const parseCombinedTrails = (trails) => {
     // destructure api props
     let { name, city, state, lat, lon, description } = trails[i];
 
+    //remove html characters in string
+    description = description.replace(/<br\s*\/?>/gi, " ");
+    description = description.replace(/&lt;br\s*\/&gt;/gi, "");
+    description = description.replace(/&lt;/gi, "");
+    description = description.replace(/(\r\n|\n|\r)/gm, "");
+    description = description.replace(/&quot;/g, '"');
+    //replace multiple spaces with single
+    description = description.replace(/\s\s+/g, " ");
+
     // store lng and lat in db as type Point
     const point = { type: "Point", coordinates: [lon, lat] };
 
@@ -123,13 +132,14 @@ const parseBikingTrails = (trails) => {
       difficulty = "beginner";
     }
 
-    const point = { type: "Point", coordinates: [lon, lat] };
-
     //remove html characters in string
     description = description.replace(/<br\s*\/?>/gi, "");
     description = description.replace(/(\r\n|\n|\r)/gm, "");
+    description = description.replace(/&quot;/g, '"');
     //replace multiple spaces with single
     description = description.replace(/\s\s+/g, " ");
+
+    const point = { type: "Point", coordinates: [lon, lat] };
 
     // push schema into result and return
     result.push({
@@ -296,4 +306,10 @@ exports.storeBikingTrailsInJSON = (trails) => {
   });
 
   return parsedTrails;
+};
+
+exports.returnJSON = () => {
+  const read = fs.readFileSync(trailFile);
+  const content = JSON.parse(read);
+  return content;
 };

@@ -10,9 +10,9 @@ const {
 exports.getCombinedTrails = async (req, res) => {
   const data = await grabCombinedData();
 
-  const trails = seedService.storeCombinedTrailsInJSON(data);
+  const storedTrails = seedService.storeCombinedTrailsInJSON(data);
 
-  res.json(trails);
+  res.json(storedTrails);
 };
 
 exports.getBikingByState = async (req, res) => {
@@ -51,4 +51,9 @@ exports.getHikingByState = async (req, res) => {
   // const storedTrails = seedService.storeHikingTrailsInJSON(data);
 
   res.json(data);
+};
+
+exports.seeJSON = (req, res) => {
+  const trails = seedService.returnJSON();
+  res.json(trails);
 };

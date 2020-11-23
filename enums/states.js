@@ -49,4 +49,5 @@ module.exports = [
   // { westVirginia: { lat: 39.0, lng: -80.5 } },
   // { wisconsin: { lat: 44.5, lng: -89.5 } },
   // { wyoming: { lat: 35.0733, lng: -106.5503 } },
+  //{puertoRico: {lat: 18.2001, lng: -66.6645}}
 ];
