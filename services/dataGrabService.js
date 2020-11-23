@@ -61,7 +61,7 @@ const grabBikingData = async (lat, lng) => {
   const res = await axios.request({
     method: "GET",
     url: "https://trailapi-trailapi.p.rapidapi.com/trails/explore/",
-    params: { lat: lat, lon: lng, radius: "100", per_page: "5" },
+    params: { lat: lat, lon: lng, radius: "100", per_page: "25" },
     headers: {
       "x-rapidapi-key": process.env.TRAILS_API_KEY,
       "x-rapidapi-host": process.env.TRAILS_API_HOST,

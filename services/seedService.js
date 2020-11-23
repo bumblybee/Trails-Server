@@ -125,6 +125,10 @@ const parseBikingTrails = (trails) => {
 
     const point = { type: "Point", coordinates: [lon, lat] };
 
+    //remove html characters from string
+    description = description.replace(/<br\s*\/?>/gi, "");
+    description = description.replace(/(\r\n|\n|\r)/gm, "");
+
     // push schema into result and return
     result.push({
       name,

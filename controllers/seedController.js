@@ -48,7 +48,7 @@ exports.getHikingByState = async (req, res) => {
 
   // const storedTrails = await seedService.storeHikingTrailsInDb(trails);
 
-  const storedTrails = seedService.storeHikingTrailsInJSON(data);
+  // const storedTrails = seedService.storeHikingTrailsInJSON(data);
 
-  res.json(storedTrails);
+  res.json(data);
 };
