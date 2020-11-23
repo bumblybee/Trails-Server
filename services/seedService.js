@@ -68,12 +68,18 @@ const parseCombinedTrails = (trails) => {
     if (activities.image === null || !activities.image.includes("http")) {
       activities.image = null;
     }
-    //TODO: Change http to https
 
+    //convert http to https
+    if (activities.image !== null) {
+      activities.image = activities.image.replace("http", "https");
+    }
+
+    //TODO: Change http to https
+    //TODO: // replace \\\" with \" in json file
     // destructure api props
     let { name, city, state, lat, lon, description } = trails[i];
 
-    //remove html characters in string
+    //remove html encoded characters in string
     description = description.replace(/<br\s*\/?>/gi, " ");
     description = description.replace(/&lt;br\s*\/&gt;/gi, "");
     description = description.replace(/&lt;/gi, "");
@@ -133,7 +139,9 @@ const parseBikingTrails = (trails) => {
     }
 
     //remove html characters in string
-    description = description.replace(/<br\s*\/?>/gi, "");
+    description = description.replace(/<br\s*\/?>/gi, " ");
+    description = description.replace(/&lt;br\s*\/&gt;/gi, "");
+    description = description.replace(/&lt;/gi, "");
     description = description.replace(/(\r\n|\n|\r)/gm, "");
     description = description.replace(/&quot;/g, '"');
     //replace multiple spaces with single

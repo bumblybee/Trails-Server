@@ -1,0 +1,1731 @@
+[
+  {
+    "name": "Wild Goose State Trail",
+    "city": "Fond Du Lac",
+    "state": "Wisconsin",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -88.634643,
+        43.650227
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 34,
+    "rating": 0,
+    "description": "This 34-mile rail trail skirts the western edge of the vast Horicon Marsh from Fond du Lac to Clyman Junction. The Horicon Marsh, a National Wildlife Refuge and State Wildlife Area, home to over 250 bird species, is world-famous for its numerous migrant waterfowl and endless V-shaped formations of Canada geese. Wildflowers, woodlots, wildlife, prairie remnants and fertile farm fields are common sites along the trail.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Monagas",
+    "city": "BayamÃ³n",
+    "state": "Puerto Rico",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -66.13781,
+        18.40554
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 10,
+    "rating": 0,
+    "description": "Monagas Mountain Bike Trails are located at the municipality of Bayamon, which is inside Puerto Rico's metropolitan area. The trail network is inside the Julio E. Monagas National Park and is composed of around 15 trails that run throughout the park. They are properly identified with signs marking the entry and exit points, and direction arrows throughout the routes. They are identified at their entry points with difficulty level logos which makes it easier for newcomers to know which trail to tackle first. The park is located in which as an US Army location, so throughout the park one can see old bunkers and watch posts. The trails are composed of single-tracks with lots of roots present throughout the trails. There are some streams of water that needs to be crossed though the wooden bridges in place, and some natural \"staircases\" formed by the large roots, which combined with the uphill location of the roots and the narrow of the track throw the technical part to the mix. The list of trails currently active on the network are: -La Caverna -Mirador -El Lago -Cuesta Las Marias -Las Tablas -Magic Kingdom I -Magic Kingdom II -Los Columpios -La Ceiba -Los Picapiedras -Boys Scouts -Triple Cuesta -Blair Witch -Hobbits -Almendros As previously mentioned, the trails are located inside a forest park, so rain in the months of October to February is normal in the area which can render some of the trails unusable. But hey, it's the Caribbean! So a couple of continuous days of sun and all trails are back. For more information about this location you can call the Park offices at (787) 269-6600 &amp; (787) 269-6603.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Garin/Dry Creek Pioneer Regional Parks",
+    "city": "Hayward",
+    "state": "California",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -122.029191,
+        37.62799
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 20,
+    "rating": 0,
+    "description": "The Garin Barn Visitor Center is open weekends between Memorial Day and Labor Day from 11:30 a.m. to 6:00 p.m. It is designed to aide in interpretive programs and for the enjoyment of the casual visitor. The Visitor Center displays artifacts from the ranching and farming history of the Hayward area. There is a blacksmith shop, a tool shop and several ranching-related displays to explore. An interesting collection of antique farm machinery outside the barn augments the display. Meyers Cottage was a popular summer home of Edith, Mildred, and Jeanette Meyers, three sisters of Alameda who were very involved in local charities and fundraisers during the early and mid 1900s. The sisters also owned the 1,200-acre Dry Creek Ranch, which was donated to the Park District in 1979 and later opened as Dry Creek Regional Park. Upon the passing of the last surviving Meyers sister, the Meyers Cottage and its garden was also donated to the Park District. The Park District plans to eventually open the cottage for receptions, weddings, and similar events, and it will also house a small visitor center.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "UWF Mountain Bike Trails",
+    "city": "Pensacola",
+    "state": "Florida",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -87.24247,
+        30.5516
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 6,
+    "rating": 0,
+    "description": "12.5 miles of trails intermediate to advanced level. Well marked with 5 stacked loops",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Grahams Island State Park",
+    "city": "Devils Lake",
+    "state": "North Dakota",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -99.070516,
+        48.043225
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "Devils Lake-North Dakota's largest natural lake-is home to a 1,142-acre park system including Grahams Island State Park and a boat access area on the east side of the lake, named Black Tiger Bay State Recreation Area.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Herkenham/Ridge Trail Lollipop",
+    "city": "Sedona",
+    "state": "Arizona",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -111.82848,
+        34.84703
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 7,
+    "rating": 0,
+    "description": "Herkenham/Ridge Trail Lollipop features 7 miles of hiking trails near Sedona, AZ.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Dona Ana",
+    "city": "Dona Ana",
+    "state": "New Mexico",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -106.77148,
+        32.40945
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2014/01/IMG_20130509_132814_824-0.jpg",
+    "length": 20,
+    "rating": 4,
+    "description": "Large trail system with options for every rider. Easier trails are near the TH and tougher ones near the mountain. The Roller Coaster is a must ride. While the lower trails are buffed the higher trails Have a lot of very hard, and sharp rock. Pinch flats and cut sidewalls are common. It.s no fun hiking out of there with the bike on your shoulder so come prepared. Area is total exposed (No shade), but is rideable all year. Local Bike club Web site; http://www.lcrimrattlers.org/index.html",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Good solid training",
+    "city": "Goshen",
+    "state": "Connecticut",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -73.29773,
+        41.8289
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2014/05/mud.jpg",
+    "length": 15,
+    "rating": 3,
+    "description": "mostly logging roads, can be ridden rigid. Climb to the top of mohawk mountain and back down. Lots more to be explored, this is a good 15 miles and 1.5 hours of riding. 1) at the dead end first road before the dead end circle you'll find the trail. 2) take your immediate right 3) take lefts when possible to get to eli bunker road. 4) take a left on eli bunker and your first right when you see a trail opening (about a quarter mile) 5) follow this trail all the way down to the bottom then veering right when in doubt. 6) at the bottom at the drive take a left and CLIMB! 7) take another right past the gate 8) this trail will sideline a driveway at the end, go down it and take another right, over the bridge and then take a right past the bridge. 9) follow the logging road along the river for about a 5 minutes or so. 10) at the fork, stay to the left 11) top of climb take a right, climb to the top and stay right of the park buildings and straight across to the xcountry trails 12) climb up the hill for a short singletrack section, stay left at the T. 13) this will bring you out to the main road. (take a right down the hill to get water at the well which will be on your left) 14) take a left on the main road and look for the 2nd trail entrance that does not say \"foot traffic only) 15) this will bring you up to the top of the ski mountain. ride up by the lifts but stay left. (don't ride down the mountain, or do, I haven't yet) 16) trail will be up on your left, go down the hill and take your first left back to the main road. 17) climb up the mountain on the road to the top (there is a technical way down from behind the towers up there but I haven't mapped it well yet) 18) ride back down the dirt road and head back down. 19) on the right keep an eye out for picnic tables, there is a small trail opening on the right, take that 20) take a right at the end and follow any path back down to Wadhams road. from there you can ride back to eli bunker direct or back down the way you came up. Hope we can find more trails in here. Looks promising. Not a much singletrack but very rideable and a good workout. Strava Not the exact route described but will get you there route:http://www.strava.com/activities/144989849",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Fullersburg Woods",
+    "city": "Oak Brook",
+    "state": "Illinois",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -87.953586,
+        41.841215
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 6,
+    "rating": 0,
+    "description": "Fullersburg Woods opened to the public in 1920 and has a rich history. In the 1930s, a Civilian Conservation Corps camp was built here, and the visitor center and several of the shelters stand as remnants of that period. In subsequent years, the preserve was so heavily used that in 1969 picnicking was restricted, and boating was prohibited because sewage discharges and water runoff from surrounding communities polluted Salt Creek.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Greers Ferry Lake",
+    "city": "Heber Springs",
+    "state": "Arkansas",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -92.105976,
+        35.508351
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "Greers Ferry Dam stands at the foot of beautiful Round Mountain in the Ozark Mountains of north-central Arkansas. Numerous parks offer modern camping and recreational opportunities. Marinas provide rental services, food and other supplies and services. Lake fishing is good throughout the year. A trout hatchery furnishes trout for the Little Red River flowing out of the dam. Hiking trails give visitors a beautiful natural view of the lake and its surroundings. Activities on and around Greers Ferry Lake will keep anyone busy.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Little Beaver State Park",
+    "city": "Beaver",
+    "state": "West Virginia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -81.08087,
+        37.75481
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 18,
+    "rating": 0,
+    "description": "Little Beaver State Park is a 562-acre day-use park that features many outdoor recreational opportunities centered around an 18-acre lake. All trails are open for both hiking and biking, but bikers should use caution while riding in high-use areas. The following park trails can be easily linked to create various circuits based on the individuals preference and skill: Beaver Creek Trail Many seasonal wildflowers and a stand of virgin pine and oak are features of this half-mile trail that encircles a portion of Beaver Creek. The trail runs above the lake. Billy Goat's Gruff This is a challenging bike trail full of rocks and steep inclines. It is an extreme .6 mile challenge. Black Bear Run A .5 mile trail that follows a laurel thicket along Beaver Creek. Creek Bed A moderate .4 mile of wooded trail for bikers and hikers. Crooked Rock Trail Very rocky and challenging trail with steep terrain. 1.2 miles. Deer Trail An open trail with .8 miles of changing terrain. The trail changes from an open field to a steep wooded incline. Drop Off Starts off moderate and then becomes very steep. .4 mile. Easy Street A wooded .5 mile easy trail. Wooded with moderate changing terrain. Hemlock Trail A moderate .25 mile trail in a stand of hemlocks. Laurel Creek This trail is 2.6 miles and is the second longest trail in the park. It follows the park boundary along Country Club Road and is an easy to moderate walk with changing scenery. Lake Front Trail A loop trail that follows the lake front. Very easy and a 1.1 distance. Nature Ridge This trail has an incline, sometimes steep, that follows the ridge above the lake. It is a 2.2 mile trail Railroad Grade This trail is 1.95 miles long. The scenery ranges from deep woods to open meadows. Gentle loop trail that follows Laurel Run Creek. Rhododendron Run This trail is 2.5 miles long, which makes it the longest in the park. It follows the park boundary with extreme terrain challenges to bikers and hikers. Stone Trough Rocky and steep wooded trail with changing terrain. The length is .9 miles. Topper's Ridge This rocky trail is .7 miles long. It is considered to be a moderate to extreme trail for bikers. Turkey Spur A short rocky trail that runs along a ridge spur. .5 miles. Weaver Way Moderate 1.5 mile wooded trail with changing terrain. ",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Peaks Trail",
+    "city": "Breckenridge",
+    "state": "Colorado",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -106.06724,
+        39.4874
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 0,
+    "rating": 0,
+    "description": "Awesome trail, lots of rocks, roots, climbs, and some killer downhill. You can really get speed on some parts so be careful of hikers and other bikers. Trail is cut out of pine and aspen trees, incredible views of the surrounding mountaings at times. Aerobic level may be higher for some - especially those coming from sea level, this trail head starts at about 9600 (Breckenridge) feet, goes up to around 10,500 then back down to 9000 (Frisco). ",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Lake Norman State Park",
+    "city": "Troutman",
+    "state": "North Carolina",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -80.939891,
+        35.666867
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": "https://images.tripleblaze.com/2013/06/lake_norman_group_campsite-0.jpg",
+    "length": 3,
+    "rating": 4,
+    "description": "At Lake Norman State Park, fun is just a matter of scale. On one hand, there's the largest manmade lake in the state, Lake Norman. When filled to capacity, its surface area is 32,510 acres with a shoreline of 520 miles and a main channel 34 miles in length ? thus its nickname, the \"Inland Sea.\" Thirteen miles of the shoreline are in the state park, which provides boating access.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Emerald Lake",
+    "city": "Bozeman",
+    "state": "Montana",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -110.94402,
+        45.48359
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 10,
+    "rating": 0,
+    "description": "Some consider this the best ride in Montana. There is a stiff, 2k ft climb to a gorgeous high alpine lake. Ofcourse, this makes for a killer downhill on the return. You can continue beyond Emerald Lake to Heather lake for an additional mile, but the best of the singletrack is already behind you at this point. This is a popular trail with hikers and equestrians, so going on a weekday is best (all those other trail users will break your flow on the plummet back to your vehicle). The bottom of the \\\"singletrack\\\" is pretty wide. Only this, plus the relatively short length (5mi each way) keep this from being a 5-star in my book.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Wildcat Creek Trail",
+    "city": "El Cerrito",
+    "state": "California",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -122.26391,
+        37.90821
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": null,
+    "length": 11,
+    "rating": 0,
+    "description": "Park your car at the lot near Tilden Indian Camp and start off going back down Central Park Dr a little ways and turn left at Lone Oak Rd. Continue left onto Read Loop Rd. for a mile until you reach the intersection for Wildcat Creek Trail at Jewel Lake. Continue on Wildcat Creek Trail for several miles on mainly wide fire road until you reach the end at Alvarado Staging area. Trail is fairly flat and the speed is relaxed. Not many steep climbs or descents, but good for an easy long family ride or recovery ride. Enough room to pass hikers on the trail who are friendly to you as long as you are courteous and friendly to them. Give yourself a couple of hours to finish this out and back if you're riding at a medium pace. Plus, if you have kids, it's fun to take them out to Animal Farm near the Indian Camp parking lot in Tilden. Great trail to get your feet wet in the world of mountain biking. It was my very first offroad ride and it was perfect for just getting comfortable on a mountain bike. Happy Trails! ",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Broadneck Warm-up",
+    "city": "Arnold",
+    "state": "Maryland",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -76.48403,
+        39.04721
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 2,
+    "rating": 0,
+    "description": "Update: \"Please be advised that under current Anne Arundel County Law, biking (motorize or not) off of a paved surface in a County Park is prohibited.\" Trail is predominately an out and back trail, but there are a few alternate trails which loop back to the main trail. Trails has no markings, but are relatively well traveled and easy to see. There are a few obstacles such as fallen trees and stream crossings, but overall pretty easy riding. Good afterwork trail or for testing out new gear before your next epic ride. Should be able to ride all trails in less than an hour. ",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Harrisburg Half",
+    "city": "Harrisburg",
+    "state": "North Carolina",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -80.6561,
+        35.31769
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2009/trails/02/2018-1178035904.jpg",
+    "length": 0,
+    "rating": 3.5,
+    "description": "Keeping with the spirit of NASCAR's famous Lowes Motor Speedway just three miles to the north, The Harrisburg Half is a \"dirt criterium\" track used for the Charlotte Short Track Series Circuit...but it's a great half-mile loop for users of all skill levels to turn and burn and get a sprint workout anytime. The best part of this trail is the fast hardpack gravel/rip-rap trail surface with some large, well-constructed, downhill berms. The trail can be divided into 4 sections (for the purpose of referring to its parts). Section one begins at the top of the hill, includes 4 berms on a quick downhill switchback and exits on to the park service road. From there you ride up the service road about 50+ feet to the beginning of section 2, which heads off into the woods down to the left includes a benched downhill trail with 2 berms and a culvert crossing. This section exits into singletrack crossing a small grassy field. Travel straight into the field 100-150 ft and enter section 3 into the woods to the right. This begins the second half of the trail and is all uphill until you begin your next lap. Section 3 crosses the park walking trail. You travel straight ahead into section 4. Section 4 is a climb up the park walking trail. Stay right and follow the park walking trail up past the shelter. As the walking trail bears around to the left at the top of the hill you will see the trailhead bulletin board and the beginning of the trail. Approximate total ascent is 65ft per half-mile lap. ",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "World's End",
+    "city": "Hingham ",
+    "state": "Massachusetts",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -70.8737,
+        42.25835
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": null,
+    "length": 5,
+    "rating": 3,
+    "description": "Four drumlins jutting out into Hingham Harbor, woodsy trails with great views of Boston Harbor &amp; Islands as well as Nantasket. Most of the trails are old carriage paths, which are somewhat grassy; there's also a rocky section (Rocky Nook, haha) and some gravel paths. Lots of walkers, families. ",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Bobcat Run",
+    "city": "North River",
+    "state": "New York",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -74.1053,
+        43.71001
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": null,
+    "length": 50,
+    "rating": 0,
+    "description": "Beginner Mountain Biking Rides - The easiest riding for beginners is on the roads in the area - Old Farm Road, 4-H Road, Harvey Road, and 13th Lake Road. The Old Faithful Trail connects the 4-H Rd. and Harvey Rd and makes a nice beginner loop. Intermediate bike rides are found on Trapper, Cougar, and Sugarhouse Trails. These trails also lead to Mt. View Trail, Apple Way and The North Acres Farm. There are great mountain views here and you can see the new llamas at the farm. Expert riders can test their skills on Matt &amp; Jeff, Solitude, Bobcat, Duffany's, and the single-track trails. Get a copy of the Mt. Bike Guide, and maps at the lodge or at the Adventure Center.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Kachemak Bay State Park and State Wilderness Park",
+    "city": "Homer",
+    "state": "Alaska",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -151.004623,
+        59.287943
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "These two parks sit across the bay from the town of Homer, offering cabins, backcountry camping, and miles of trail.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Pacific Crest Trail: C: Hwy 140 to Hwy 138.",
+    "city": "Altamont",
+    "state": "Oregon",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -122.291439,
+        42.395848
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 76,
+    "rating": 0,
+    "description": "Section C of the PCT in Oregon runs 76 miles from Highway 140 near Fish Lake to Highway 138 near the Cascade Crest. Section C offers up a true wilderness experience with gorgeous views thanks to the Sky Lakes Wilderness and Crater Lake National Park. Along the way the trail passes the Devils Peak/Lee Peak Saddle; Honeymoon Creek; Highway 62, close to Mazama Campground; Crater Lake National Park, OR; Crater Lake, OR; and Discovery Point.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Rainbow Falls State Park",
+    "city": "Chehalis",
+    "state": "Washington",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -123.232831,
+        46.629197
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "Rainbow Falls State Park is a 139-acre camping park with 3,400 feet of freshwater shoreline on the Chehalis River. Situated in stands of old-growth forest, the park features a waterfall and a small fuchsia garden.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Frank G. Bonelli Regional Park",
+    "city": "San Dimas",
+    "state": "California",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -117.81529,
+        34.07794
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2013/06/mobile-1372205901-0.jpg",
+    "length": 15,
+    "rating": 3.57,
+    "description": "Frank G. Bonelli Regional Park is an expansive park system complete with reservoir, swimming areas... and a surprisingly good trail system. However, it does cost $10 to park in the park, but there is a Park and Ride lot located just outside the entrance near the off ramp for the 57 Freeway. You can easily park your car there and ride into the park, getting access to the trails for free! While at first the trails appeared to be just wide, gated gravel roads, as I continued around the park I started to find more and more singletrack. The trails were entertainingly rocky in places, and uber fast and smooth in others. Despite having a trail map, I had issues following the designated route in places. As I was nearing the end of the loop, I took a wrong turn and ended up on a different trail that took me out of the park. It conveniently led me very near to where I had parked at the park and ride, so in the end everything worked out! One word of caution: these trails are very exposed, and the majority of it has absolutely no shade or respite from the blazing sun. Ride early in the morning, or during times of the year when the temps are cooler.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "High Lonesome/ Caribou/ Strawberry West Trail ",
+    "city": "Fraser",
+    "state": "Colorado",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -105.73665,
+        39.98636
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2009/trails/02/2715-1217741755.jpg",
+    "length": 27,
+    "rating": 0,
+    "description": "If you like hard technical rides with some hike-a-bike this ride might be for you. it's a great ride. High Lonesome at 6 miles is a little short for me so I continue on to Caribou Trail and Strawberry West. Once you get to Strawberry West there is no easy way back I've ridden it as an out and back and as a loop. Pick your poison These are some nice technical trails with lots of natural features rocks, roots, stream crossings, bridges, logs, rocks and more rocks. Caribou Trail is like a 5 mile bushwhack! Strawberry West Trail is some sweet singletrack. This year they put in some new signs that helps. At least you know you're on the right track. Strawberry Creek Trail N9 1 from Caribou Trail to Strawberry West is more hike-a-bike to a phenomenal downhill run From Devils Thumb Trailhead follow Devils Thumb Trail a short distance to High Lonesome Trail. Follow High Lonesome Trail to The Junco Lake parking area 6mi. total. Head out of the parking lot to FS 129 turn right follow the road about Â½ way around Meadow Creek Reservoir turn right on FS 857.2 watch for Caribou Trail to take off on the right. The trail is blazed and still hard to follow but generally follows the creek. Left when you reach Strawberry West Trail ride up to FS 129 turn left to FS 128 right back to where you parked. About 27 miles I'm guessing I took a wrong turn and my computer wasn't working for a while",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Kirkwood Ski Resort/mtb Park",
+    "city": "Kirkwood",
+    "state": "California",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -120.06704,
+        38.68386
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": "https://images.snowtoit.com/2011/10/789-0.jpg",
+    "length": 0,
+    "rating": 0,
+    "description": "Depending on the month, up to 5 ski lifts will be in operation to ferry you to the top of 11 different downhill trails. Their map is microscopic, but the trails are makrked well and in good shape. Kona Stinky\\'s are available to rent. These bikes are bought new each season, used only on weekends and sold off at the end of the bike season for about half of their new price and they are still in great shape. Coilers too.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Bunce School Road To T33 Crash Site",
+    "city": "Allenspark",
+    "state": "Colorado",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -105.46947,
+        40.17093
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2012/07/BunceSchoolRoad-0.jpg",
+    "length": 14,
+    "rating": 0,
+    "description": "Bunce School road is mostly class 2 except about a half mile in the middle that was loose and steep (class 4). Take FR202 to FR203 to a hiking trail to get to the crash site. 203 has a lot of steep loose rocky spots which may require a hike-a-bike both ways. The crash site has a few large pieces. There was a lot of small fragments in the ground. Most of the plane was aluminum so it hasn't decayed or rusted at all.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Elkhorn Loop",
+    "city": "Idaho City",
+    "state": "Idaho",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -115.60563,
+        44.02384
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 0,
+    "rating": 0,
+    "description": "Start up the dirt road about a mile or two and you will see the trailhead for Elkhorn loop a little bit after the climb levels off and then starts downhill. Then follow the markers that say Elkhorn loop. It will kick you back out onto eht street where you started your climb. It's a fun run but not very technical. Really good views.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Perch Lake State Forest Campground",
+    "city": "Muskallonge",
+    "state": "Michigan",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -88.648165,
+        46.361027
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "Phone number indicated above is for the Management Unit. Sites available on a first-come, first-serve basis. No reservations. 35 sites for tent and small trailer use. Rustic campground includes vault toilets and potable water from well hand pump.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "East Branch Forest Preserve",
+    "city": "Glendale Heights",
+    "state": "Illinois",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -88.052399,
+        41.915841
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 0,
+    "rating": 4,
+    "description": "The 525-acre East Branch Forest Preserve in Glendale Heights is largely a natural wetland along the East Branch of the DuPage River with lakes, marshes and wildlife habitats. It is an excellent place to observe grassland birds, shorebirds, and waterfowl, including spring and fall migrants. In addition to recreational opportunities, the preserve provides valuable benefits to the community in the form of stormwater control and improved water quality.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Wharton State Forest",
+    "city": "Hammonton",
+    "state": "New Jersey",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -74.646668,
+        39.644031
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 0,
+    "rating": 0,
+    "description": "Wharton State Forest is the largest single tract of land within the New Jersey State Park System. It is also the site of Batsto Village, a former bog iron and glassmaking industrial center from 1766 to 1867 that currently reflects the agricultural and commercial enterprises that existed here during the late 19th century. Throughout Wharton are rivers and streams for canoeing, hiking trails (including a major section of the Batona Trail), miles of unpaved roads for mountain biking and horseback riding and numerous lakes, ponds and fields ideal for wildlife observation. Bald eagles, red-tailed hawks, marsh hawks, ospreys, great blue herons, swans, screech owls, great-horned owls, bluebirds, hummingbirds, purple martins, goldfinch, turkeys, beavers, river otters, fox and deer are only some of the wildlife the alert visitor can see.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Folkstone Park Trail",
+    "city": "Herndon",
+    "state": "Virginia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -77.36156,
+        38.9056
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 2,
+    "rating": 0,
+    "description": "Sandwiched between Fox Mill Road and West Ox Road and bordered by Folkstone Drive to the north, this fun little loop of singletrack in Oak Hill, VA (Herndon) is hardly known. This is not an overly challenging trail, but it does have a few technical spots. In a few cases the trail comes right to the edge of a six-foot drop-off into the stream. Also, there are a few marshy places with thin wooden bridges that make for an interesting challenge.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Prison camp",
+    "city": "Tucson",
+    "state": "Arizona",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -110.71986,
+        32.33613
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2014/04/WeeklyWander18-0.jpg",
+    "length": 5,
+    "rating": 4,
+    "description": "Downhill",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Jacques Cartier State Park",
+    "city": "Morristown",
+    "state": "New York",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -75.677606,
+        44.552452
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 0,
+    "rating": 0,
+    "description": "Jacques Cartier State Park has a sheltered bay protecting the sandy swimming beach and campers dock. The two biggest draws for the park are unlimited boating opportunities and excellent fishing. The park's large open lawns encourage games and picnics; a playground and another picnic ground, this one forested, are nearby. In winter, cross-country skiing is permitted in the park.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Appalachian Trail 017: Newfound Gap to Davenport Gap",
+    "city": "Cherokee",
+    "state": "North Carolina",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -83.424836,
+        35.611077
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": "https://images.tripleblaze.com/2009/02/676-1229290222.jpg",
+    "length": 31,
+    "rating": 0,
+    "description": "This is the second major section of Appalachian Trail inside Smoky Mountains National Park. Shelters along this route include Icewater Spring, Kephart, Pecks Corner, Tricorner Knob, Cosby Knob, and Davenport Gap shelters. Shelter spots along this route may need to be reserved in advance. Recommended parking spot: see Google Map to the right.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Villanueva State Park",
+    "city": "Villanueva",
+    "state": "New Mexico",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -105.324274,
+        35.25668
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "The park is nestled between high sandstone bluffs that form a canyon along the Pecos River. Camp or picnic under the shade of cottonwood trees. Enjoy fishing, birding, wildflower viewing, or hiking the trails along the canyon walls.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Dry Falls",
+    "city": "Highlands",
+    "state": "North Carolina",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -83.235098,
+        35.068188
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": "https://images.tripleblaze.com/2012/12/30-IMG_1662-0.jpg",
+    "length": 1,
+    "rating": 5,
+    "description": "This is a beautiful waterfall trail right along the side of the road. It's a short path to hike down from the road to the falls. The path then takes you around and directly behind the waterfall.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Greenbelt Plateau",
+    "city": "Superior",
+    "state": "Colorado",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -105.23302,
+        39.92897
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2012/08/DSCN0823-0.jpg",
+    "length": 3,
+    "rating": 3,
+    "description": "An extremely mild, easy trail. Gentle climbs and descents on coarse gravel that's very stable. Extremely few rocks. A good trail for teaching your kids to ride off the road, or for a newly converted roadie. The trail ends at Highway 93, where you can connect to Community Ditch (if you head west, be careful crossing the highway) or the Marshall Mesa trails. There's also a connector trail shortly before the end that will lead to the eastern section of Community Ditch.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Arthur Kunz County Park",
+    "city": "San Remo",
+    "state": "New York",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -73.214465,
+        40.890889
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 0,
+    "rating": 0,
+    "description": "Situated on the western bank of the Nissequogue River, near its estuarine mouth, this 93 acre forested property is utilized primarily for hiking. Arthur Kunz County Park features tidal creeks, a lush, mixed deciduous forest, rolling hills and valleys, and quaint hidden ponds all of which provide important habitat for wildlife. The trail system in the park provides a scenic link in a section of the Long Island Greenbelt Trail which heads north from Arthur Kunz Park to its terminus at Sunken Meadow State Park.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Viking Trail",
+    "city": "Rome",
+    "state": "Georgia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -85.19113,
+        34.2901
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "This is just a basic paved path like the Silver Comet Trail. It connects the main campus at Berry College to the Mountain Campus. It runs along the treeline then under a power/utility line. Three miles one way (if you only ride the trail, but you can get many more miles by riding some fire road/utility roads or even some of the mtb trails back at the mountain campus). Deer are everwhere along this trail. It's very easy, only a slight grade going up to the mtn campus, you really don't notice this until you're on your way back and you notice that you're coasting a bit. This is my 5 year old's favorite because he can ride his own bike on it.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Greenleaf Lake State Recreation Area",
+    "city": "Litchfield",
+    "state": "Minnesota",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -94.688046,
+        46.727888
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 0,
+    "rating": 0,
+    "description": "Greenleaf Lake State Recreation Area (SRA) is open to the public. Recreation opportunities are limited to day use. No facilities are available at this time.The site includes portions of Greenleaf and Sioux lakes, several wetlands and an island.Remnant oak savanna, oak/rock elm woodlands, and nearly half of the lakes' natural shorelines are found within the statutory boundary of the SRA.Good panfish and largemouth bass fishing. Sioux Lake, being the shallower of the two lakes, supports significant waterfowl populations.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Ainsworth State Park",
+    "city": "Troutdale",
+    "state": "Oregon",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -122.047119,
+        45.599284
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "Nestled in the awe-inspiring Columbia River Gorge, Ainsworth is equal parts waterfall wonderland, hiker's playground and camper's delight.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Jug Handle State Natural Reserve",
+    "city": "Fort Bragg",
+    "state": "California",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -123.805294,
+        39.445723
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "This reserve offers a firsthand look at 500,000 years of CaliforniaÃs geological history. A 2.5- mile nature trail leads through 5 terraces uplifted from the sea approximately 100,000 years apart. The lowest terrace still battles ocean waves, the third terrace has a unique pygmy forest, and terraces above display more advanced vegetation. (707) 937-5804.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Barkley Lake",
+    "city": "Grand Rivers",
+    "state": "Kentucky",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -87.997584,
+        36.795021
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "Lake Barkley was named for former Vice-President Alben Barkley. Land Between the Lakes (US Forest Service) and Fort Donelson National Military Park are on Lake Barkley's western shore.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Gunpowder Falls State Park",
+    "city": "Kingsville, Md",
+    "state": "Maryland",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -76.42235,
+        39.47874
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 10,
+    "rating": 0,
+    "description": "This entire trail runs from Jerusalem Road to Pleasantville Road (and beyond! Although I've never ridden that section). This write up covers the section of the trail which runs from Harford Road to Pleasantville Road and is approximately 10 miles out and back. From the parking lot on the Baltimore County (south) side of the Little Gunpowder, enter the trail. Trail head is right in the middle of the lot. Follow the trail along the Little Gunpowder. There are four stream crossings and some nice rock gardens along the trail to Bottom road. When the trail exits onto Bottom Road, go right across the bridge over the Little Gunpowder River. Continue on Bottom Road until you pass Laurel Brook Road on your right. Just past Laurel Brook Road, enter the trail again on the left. The entry is a nice steep uphill climb to a flat trail. This section of the trail is an old railroad bed, so it's pretty flat for about .75 miles. At several points you can see the Little Gunpowder on your left down in the valley. Continue on the old rail trail until it abruptly ends, then turn left. There is a nice little 2 ft. drop around the first turn. The trail continues towards Pleasantville Road, with a couple of nice uphill sections and some rooty, technical downhill sections. Once you've reached Pleasantville Road, take a left on Pleasantville and ride across the bridge over the Little Gunpowder. Be careful here! The cars headed northbound on Pleasantville have a sharp, almost blind turn to get onto the bridge. Just over the bridge, lift your bike over the guard rail and onto the trail again. You're now in the Balto county again. The first section of trail has a nice, technical downhill section to a small stream crossing. The trail on this side of the L'il Gunpowder has some swooping up and downhill sections with stream crossings at the terminus of each downhill. Some fun technical sections, too. Continue along this trail until it dumps you out onto Bottom Road again. Come out of the woods and go left on Bottom, back down towards the L'il Gunpowder. Enter the woods on the right before you cross the bridge and backtrack along the little Gunpowder towards Hardord Road. At two of the stream crossings on this leg there are side loops that follow the streams uphill, cross the stream, the follow it back downhill. One of them has a nice, small waterfall at the top. This is a multi-use trail, and during the summer sections of it can be overgrown. Sticker bushes, the unofficial MD state flower. ",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Sand Canyon Trail",
+    "city": "Cortez",
+    "state": "Colorado",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -108.81799,
+        37.3414
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 14,
+    "rating": 5,
+    "description": "Route is thru slickrock and singletrack. Thru indian sites, please do not go off trail or bikes will be banned. Built by and for mountain bikes these trails are fun and hard to follow. 2 canyons to ride. There is a large ruin at the top of Sand Canyon main trail but involves a 30 switchback hard climb, not the fun MTB route.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "CDT NM27: Skull Bridge Trailhead to US Hwy 84",
+    "city": "Abiquiu",
+    "state": "New Mexico",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -106.624846,
+        36.33
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 14,
+    "rating": 0,
+    "description": "Segment 27 of the CDT runs 14.4 miles from the Skull Bridge Trailhead to US Hwy 84. A good portion of this segment is real trail, but a sizable portion is also routed along a road. Along the way the trail passes Mesa De Los Viejos.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Wills Canyon (t5008)",
+    "city": "Cloudcroft",
+    "state": "New Mexico",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -105.74006,
+        32.80043
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 4,
+    "rating": 0,
+    "description": "The portion of trail coming off the upper (west) end of T113 is a steep rocky downhill stretch that will test your technical skills. It would be very difficult to ride up this section. Aside from the portion mentioned above, and a short downhill section linking back into lower T113, this trail follows an old railroad grade and is relatively easy riding with excellent wide-open views. You pass through a variety of terrain as well, making this an interesting ride as part of a larger Willie White-Wills Canyon Loop. Elevation Range: 8,700 - 9,360 ft (660 ft elevation gain)",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Branched Oak State Park Area 7",
+    "city": "Raymond",
+    "state": "Nebraska",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -96.88675,
+        40.97364
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": null,
+    "length": 5,
+    "rating": 2,
+    "description": "Easy singletrack through both prairie and wooden sections. The trail is well worn and is occasionally marked with a horse trail sign but bikes can ride as well. Has some nice rolling hills but nothing major. Good for beginners or those wanting an easy fast afternoon ride.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Manchester State Park",
+    "city": "Wedgefield",
+    "state": "South Carolina",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -80.52584,
+        33.80297
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2009/trails/04/440-1204355374.jpg",
+    "length": 7,
+    "rating": 3.42,
+    "description": "The trail is about 7.5 mile loop, good condition most of the time. This trail is partially shared with motorcycles and/or horses, so be aware of this. There are probably 100 miles of trails in the forest, so don't get lost. Maps are available by calling or usually at the Bicycle staging area. Also motorcycles, dogs, horseback, hunting (turkey hunting is during april, deer hunting is oct-dec) is allowed. During hunting season ride only on Sundays! For more information: Call Park Office (803) 494-8196",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Hawk Hollow Forest Preserve",
+    "city": "Hanover Park",
+    "state": "Illinois",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -88.170718,
+        41.970735
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "A gently rolling landscape covered with grassy meadows, accented with mature woodlands, dotted with fens, and bisected by a river - that's what visitors will find at Hawk Hollow Forest Preserve. At over a thousand acres, this large preserve hosts various wildlife habitats, but most importantly, it contains one of the largest unbroken blocks of grassland habitats in the county. This grassland is home to several uncommon bird species, including Henslow's sparrow, bobolink, eastern meadowlark, grasshopper sparrow, and savannah sparrow; and while currently it is composed of many non-native species, the District is working to reintroduce native grasses to this significant area.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Hoffmaster State Park",
+    "city": "Muskegon",
+    "state": "Michigan",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -86.265443,
+        43.132943
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": "https://images.tripleblaze.com/2012/08/July-2012-036-0.jpg",
+    "length": 3,
+    "rating": 4.5,
+    "description": "P. J. Hoffmaster State Park features over three miles of Lake Michigan shoreline, a 297 site modern campground, towering Lake Michigan dunes, and the Gillette Visitor Center. Miles of hiking and skiing trails offer stunning views of Lake Michigan and subtle beauty at every turn.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Zimmerman Trail",
+    "city": "Billings",
+    "state": "Montana",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -108.50492,
+        45.79877
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 15,
+    "rating": 0,
+    "description": "This is a great playground for mountain bikes right on the edge of town. There is both traditional singletrack and slickrock everywhere. There are stunt opportunities galore and some impressive exposure over the cliffs. The trail that parallels closest to the highway is mostly smooth while the trail that runs lower along the rocks is more advanced. There are countless lines between the two and alternate braids that seek different challenges, keeping the ride fresh. Just go out and explore.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Weeki Wachee Preserve Trail",
+    "city": "Spring Hill",
+    "state": "Florida",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -82.638975,
+        28.479825
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": "https://images.tripleblaze.com/2011/12/8-November-128-0.jpg",
+    "length": 10,
+    "rating": 5,
+    "description": "This is a very nice Florida Preserve. There are man-made lakes created from mining. The water is crystal clear and you can see the bottom until it drops off. There are trails that go around the lakes and a trail that goes into the swamp where there are freshwater and saltwater marshes, and pine-covered sandhills.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Cave-run Lake",
+    "city": "Owingsville",
+    "state": "Kentucky",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -83.52476,
+        38.12339
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 0,
+    "rating": 0,
+    "description": "They have excellent trails, much like the ideal trail you would see in an outdoor mag. There are quite a few trails there, a good beginner trail is called Caney Loop which takes you out over the lake, excellent view, and a most excellent ride. Contact: bahick00@mik.uky.edu",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Sidewinder",
+    "city": "Olathe",
+    "state": "Colorado",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -107.88875,
+        38.59656
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2012/10/sidewinder-trail-0.jpg",
+    "length": 21,
+    "rating": 4.33,
+    "description": "This trail description is South-to-North. You will want a shuttle vehicle at the other trailhead off H75 Road. We used Peach Valley Road to drop the shuttle at that end. The Sidewinder Trail is a relentless, rocky, technical, physical adventure on the bike. There are very few extended climbs or downhills, but my GPS still measured 2500' of climbing and 3000' of total descending by the time we were done. Mostly it is a constant mind-game of rocky, technical bike-handling tests. There are very few sections of fast cruising. The trail is extremely well-built though so the technical challenges are mostly rideable for a skilled rider. There were 6 of us on our ride and while we were all bucked-off at various places, usually a couple of us would clean most features. As the name implies, the Sidewinder weaves in and out of many arroyos as you cling to the western edge of the Gunnison Gorge Wilderness Area. You will climb and descend these arroyos enjoying many slickrock drops and ledges along the way, as well as about a thousand other rocky treats. The Sidewinder is not for beginners. I would imagine they would hate it and probably wind up hurt. For a rider loving a technical, physical workout its one of the best trails I've ever ridden. It took our group 5 hours to ride the whole thing including all our breaks and lunch and all that. If you google \"Sidewinder Trail\" then you will find a map on the BLM website that shows the route and many other bailout options. Go ride it... you will not be disappointed.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Parker Road",
+    "city": "Chester",
+    "state": "New Jersey",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -74.73082,
+        40.77381
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": null,
+    "length": 2,
+    "rating": 4,
+    "description": "After over a year of 3 hour work days each monday, the parker road short track is finished! There are a lot of rocks in the middle, but everything is riding out nicely. The end is nice and flowy.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Northwest Park",
+    "city": "Eau Claire",
+    "state": "Wisconsin",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -91.51957,
+        44.84342
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2014/05/IMG_20140521_185012359.jpg",
+    "length": 3,
+    "rating": 3.83,
+    "description": "All single track trails with lots of down hills turns, trail style flows nicely and has several muddy water crossings. Maintenance on the trail was ok, you have to deal with some down trees every now and then. Trails are well ridden singletrack that is fairly hard packed. Trails are not individually marked and no maps are available, so if your land navigation isn't the best then a GPS might help you get back to the trail head. My max speed while investigating this trail for an hour was 17 mph and my ascent/descent was +515/-488 ft. Lots of potential for this trail if it continues to be developed.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Tucson Mountain Park",
+    "city": "Tucson",
+    "state": "Arizona",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -111.0469,
+        32.20543
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 1,
+    "rating": 0,
+    "description": "Just about every pullout on Gates Pass Rd has a trailhead. Pick up a trail and connect to many others along the way if you wish. You can do any amount of miles that you wish. The trails are great for beginners, quick rides after work and night rides. If you feel you are getting lost, just head back toward the mountain. There are also paved roads to get you back to your car if you get tired of the trails.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Hole In The Ground",
+    "city": "Truckee",
+    "state": "California",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -120.38932,
+        39.32823
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 0,
+    "rating": 0,
+    "description": "This ride is both fun and challenging. It has a bit of everything including steep climbing, technical downhill sections, beautiful lakes, nice smooth single-track, and some dirt and paved road riding. The trail is well marked and exceptionally well maintained. It is popular and receives a fair amount of traffic, especially on weekends. The length and vertical gain are in the immediate range of difficulty",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Joliet Iron Works Historic Site",
+    "city": "Joliet",
+    "state": "Illinois",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -88.081724,
+        41.524987
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 0,
+    "rating": 0,
+    "description": "The preserve is part of the Des Plaines River preservation system, which conserves more than 2,400 acres of land.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Nelson Dewey State Park",
+    "city": "Cassville",
+    "state": "Wisconsin",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -91.018057,
+        42.731991
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 2,
+    "rating": 0,
+    "description": "Nelson Dewey State Park sits on a 500-foot bluff and overlooks the Mississippi River. The views are almost as good as the variety of activities here with camping, hiking, cross-country skiing and snowshoeing available for visitors.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Deepdene/Dellwood",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -84.32475,
+        33.77184
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 1,
+    "rating": 4,
+    "description": "Mulched hiking trails in 26 acre park parallel to Ponce de Leon Ave. Amazing stone bridges and stream views.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Jass Chrome Molly",
+    "city": "Vernal",
+    "state": "Utah",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -109.45779,
+        40.59866
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2013/05/CIMG1698-0.jpg",
+    "length": 7,
+    "rating": 4.75,
+    "description": "WOW! This incredible slice of dirt could be one of the best in the country. Super narrow singletrack(6-8 inches) rolls it's way through rust and grey hued formations, between gnarled junipers and ends with a fast flowing descent back to TH. A figure eight loop with a circuit connected to it, all one trail though. From the start just stay left at every intersection to ride the trail in the direction it was designed to be ridden. I do not recommend riding this trail in any other variation than described above. The creators of the trail will tell you the same. A Classic! PLEASE STAY ON THE TRAIL. It's very narrow and very fragile just off the edges of the trail.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Lusardi Creek Preserve",
+    "city": "San Diego",
+    "state": "California",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -117.162756,
+        33.016146
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 0,
+    "rating": 0,
+    "description": "Lusardi Creek features a small multi-use trail system (comprised primarily of utility roads) The preserve is mainly canyons with robust riparian habitat along the creek.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Great River State Trail",
+    "city": "Trempealeau",
+    "state": "Wisconsin",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -91.216962,
+        43.864511
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 24,
+    "rating": 0,
+    "description": "This 24-mile trail travels through prairies and backwaters of the upper Mississippi River valley. Built on an abandoned Chicago-Northwestern railroad line, the trail has a finely crushed limestone surface suitable for walking and bicycling for much of the year and snowmobiling, cross-country skiing and snowshoeing in winter. The Great River trail is within a larger area called the Mississippi Flyway and passes through two National Wildlife Refuges.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Brimfield State Forest",
+    "city": "Brimfeild",
+    "state": "Massachusetts",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -72.248968,
+        42.100095
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 20,
+    "rating": 0,
+    "description": "Brimfield State Forest is home to 20 miles of roads and trails that can be used for hiking, walking and horseback riding. You'll also find Dean Pond Recreation Area on the park's property. This area is popular because of its 100-ft beach. Visitors love to sunbathe and fish here. There are multi-use trails, restrooms and several picnic areas for your fun and convenience.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Other Trails",
+    "city": "Jupiter",
+    "state": "Florida",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -80.175405,
+        26.935296
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 1,
+    "rating": 0,
+    "description": "All of the trails bellow are less than 0.25miles and offer unique and diffrent views of the park. Indian Camp Trail, Pond Trail, Indian Hammock Trail, Cow Pen Loop Trail, Bridge, Overlook Trail, Dark Hammock Trail, and Big Grove Loop Trail.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Valley Falls State Park",
+    "city": "Fairmont",
+    "state": "West Virginia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -80.142404,
+        39.437811
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 10,
+    "rating": 0,
+    "description": "Once the site of a lumber and grist mill community, the scenic treasure of Valley Falls State Park is located only a short drive from Fairmont and Grafton. This 1,145 acre day use park hosts a variety of outdoor recreation including fishing, picnicking, kayaking, and 18 miles of hiking and mountain biking trails.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Millers Pond State Park",
+    "city": "Durham",
+    "state": "Connecticut",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -72.628236,
+        41.480518
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 5,
+    "rating": 0,
+    "description": "Visit a Connecticut State Park or Forest and explore the wealth of diverse natural areas and unique features that will make your experience memorable.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Buffalo Creek Preserve",
+    "city": "Long Grove",
+    "state": "Illinois",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -87.998036,
+        42.178609
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 4,
+    "rating": 4,
+    "description": "Set in the midst of bustling suburbs, this 408-acre emerald island offers a quiet place to relax and recreate with nature. Its wide open spaces are safe, clean and easy to explore.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Boyd's Gap",
+    "city": "Copperhill",
+    "state": "Tennessee",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -84.45201,
+        35.04213
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": null,
+    "length": 1,
+    "rating": 4.17,
+    "description": "Although considered part of Tanasi trail system, it is actually removed from the network and connected by Old Copper Road. This is usually only run from the overlook parking to Old Copper Road, since it is a very steep downhill run in this direction.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Open Quarry Rd.",
+    "city": "Spring Hill",
+    "state": "Florida",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -82.64067,
+        28.48037
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 4,
+    "rating": 0,
+    "description": "A lot of Paved Roads, with trails branching off, some rocky and some sandy. Very easy trail for beginners, and has a few technical spots you can mess around with.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Keystone Canyon",
+    "city": "Reno",
+    "state": "Nevada",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -119.84243,
+        39.55058
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 15,
+    "rating": 0,
+    "description": "Drop into gully on right, climb hill, we went as far as could keep our direction. Tracks went here and yawn. Would be fun in the morning before work but we live 5 hours away.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Red Hill",
+    "city": "Carbondale",
+    "state": "Colorado",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -107.2204,
+        39.41843
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 7,
+    "rating": 0,
+    "description": "This trail has miles of amazing single track but you will have to do a technical climb to get to the sweet loop trails at the top of red hill. Itâs worth every once of energy you have to get into this amazing network. The view of the Roaring Fork Valley and Mt. Sopis are awesome. ",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Langdale Park Trail System",
+    "city": "Valdosta",
+    "state": "Georgia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -83.32277,
+        30.88632
+      ]
+    },
+    "hiking": true,
+    "biking": true,
+    "image": null,
+    "length": 8,
+    "rating": 0,
+    "description": "The Best place to ride in south Ga. The park consist of Main Double track trails A-I that lead off into single track trails. Most of the single track are unmarked and can be pretty technical, but there are others along the river that are pretty mild. ",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Moccasin Creek State Park",
+    "city": "Clarkesville",
+    "state": "Georgia",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -83.587129,
+        34.845845
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": "https://images.tripleblaze.com/2013/01/moccasin_creek_state_park1-0.jpg",
+    "length": 3,
+    "rating": 0,
+    "description": "PARK NOTICE: Moccasin Creek is closed from December 1, 2012 and will reopen March 15, 2013. Sitting on the shores of lovely Lake Burton, Moccasin Creek prides itself on being \"where spring spends the summer.\" Despite its mountain location, the park is relatively flat, offering easy navigation for large RVs, children's bicycles and wheelchairs. A fully accessible fishing pier sits above a trout-filled creek open only to physically challenged visitors, senior citizens and children.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Buncombe Horse Trail (Trail #191)",
+    "city": "Burnsville",
+    "state": "North Carolina",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -82.211611,
+        35.801445
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": "https://images.tripleblaze.com/2011/08/P7080067-0.jpg",
+    "length": 17,
+    "rating": 5,
+    "description": "This is the longest Trail in the Black Mountain Range. Where the trail intersects the Access road to Mt. Mitchell (SR 128). The trail then continues along an old railroad grade. After Maple Camp Bald the trail then descends through old growth fir and spruce forests.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Big Smokey MTB Loop",
+    "city": "Mammoth Lakes",
+    "state": "California",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -118.94116,
+        37.69197
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": null,
+    "length": 13,
+    "rating": 0,
+    "description": "The Big Smokey Loop climbs into the hills where and offers views of local scenery, a chance to check out local flora and fauna, and great rock formations, all of which makes a great ride. source: fs.usda.gov",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Cherokee Landing State Park",
+    "city": "Park Hill",
+    "state": "Oklahoma",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -94.909017,
+        35.759233
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "Located in the Cookson Hills, just south of Tahlequah on Lake Tenkiller, Cherokee Landing State Park features RV hookups with 30/50 amp electric and water, a dump station, primitive campsites, covered picnic shelters and restrooms with hot showers. RV sites can accommodate rigs up to 40-feet in length.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Cumberland Mountain State Park",
+    "city": "Crossville",
+    "state": "Tennessee",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -84.99753,
+        35.901444
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "Cumberland Mountain State Park is situated on the Cumberland Plateau, a segment of the great upland, which extends from western New York to central Alabama. It is said to be the largest timbered plateau in America. This 1,720-acre park was acquired in 1938 as a project of the Farm Security Administration to provide a recreational area for some 250 families selected to homestead on the Cumberland Plateau.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Grass Mountain / Trail #1170",
+    "city": "Enumclaw",
+    "state": "Washington",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -121.64461,
+        47.16101
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": null,
+    "length": 6,
+    "rating": 0,
+    "description": "Grass Mountain Trail takes you along ridges of subalpine timber to an open meadow and Mule Springs. Start riding at a junction 3.3 miles down the Christoff Trail 1171. Follow the trail junction west to Grass Mountain. The east route will take you to the Divide Trail 1172. The trail can be primitive and hard to follow. source: fs.usda.gov",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "The Way Up Trail",
+    "city": "San Marcos",
+    "state": "California",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -117.145547,
+        33.087271
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 5,
+    "rating": 3,
+    "description": "The Way Up trail is the main trail through the Elfin Forest Preserve located in San Marcos, CA. The trail follows the side of the mountain and leads to the Olivehaven Resevoir located at the top of the mountain. a Picnic Area is provided at the top with views of the lake, but not water access is available. Total elevation gain is about 800ft.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Blydenburgh County Park",
+    "city": "Smithtown",
+    "state": "New York",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -73.217269,
+        40.842461
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "Richly forested hills and valleys at the headwaters of the Nissequogue River, rowing and fishing on lovely Stump Pond, casual strolls through the Blydenburgh Farm and New Mill Historic District featuring a grist mill. These are but a few of the attractions of Blydenburgh County Park. This 627 acre park is open year-round to Suffolk County residents and their guests. Horseback riders may ride or trailer their mounts to Blydenburgh to utilize an extensive bridle path system and practice ring. Trailer parking is available at the northern (New Mill Road) entrance. Suffolk County horseback riding permits are required and must be visibly displayed by all riders. Freshwater fishing for pumpkinseed sunfish, large-mouth bass, perch and bluegill is permitted at Stump Pond between sunrise and sunset. New York State freshwater fishing laws apply. Rowboat rentals are generally available from mid-May to Labor Day. Use the southern (Veteran's Memorial Highway) entrance for these activities. Hikes through Blydenburgh are led on a regular basis by the Long Island Greenbelt Trail Conference, whose headquarters are located in one of the historic district houses. For a hike schedule, contact the Greenbelt office at (631)-360-0753.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Elk Neck State Park",
+    "city": "north east",
+    "state": "Maryland",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -75.97896,
+        39.47903
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": null,
+    "length": 12,
+    "rating": 0,
+    "description": "A network of single track loops connected by either single track connector trails or hard surface roads. Trails very in difficulty but are mostly intermediate with some difficult trails. Plenty of technical down hills and climbs. Trails have a large amount of bare roots but are well maintained.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Minneopa State Park",
+    "city": "Mankato",
+    "state": "Minnesota",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -94.095306,
+        44.147663
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "The word Minneopa comes from the Dakota language and is interpreted to mean \"water falling twice,\" referring to the beautiful waterfalls of the Minneopa Creek. Walk the trail which encircles the falls, leading down a limestone stairway to the valley below. Ascend the opposite side and enjoy a panoramic view of the valley which reveals the underlying geology of this area. Visit Seppmann Mill, a wind driven grist mill fashioned in German style from native stone and lumber, or hike through oak savanna and native prairie grasslands overlooking the scenic Minnesota River Valley.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Appalachian Trail 116: NY 55 to Metro North Railroad (NY 22)",
+    "city": "Poughquag",
+    "state": "New York",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -73.660143,
+        41.590576
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 8,
+    "rating": 0,
+    "description": "The AT runs 7.6 miles from NY Hwy 55 to the Metro North Railroad (NY Hwy 22). Along the way it passes Nuclear Lake, the Telephone Pioneers shelter, and County Road 20.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Trailside Loop And Skills Park",
+    "city": "Park City",
+    "state": "Utah",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -111.50163,
+        40.71221
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2009/trails/01/1166170102.jpg",
+    "length": 2,
+    "rating": 0,
+    "description": "Find the skills park up off the trail you can't miss it and have some fun. Good for beginner to intermediates to practice their skills in an easy environment to gain confidence for some more serious business.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "San Angelo State Park",
+    "city": "San Angelo",
+    "state": "Texas",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -100.536258,
+        31.468302
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": null,
+    "length": 3,
+    "rating": 0,
+    "description": "San Angelo State Park is located on the shores of O.C. Fisher Reservoir, which was completed by the U.S. Army Corps of Engineers in 1952 for flood control on the North Concho River. The park, adjacent to the city of San Angelo in Tom Green County, is an oasis of quality outdoor recreation in an area of West Texas known as Concho Country. It was leased by the Texas Parks and Wildlife Department and opened to the public May 1, 1995. The property contains 7,677 acres, most of which will remain undeveloped. Park redevelopment to its full recreational potential is expected to take a number of years. In the meantime, a wide range of facilities is available.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Beavertail Hill State Park",
+    "city": "Clinton",
+    "state": "Montana",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -113.577776,
+        46.717445
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": "https://images.tripleblaze.com/2011/03/4802-1301347416-0.jpg",
+    "length": 3,
+    "rating": 4,
+    "description": "The 65-acre Beavertail Hill State Park is located on the beautiful Clark Fork River. The park is an excellent fishing location, as well a common destination for canoeists. Camping, birding, hiking, picnicking and wildlife viewing are other popular activities here.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Ouabache State Park",
+    "city": "Bluffton",
+    "state": "Indiana",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -85.129431,
+        40.728773
+      ]
+    },
+    "hiking": true,
+    "biking": false,
+    "image": null,
+    "length": 3,
+    "rating": 4,
+    "description": "Ouabache is difficult to spell, but easy to pronounce. Simply say 'Wabash'...just like the river that forms the southwest boundary for the park. This is the French spelling of an Indian word, so don't be surprised to hear some folks call it o-ba-chee.Kunkel Lake offers excellent fishing. During the summer months, a naturalist will provide information about the natural wonders of the park. A lodge recreation building is ideal for special gatherings and is now available all year.",
+    "difficulty": "unknown"
+  },
+  {
+    "name": "Sheep Creek/little Elk Connection",
+    "city": "Palisades",
+    "state": "Idaho",
+    "lnglat": {
+      "type": "Point",
+      "coordinates": [
+        -111.14744,
+        43.33773
+      ]
+    },
+    "hiking": false,
+    "biking": true,
+    "image": "https://images.singletracks.com/2009/06/Picture-4-0.jpg",
+    "length": 7,
+    "rating": 0,
+    "description": "The trail headed up hill is extremely rigorous. Some walking will be necessary at first. Follow the climb about 1.5 miles till you reach a plateau. The trail divides and heads south down to Little Elk Creek. This downhill can also be used as the climb if you want to reverse the loop. It is a horse trail with smooth singletrack and technical areas. You glide out through a great canyon with lots of MOOSE! All the way to the road. Proceed to your starting point on the road or head back the way you came. There is an excellent Shuttle for downhill laps but you must access it with permission from homeowners. On the south side above the reservoir a gravel road cuts right up the hill about 1300 feet to the top of quite possibly the most scenic subdivision in the country. When you reach the top head right at the T and follow the four wheeler track. It leads to the trail divide to either Sheep Creek or Little Elk Canyon.",
+    "difficulty": "unknown"
+  }
+]
