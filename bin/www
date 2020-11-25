@@ -7,7 +7,10 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-var db = require("../db");
+const db = require("../db");
+const Trail = db.Trail;
+const trailFile = "../trails-server/db/json/trails.json";
+
 var app = require("../app");
 var debug = require("debug")("trails-server:server");
 var http = require("http");
@@ -34,8 +37,14 @@ db.sequelize.sync({ force: forceDbReset }).then(async () => {
   server.listen(port);
   server.on("error", onError);
   server.on("listening", onListening);
-
-  // seed db with trail data?
+  //TODO: replace \\\" with \" in json file before storing to db
+  // if(forceDbReset) {
+  //const readFile = fs.readFileSync(trailFile);
+  //const parsedTrails = JSON.parse(readFile);
+  // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
+  //   ignoreDuplicates: true,
+  // });
+  // }
 });
 
 /**

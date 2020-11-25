@@ -1,4 +1,3 @@
-const Trail = require("../db").Trail;
 const fs = require("fs");
 const trailFile = "../trails-server/db/json/trails.json";
 
@@ -74,12 +73,10 @@ const parseCombinedTrails = (trails) => {
       activities.image = activities.image.replace("http", "https");
     }
 
-    //TODO: Change http to https
-    //TODO: // replace \\\" with \" in json file
     // destructure api props
     let { name, city, state, lat, lon, description } = trails[i];
 
-    //remove html encoded characters in string
+    // remove html encoded characters in string
     description = description.replace(/<br\s*\/?>/gi, " ");
     description = description.replace(/&lt;br\s*\/&gt;/gi, "");
     description = description.replace(/&lt;/gi, "");
@@ -113,7 +110,10 @@ const parseBikingTrails = (trails) => {
   const result = [];
 
   for (let i = 0; i < trails.length; i++) {
-    if (trails[i].description === "") {
+    //external api has no data for Alaska, returns null
+    if (trails[i] === null) continue;
+
+    if (trails[i].description === "" || trails[i].description === null) {
       continue;
     }
 
@@ -169,6 +169,7 @@ const parseBikingTrails = (trails) => {
 
 const parseHikingTrails = (trails) => {
   const result = [];
+
   for (let i = 0; i < trails.length; i++) {
     if (!trails[i].name) {
       continue;
@@ -281,11 +282,14 @@ exports.storeCombinedTrailsInJSON = (trails) => {
   return parsedTrails;
 };
 
+//!! getting all the data back for hiking from external api, but something is happening in writing data that it's only returning first state
 exports.storeHikingTrailsInJSON = (trails) => {
   //require within function because if no data store in json yet and it's required at top, throws error
   const jsonTrails = require("../db/json/trails.json");
 
-  const parsedTrails = parseHikingTrails(...trails);
+  //flatten nested arrays
+  trails = trails.flat();
+  const parsedTrails = parseHikingTrails(trails);
 
   jsonTrails.push(parsedTrails);
 
@@ -302,7 +306,8 @@ exports.storeHikingTrailsInJSON = (trails) => {
 exports.storeBikingTrailsInJSON = (trails) => {
   const jsonTrails = require("../db/json/trails.json");
 
-  const parsedTrails = parseBikingTrails(...trails);
+  trails = trails.flat();
+  const parsedTrails = parseBikingTrails(trails);
 
   jsonTrails.push(parsedTrails);
 

@@ -20,9 +20,9 @@ exports.getBikingByState = async (req, res) => {
 
   // pull lat and lng from each state object
   states.map((state) => {
-    const entries = Object.values(state);
+    const coords = Object.values(state);
 
-    stateLatLng.push(...entries);
+    stateLatLng.push(...coords);
   });
 
   const data = await grabAllBikingData(stateLatLng);
@@ -39,18 +39,18 @@ exports.getHikingByState = async (req, res) => {
 
   // pull lat and lng from each state object
   states.map((state) => {
-    const entries = Object.values(state);
+    const coords = Object.values(state);
 
-    stateLatLng.push(...entries);
+    stateLatLng.push(...coords);
   });
 
   const data = await grabAllHikingData(stateLatLng);
 
   // const storedTrails = await seedService.storeHikingTrailsInDb(trails);
 
-  // const storedTrails = seedService.storeHikingTrailsInJSON(data);
+  const storedTrails = seedService.storeHikingTrailsInJSON(data);
 
-  res.json(data);
+  res.json(storedTrails);
 };
 
 exports.seeJSON = (req, res) => {
