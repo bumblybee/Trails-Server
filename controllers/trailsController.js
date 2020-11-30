@@ -1,5 +1,6 @@
 const Trail = require("../db").Trail;
 const sequelize = require("sequelize");
+const { Op } = require("sequelize");
 
 exports.searchTrails = async (req, res) => {
   //TODO: Check using query vs params
@@ -17,7 +18,17 @@ exports.searchTrails = async (req, res) => {
     location
   );
 
+  const whereConfig = {};
+  if (req.query.filter) {
+    if (req.query.filter === "hiking") {
+      whereConfig.hiking = true;
+    } else if (req.query.filter === "biking") {
+      whereConfig.biking = true;
+    }
+  }
+
   const trails = await Trail.findAll({
+    where: whereConfig,
     attributes: {
       include: [[distance, "distance"]],
     },
@@ -28,7 +39,6 @@ exports.searchTrails = async (req, res) => {
   res.json(trails);
 };
 
-//TODO: Change http in images from external api to https so don't run into cors issues later in prod
 exports.createTrail = async (req, res) => {
   const {
     userId,

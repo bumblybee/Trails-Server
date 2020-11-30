@@ -282,7 +282,6 @@ exports.storeCombinedTrailsInJSON = (trails) => {
   return parsedTrails;
 };
 
-//!! getting all the data back for hiking from external api, but something is happening in writing data that it's only returning first state
 exports.storeHikingTrailsInJSON = (trails) => {
   //require within function because if no data store in json yet and it's required at top, throws error
   const jsonTrails = require("../db/json/trails.json");
