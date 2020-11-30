@@ -324,5 +324,19 @@ exports.storeBikingTrailsInJSON = (trails) => {
 exports.returnJSON = () => {
   const read = fs.readFileSync(trailFile);
   const content = JSON.parse(read);
+
+  // let seen = {};
+  // let dups = [];
+
+  // content.forEach((val) => {
+  //   if (seen[val.name]) {
+  //     dups.push(val);
+  //   } else {
+  //     seen[val.name] = true;
+  //   }
+  // });
+  // dups = dups.flat();
+  // return { dups, seen: seen };
+
   return content;
 };

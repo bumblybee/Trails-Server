@@ -13,7 +13,7 @@ if (env !== "production") {
     process.env.DATABASE,
     process.env.DATABASE_USER,
     process.env.DATABASE_PASSWORD,
-    { dialect: "postgres", logging: false }
+    { dialect: "postgres", logging: false, pool: { max: 30000 } }
   );
 } else {
   sequelize = new Sequelize(process.env.DATABASE_URL);
