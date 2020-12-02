@@ -3,11 +3,23 @@ const crypto = require("crypto");
 
 const randomId = crypto.randomBytes(2).toString("hex");
 
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, "uploads");
-  },
-  // To ensure uniqueness - splitting filename at dots, grabbing first three chars + randomId + extension
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, "uploads");
+//   },
+//   // To ensure uniqueness - splitting filename at dots, grabbing first three chars + randomId + extension
+//   filename: (req, file, cb) => {
+//     cb(
+//       null,
+//       file.originalname.split(".")[0].substring(0, 3) +
+//         randomId +
+//         "." +
+//         file.originalname.split(".")[1]
+//     );
+//   },
+// });
+
+const storage = multer.memoryStorage({
   filename: (req, file, cb) => {
     cb(
       null,

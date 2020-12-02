@@ -10,11 +10,11 @@ const s3Client = new AWS.S3({
 
 // TODO: Be sure to pass in file when calling in TrailsController
 
-exports.s3Params = async (file) => {
+exports.uploadToS3 = async (file) => {
   const params = {
     Acl: "public-read",
     Bucket: process.env.S3_BUCKET,
-    Key: "" + file.originalname,
+    Key: " " + file.originalname,
     Body: file.buffer,
   };
 

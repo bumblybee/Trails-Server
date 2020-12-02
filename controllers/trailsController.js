@@ -1,5 +1,6 @@
 const Trail = require("../db").Trail;
 const sequelize = require("sequelize");
+const { uploadToS3 } = require("../services/s3Service");
 const { Op } = require("sequelize");
 
 exports.searchTrails = async (req, res) => {
@@ -52,32 +53,34 @@ exports.createTrail = async (req, res) => {
     length,
     rating,
     description,
-    directions,
   } = req.body;
 
   console.log(req.file);
 
-  const url = `${req.protocol}://${req.get("host")}`;
-  const image = `${url}/${req.file.filename}`;
+  // const url = `${req.protocol}://${req.get("host")}`;
+  // const image = `${url}/${req.file.filename}`;
+
+  const s3Response = await uploadToS3(req.file);
+  const s3ImageUrl = s3Response.Location;
 
   const point = { type: "Point", coordinates: [lng, lat] };
 
-  const newTrail = {
-    userId,
-    name,
-    city,
-    state,
-    lnglat: point,
-    hiking,
-    biking,
-    image,
-    length,
-    rating,
-    description,
-    directions,
-  };
+  // TODO: bring in multer config code to append an id to image before store
+  // const newTrail = {
+  //   userId,
+  //   name,
+  //   city,
+  //   state,
+  //   lnglat: point,
+  //   hiking,
+  //   biking,
+  //   image,
+  //   length,
+  //   rating,
+  //   description,
+  // };
 
   // const trail = await Trail.create(newTrail);
-
-  res.status(200).json({ newTrail });
+  res.status(201).send(s3Response);
+  // res.status(201).json({ newTrail });
 };
