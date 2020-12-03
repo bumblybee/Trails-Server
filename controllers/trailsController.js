@@ -52,29 +52,34 @@ exports.createTrail = async (req, res) => {
     length,
     rating,
     description,
+    difficulty,
   } = req.body;
+
+  if (!hiking) hiking = false;
+  if (!biking) biking = false;
+
+  const imageUrl = req.file.location;
 
   console.log(req.file);
 
   const point = { type: "Point", coordinates: [lng, lat] };
 
-  // TODO: bring in multer config code to append an id to image before store
-  // const newTrail = {
-  //   userId,
-  //   name,
-  //   city,
-  //   state,
-  //   lnglat: point,
-  //   hiking,
-  //   biking,
-  //   image,
-  //   length,
-  //   rating,
-  //   description,
-  // };
+  const newTrail = {
+    userId,
+    name,
+    city,
+    state,
+    lnglat: point,
+    hiking,
+    biking,
+    image: imageUrl,
+    length,
+    rating,
+    description,
+    difficulty,
+  };
 
-  // const trail = await Trail.create(newTrail);
-  // console.log(s3Response);
-  res.status(201).send(req.file);
-  // res.status(201).json({ newTrail });
+  const trail = await Trail.create(newTrail);
+
+  res.status(201).json({ trail });
 };

@@ -29,15 +29,15 @@ exports.notFound = (req, res, next) => {
 };
 
 exports.sequelizeErrorHandler = (err, req, res, next) => {
-  if (
-    err instanceof Sequelize.ValidationError ||
-    err instanceof Sequelize.DatabaseError
-  ) {
+  if (err instanceof Sequelize.ValidationError) {
     const errorCodes = err.errors.map((error) => error.message);
     res.status(400).json({
       errors: errorCodes,
     });
     return;
+  } else if (err instanceof Sequelize.DatabaseError) {
+    const errorCode = err.message;
+    res.status(400).json({ errors: errorCode });
   } else {
     next(err);
   }
