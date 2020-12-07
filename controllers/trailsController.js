@@ -78,7 +78,7 @@ exports.createTrail = async (req, res) => {
     description,
     difficulty,
   };
-
+  //TODO: delete test trails
   const trail = await Trail.create(newTrail);
 
   res.status(201).json({ trail });

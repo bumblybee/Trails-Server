@@ -10060,7 +10060,7 @@
     "length": 9.4,
     "rating": 5,
     "difficulty": "advanced",
-    "image": "",
+    "image": null,
     "biking": false,
     "hiking": true
   },
@@ -10156,7 +10156,7 @@
     "length": 3.8,
     "rating": 4.5,
     "difficulty": "intermediate",
-    "image": "",
+    "image": null,
     "biking": false,
     "hiking": true
   },
@@ -11708,7 +11708,7 @@
     "length": 9.4,
     "rating": 5,
     "difficulty": "advanced",
-    "image": "",
+    "image": null,
     "biking": false,
     "hiking": true
   },
@@ -12012,7 +12012,7 @@
     "length": 6.7,
     "rating": 5,
     "difficulty": "intermediate",
-    "image": "",
+    "image": null,
     "biking": false,
     "hiking": true
   },
@@ -12044,7 +12044,7 @@
     "length": 1.5,
     "rating": 5,
     "difficulty": "intermediate",
-    "image": "",
+    "image": null,
     "biking": false,
     "hiking": true
   },
@@ -12060,7 +12060,7 @@
     "length": 0.6,
     "rating": 5,
     "difficulty": "advanced",
-    "image": "",
+    "image": null,
     "biking": false,
     "hiking": true
   },
@@ -13180,7 +13180,7 @@
     "length": 5.6,
     "rating": 4,
     "difficulty": "intermediate",
-    "image": "",
+    "image": null,
     "biking": false,
     "hiking": true
   },
@@ -14428,7 +14428,7 @@
     "length": 1.5,
     "rating": 5,
     "difficulty": "intermediate",
-    "image": "",
+    "image": null,
     "biking": false,
     "hiking": true
   },
@@ -15244,7 +15244,7 @@
     "length": 8,
     "rating": 4.3,
     "difficulty": "intermediate",
-    "image": "",
+    "image": null,
     "biking": false,
     "hiking": true
   },
