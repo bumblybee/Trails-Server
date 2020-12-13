@@ -1,4 +1,5 @@
 "use strict";
+// TODO: add trail drafts
 
 module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define(

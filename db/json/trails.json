@@ -20814,7 +20814,7 @@
     "difficulty": "unknown",
     "image": "https://images.singletracks.com/blog/wp-content/uploads/2016/02/001-orig-scaled.jpg",
     "biking": true,
-    "hiking": false
+    "hiking": true
   },
   {
     "name": "George Wyth",
@@ -20878,7 +20878,7 @@
     "difficulty": "beginner",
     "image": "https://images.singletracks.com/blog/wp-content/uploads/2012/07/DSCN0035-0-orig.jpg",
     "biking": true,
-    "hiking": false
+    "hiking": true
   },
   {
     "name": "Ingawanis Woodlands",
@@ -20888,7 +20888,7 @@
       "type": "Point",
       "coordinates": ["-92.42112", "42.67180"]
     },
-    "description": "Overview2:04 average time for 18.6 miles. DetailsFast riding flowing singletrack with some rocks, roots and climbs to keep you on your toes. Its lighter sandy soil allows for riding sooner after a rain without damaging the trail. The latter part of May into June brings an awe inspiring carpet of bluebells in the Bottoms segment. An occasional bald eagle can be seen, as well as many deer and turkeys. It is not uncommon to hear owls hooting and woodpeckers pecking.Need To KnowNo bathrooms or running water at the trailhead. There is a convenience store a few miles away.DescriptionThe trail is probably ridden equally each direction. I chose to map it going counter-clockwise. Either direction you'll encounter some short and somewhat rocky and or rooty climbs. The trail is one basic loop with a few spurs. As a general rule going in the counter-clockwise direction, each time there is a \"Y\" in the trail go to the right and you won't miss any of the spurs. Most of the spurs return to within 10-25 yards of where they spurred off so you can shorten your route if desired. Eagle Lodge Loop (0.25 mile segment)is the first spur. It skirts behind a few houses and Eagle Lodge. This loop and the Bottoms Loop tend to be the wettest segments so keep that in mind if there has been a recent rain. The Numbers (1.5 miles segment) spurs off about 1 mile on down the trail. It has some tighter turns, but still keeps with the fast flowy style of Ingawanis Woodlands. Karmondo (0.75 mile segment) starts at the Numbers' exit and takes you quickly down to somewhat lower ground. Near the water's edge is a \"Y\" where keeping to the right again takes you up the challenging but scenic climb of El Capitan (0.25 mile segment) with its rocky outcroppings and pretty east facing overlook. Would be a nice spot to pull up a rock or stump and sip some early morning coffee and watch the sunrise. From the top, the trail drops down quickly to join Karmondo again. Karmondo winds uphill with some gradual switchbacks and seamlessly joins the main loop. At this point, the trail picks up some speed with a bit more open turns. Use caution through here as the bottom of the curves tend to collect sand and there are a few areas of erosion. [As a side note - the goal is to correct any of these older unsustainable trail pieces.] In about 1 mile is the Bottoms (1.0 mile segment). This spur runs through the flood plain. Although it is basically flat through here, there are a couple opportunities to catch some air if you play it right. Late May into June the trail winds through an awe inspiring sea of Bluebells (as long as there is not considerable flooding). When the Bottoms are flooded go left at the \"Y\" to follow the Highwater Cutoff for about 50 yards and continue on the main loop. Once you exit the Bottoms about 2 miles of trail remains. However, in those 2 miles are 2 climbs that will get your attention again. One is a bit rocky and loose. The other is quite rocky and rooty. Clearing the rocky rooty segment warrants a fist pump or high-five! Sail through the next half mile and you are back at the parking lot.ContactsLand Manager: Bremer County Conservation BoardLocal Club: Ingawanis Mountain Biking",
+    "description": "Fast riding flowing singletrack with some rocks, roots and climbs to keep you on your toes. Its lighter sandy soil allows for riding sooner after a rain without damaging the trail. The latter part of May into June brings an awe inspiring carpet of bluebells in the Bottoms segment. An occasional bald eagle can be seen, as well as many deer and turkeys. It is not uncommon to hear owls hooting and woodpeckers pecking.Need To KnowNo bathrooms or running water at the trailhead. There is a convenience store a few miles away. The trail is probably ridden equally each direction. I chose to map it going counter-clockwise. Either direction you'll encounter some short and somewhat rocky and or rooty climbs. The trail is one basic loop with a few spurs. As a general rule going in the counter-clockwise direction, each time there is a \"Y\" in the trail go to the right and you won't miss any of the spurs. Most of the spurs return to within 10-25 yards of where they spurred off so you can shorten your route if desired. Eagle Lodge Loop (0.25 mile segment)is the first spur. It skirts behind a few houses and Eagle Lodge. This loop and the Bottoms Loop tend to be the wettest segments so keep that in mind if there has been a recent rain. The Numbers (1.5 miles segment) spurs off about 1 mile on down the trail. It has some tighter turns, but still keeps with the fast flowy style of Ingawanis Woodlands. Karmondo (0.75 mile segment) starts at the Numbers' exit and takes you quickly down to somewhat lower ground. Near the water's edge is a \"Y\" where keeping to the right again takes you up the challenging but scenic climb of El Capitan (0.25 mile segment) with its rocky outcroppings and pretty east facing overlook. Would be a nice spot to pull up a rock or stump and sip some early morning coffee and watch the sunrise. From the top, the trail drops down quickly to join Karmondo again. Karmondo winds uphill with some gradual switchbacks and seamlessly joins the main loop. At this point, the trail picks up some speed with a bit more open turns. Use caution through here as the bottom of the curves tend to collect sand and there are a few areas of erosion. [As a side note - the goal is to correct any of these older unsustainable trail pieces.] In about 1 mile is the Bottoms (1.0 mile segment). This spur runs through the flood plain. Although it is basically flat through here, there are a couple opportunities to catch some air if you play it right. Late May into June the trail winds through an awe inspiring sea of Bluebells (as long as there is not considerable flooding). When the Bottoms are flooded go left at the \"Y\" to follow the Highwater Cutoff for about 50 yards and continue on the main loop. Once you exit the Bottoms about 2 miles of trail remains. However, in those 2 miles are 2 climbs that will get your attention again. One is a bit rocky and loose. The other is quite rocky and rooty. Clearing the rocky rooty segment warrants a fist pump or high-five! Sail through the next half mile and you are back at the parking lot.",
     "length": "7.0",
     "rating": 4.75,
     "difficulty": "intermediate",
@@ -24002,19 +24002,19 @@
   },
   {
     "name": "Kraemer Lake / Wildwood Trail",
-    "city": "",
+    "city": "St. Joseph",
     "state": "Minnesota",
     "lnglat": {
       "type": "Point",
       "coordinates": ["-94.37512", "45.55408"]
     },
-    "description": "Hiking / exposed roots / old growth trees https://co.stearns.mn.us/Recreation/CountyParks/KraemerLakeWildwood",
-    "length": 0,
+    "description": "Exposed roots, old growth trees",
+    "length": 3.4,
     "rating": 0,
     "difficulty": "unknown",
-    "image": "https://images.singletracks.com/blog/wp-content/uploads/2017/08/IMG_5855-orig.jpg",
+    "image": "https://cdn-assets.alltrails.com/uploads/photo/image/31187916/extra_large_54a9e27a54892e27554b171e6aa87909.jpg",
     "biking": true,
-    "hiking": false
+    "hiking": true
   },
   {
     "name": "Mountain View Singletrack",

@@ -26,7 +26,7 @@ exports.searchTrails = async (req, res) => {
       whereConfig.biking = true;
     }
   }
-
+  //TODO: config for sending image to client via s3
   const trails = await Trail.findAll({
     where: whereConfig,
     attributes: {
@@ -38,6 +38,8 @@ exports.searchTrails = async (req, res) => {
 
   res.json(trails);
 };
+
+//TODO: handle formatting of incoming data before passing to db
 
 exports.createTrail = async (req, res) => {
   const {
@@ -54,13 +56,12 @@ exports.createTrail = async (req, res) => {
     description,
     difficulty,
   } = req.body;
+  console.log(req.body);
 
   if (!hiking) hiking = false;
   if (!biking) biking = false;
 
-  const imageUrl = req.file.location;
-
-  console.log(req.file);
+  const imageUrl = req.file ? req.file.location : null;
 
   const point = { type: "Point", coordinates: [lng, lat] };
 
@@ -76,10 +77,10 @@ exports.createTrail = async (req, res) => {
     length,
     rating,
     description,
-    difficulty,
+    difficulty: difficulty.toLowerCase(),
   };
   //TODO: delete test trails
   const trail = await Trail.create(newTrail);
 
-  res.status(201).json({ trail });
+  res.status(201).json(trail);
 };

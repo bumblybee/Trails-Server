@@ -37,8 +37,8 @@ app.use("/users", usersRouter);
 app.use("/trails", trailsRouter);
 app.use("/seed", seedRouter);
 
-app.use(errorHandlers.notFound);
 app.use(errorHandlers.sequelizeErrorHandler);
+app.use(errorHandlers.notFound);
 
 if (app.get("env") === "development") {
   app.use(errorHandlers.developmentErrors);

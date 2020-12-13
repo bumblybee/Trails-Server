@@ -6,15 +6,17 @@
 
 const dotenv = require("dotenv");
 dotenv.config();
-const Trail = require("../db").Trail;
-const db = require("../db");
-// const Trail = db.Trail;
-const trailFile = "../trails-server/db/json/trails.json";
-
 const fs = require("fs");
+
 var app = require("../app");
 var debug = require("debug")("trails-server:server");
 var http = require("http");
+
+/* ****database**** */
+
+const db = require("../db");
+const Trail = require("../db").Trail;
+const trailFile = "../trails-server/db/json/trails.json";
 
 /**
  * Get port from environment and store in Express.
@@ -30,7 +32,7 @@ app.set("port", port);
 var server = http.createServer(app);
 
 /**
- * Setup db. Listen on provided port, on all network interfaces.
+ * Sync / seed db on server start. Listen on provided port, on all network interfaces.
  */
 
 let forceDbReset = false;
@@ -45,7 +47,7 @@ db.sequelize.sync({ force: forceDbReset }).then(async () => {
     await Trail.bulkCreate([...parsedTrails], {
       ignoreDuplicates: true,
     });
-    console.log("JSON data pushed to db");
+    console.log("JSON data pushed to database");
   }
 });
 

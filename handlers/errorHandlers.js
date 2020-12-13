@@ -37,7 +37,7 @@ exports.sequelizeErrorHandler = (err, req, res, next) => {
     return;
   } else if (err instanceof Sequelize.DatabaseError) {
     const errorCode = err.message;
-    res.status(400).json({ errors: errorCode });
+    res.status(500).json({ errors: errorCode });
   } else {
     next(err);
   }
