@@ -230,45 +230,6 @@ const parseHikingTrails = (trails) => {
   return result;
 };
 
-//TODO: move db storing to www to seed db when reset
-// exports.storeCombinedTrailsInDb = async (trails) => {
-//   // grab parsed trails from above
-//   const parsedTrails = parseCombinedTrails(trails);
-
-//   //push to db in bulk, ignoring any duplicates
-//   // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
-//   //   ignoreDuplicates: true,
-//   // });
-
-//   //return db data to controller to view as json
-//   // return createdTrails;
-
-//   return parsedTrails;
-// };
-
-// exports.storeBikingTrailsInDb = async (trails) => {
-//   const parsedTrails = parseBikingTrails(trails);
-
-//   // const createdTrails = await Trail.bulkCreate([...parsedTrails], {
-//   //   ignoreDuplicates: true,
-//   // });
-
-//   //return db data to controller to view as json
-//   // return createdTrails;
-
-//   return parsedTrails;
-// };
-
-// exports.storeHikingTrailsInDb = async (trails) => {
-//   const parsedTrails = parseHikingTrails(trails);
-
-//   const createdTrails = await Trail.bulkCreate([...parsedTrails], {
-//     ignoreDuplicates: true,
-//   });
-
-//   return createdTrails;
-// };
-
 exports.storeCombinedTrailsInJSON = (trails) => {
   const parsedTrails = parseCombinedTrails(trails);
 
@@ -290,6 +251,7 @@ exports.storeHikingTrailsInJSON = (trails) => {
   trails = trails.flat();
   const parsedTrails = parseHikingTrails(trails);
 
+  //concat instead of push?
   jsonTrails.push(parsedTrails);
 
   const stringifiedTrails = JSON.stringify(jsonTrails, null, 2);

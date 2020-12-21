@@ -6,6 +6,15 @@ exports.errorWrapper = (fn) => {
   };
 };
 
+exports.multerErrorWrapper = (upload) => {
+  return function (req, res, next) {
+    return upload(req, res, function (err) {
+      if (err) console.log(err);
+      else next();
+    });
+  };
+};
+
 exports.developmentErrors = (err, req, res, next) => {
   err.stack = err.stack || "";
   const errorDetails = {
@@ -42,3 +51,18 @@ exports.sequelizeErrorHandler = (err, req, res, next) => {
     next(err);
   }
 };
+
+class CustomError extends Error {
+  constructor(error, name, status) {
+    super(error);
+
+    if (Error.captureStackTrace) {
+      Error.captureStackTrace(this, CustomError);
+    }
+
+    this.name = name;
+    this.status = status;
+  }
+}
+
+exports.CustomError = CustomError;

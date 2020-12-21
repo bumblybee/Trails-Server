@@ -3,6 +3,8 @@ const multerS3 = require("multer-s3");
 const { s3Config } = require("../config/s3Config");
 const crypto = require("crypto");
 
+//* Think about having client handle s3 uploads if going to allow multiple images - slows server down
+
 const randomId = crypto.randomBytes(2).toString("hex");
 
 const multerS3Config = multerS3({

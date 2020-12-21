@@ -1,4 +1,5 @@
 const Trail = require("../db").Trail;
+const { CustomError } = require("../handlers/errorHandlers");
 const sequelize = require("sequelize");
 const { Op } = require("sequelize");
 
@@ -39,9 +40,8 @@ exports.searchTrails = async (req, res) => {
   res.json(trails);
 };
 
-//TODO: handle formatting of incoming data before passing to db
-
 exports.createTrail = async (req, res) => {
+  // throw new CustomError("upload.failed", "UploadError", 400);
   const {
     userId,
     name,
@@ -79,7 +79,7 @@ exports.createTrail = async (req, res) => {
     description,
     difficulty: difficulty.toLowerCase(),
   };
-  //TODO: delete test trails
+
   const trail = await Trail.create(newTrail);
 
   res.status(201).json(trail);
