@@ -9,8 +9,14 @@ exports.errorWrapper = (fn) => {
 exports.multerErrorWrapper = (upload) => {
   return function (req, res, next) {
     return upload(req, res, function (err) {
-      if (err) console.log(err);
-      else next();
+      if (err) {
+        const errorDetails = {
+          error: err.message,
+          status: err.statusCode,
+          stack: err.stack,
+        };
+        res.status(err.statusCode).json(errorDetails);
+      } else next();
     });
   };
 };
