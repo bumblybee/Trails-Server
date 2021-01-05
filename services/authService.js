@@ -63,3 +63,32 @@ exports.signupUser = async (email, username, password) => {
     }
   }
 };
+
+exports.loginUser = async (email, password) => {
+  const userRecord = await User.findOne({ where: { email: email } });
+
+  if (!userRecord) {
+    // Handle login failure
+    throw new CustomError("auth.invalidCredentials", "LoginError", 403);
+  } else {
+    const correctPassword = await argon2.verify(userRecord.password, password);
+
+    // Handle incorrect password
+    if (!correctPassword) {
+      throw new CustomError("auth.invalidCredentials", "LoginError", 401);
+    }
+
+    const jwt = this.generateJWT(userRecord);
+
+    const userData = {
+      id: userRecord.id,
+      username: userRecord.username,
+      email: userRecord.email,
+    };
+
+    return {
+      jwt,
+      userData,
+    };
+  }
+};

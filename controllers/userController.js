@@ -16,6 +16,24 @@ exports.signupUser = async (req, res) => {
 
     res.json(user);
   } else {
+    //TODO: handle errors not picked up in authService
+    res.json({ error });
+  }
+};
+
+exports.loginUser = async (req, res) => {
+  const { email, password } = req.body;
+  const { jwt, userData: user } = await authService.loginUser(email, password);
+
+  res.cookie("jwt", jwt, COOKIE_CONFIG);
+
+  if (user) {
+    res.json({
+      id: user.id,
+      username: user.username,
+      email: user.email,
+    });
+  } else {
     res.json({ error });
   }
 };
