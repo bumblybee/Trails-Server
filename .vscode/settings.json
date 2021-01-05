@@ -3,6 +3,7 @@
         "editorCursor.foreground": "#cfee22",
         "activityBar.background": "#2A310C",
         "titleBar.activeBackground": "#3A4410",
-        "titleBar.activeForeground": "#FAFCF1"
+        "titleBar.activeForeground": "#FAFCF1",
+        "statusBar.background": "#723315"
     }
 }

@@ -27,14 +27,14 @@ exports.searchTrails = async (req, res) => {
       whereConfig.biking = true;
     }
   }
-  //TODO: config for sending image to client via s3
+
   const trails = await Trail.findAll({
     where: whereConfig,
     attributes: {
       include: [[distance, "distance"]],
     },
     order: distance,
-    limit: 25,
+    limit: 15,
   });
 
   res.json(trails);

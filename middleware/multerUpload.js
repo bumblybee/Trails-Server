@@ -19,6 +19,7 @@ const multerS3Config = multerS3({
   },
 });
 
+//TODO: Custom error fileFilter?
 //Set image size limit to 5mb and make sure it's an image
 const multerOptions = {
   storage: multerS3Config,

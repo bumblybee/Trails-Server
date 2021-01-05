@@ -10,10 +10,6 @@ const trailsController = require("../controllers/trailsController");
 
 router.get("/", trailsController.searchTrails);
 
-router.post(
-  "/",
-  multerErrorWrapper(upload),
-  errorWrapper(trailsController.createTrail)
-);
+router.post("/", upload, errorWrapper(trailsController.createTrail));
 
 module.exports = router;
