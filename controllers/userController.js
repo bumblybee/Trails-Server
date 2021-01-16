@@ -17,7 +17,7 @@ exports.signupUser = async (req, res) => {
     res.json(user);
   } else {
     //TODO: handle errors not picked up in authService
-    res.json({ error });
+    throw new CustomError("auth.unknownIssue", "signupError", 500);
   }
 };
 
