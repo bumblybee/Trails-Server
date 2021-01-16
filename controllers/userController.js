@@ -12,7 +12,7 @@ exports.signupUser = async (req, res) => {
   );
 
   if (user) {
-    res.cookie("jwt", jwt, COOKIE_CONFIG);
+    res.cookie("_ts", jwt, COOKIE_CONFIG);
 
     res.json(user);
   } else {
@@ -34,6 +34,6 @@ exports.loginUser = async (req, res) => {
       email: user.email,
     });
   } else {
-    res.json({ error });
+    throw new CustomError("auth.invalidCredentials", "loginError", 401);
   }
 };
