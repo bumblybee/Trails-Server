@@ -2,6 +2,13 @@ const authService = require("../services/authService");
 const { CustomError } = require("../handlers/errorHandlers");
 const COOKIE_CONFIG = require("../config/cookieConfig").COOKIE_CONFIG;
 
+exports.getCurrentUser = async (req, res) => {
+  const { id } = req.token.data;
+
+  const user = await authService.getUser(id);
+  res.json({ user });
+};
+
 exports.signupUser = async (req, res) => {
   const { email, username, password } = req.body;
 
@@ -25,9 +32,8 @@ exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
   const { jwt, userData: user } = await authService.loginUser(email, password);
 
-  res.cookie("jwt", jwt, COOKIE_CONFIG);
-
   if (user) {
+    res.cookie("_ts", jwt, COOKIE_CONFIG);
     res.json({
       id: user.id,
       username: user.username,

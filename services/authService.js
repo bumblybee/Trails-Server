@@ -19,6 +19,19 @@ exports.generateJWT = (user) => {
   });
 };
 
+exports.getUser = async (id) => {
+  const user = await User.findOne({
+    where: { id },
+    attributes: ["id", "username", "email"],
+  });
+
+  if (user) {
+    return user;
+  } else {
+    return { user: null };
+  }
+};
+
 exports.signupUser = async (email, username, password) => {
   const existingCredentials = await User.findOne({
     where: { [Op.or]: [{ email: email }, { username: username }] },
