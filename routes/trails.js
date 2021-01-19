@@ -1,9 +1,6 @@
 var express = require("express");
 var router = express.Router();
-const {
-  errorWrapper,
-  multerErrorWrapper,
-} = require("../handlers/errorHandlers");
+const { errorWrapper } = require("../handlers/errorHandlers");
 const { upload } = require("../middleware/multerUpload");
 
 const trailsController = require("../controllers/trailsController");
