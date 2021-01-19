@@ -1,6 +1,7 @@
 const User = require("../db").User;
 const jwt = require("jsonwebtoken");
 const argon2 = require("argon2");
+const emailHandler = require("../handlers/emailHandler");
 const { CustomError } = require("../handlers/errorHandlers");
 const { Op } = require("sequelize");
 
@@ -52,14 +53,15 @@ exports.signupUser = async (email, username, password) => {
     const createdUser = await User.create(newUser);
 
     if (createdUser) {
-      //   emailHandler.sendEmail({
-      //     subject: "Welcome to the Challenge Board!",
-      //     filename: "signupEmail",
-      //     user: {
-      //       username,
-      //       email,
-      //     },
-      //   });
+      // Send welcome email
+      emailHandler.sendEmail({
+        subject: "Welcome to TrailScout!",
+        filename: "welcomeEmail",
+        user: {
+          username,
+          email,
+        },
+      });
 
       const jwt = this.generateJWT(createdUser);
 

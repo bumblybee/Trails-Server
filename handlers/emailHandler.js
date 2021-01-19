@@ -1,6 +1,7 @@
 const nodemailer = require("nodemailer");
 const ejs = require("ejs");
 const juice = require("juice");
+
 const { CustomError } = require("../handlers/errorHandlers");
 
 const transport = nodemailer.createTransport({
@@ -31,8 +32,8 @@ exports.sendEmail = async (options) => {
       html,
     };
 
-    return transport.sendEmail(mailOptions);
+    return transport.sendMail(mailOptions);
   } catch (err) {
-    throw new CustomError("email.failed", "EmailError", 500);
+    console.log(err);
   }
 };
