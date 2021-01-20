@@ -43,3 +43,7 @@ exports.loginUser = async (req, res) => {
     throw new CustomError("auth.invalidCredentials", "loginError", 401);
   }
 };
+
+exports.logoutUser = (req, res) => {
+  res.clearCookie("_ts", COOKIE_CONFIG).json({ message: "User logged out" });
+};
