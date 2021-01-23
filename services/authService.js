@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const argon2 = require("argon2");
 const crypto = require("crypto");
 const emailHandler = require("../handlers/emailHandler");
+const { RESET_PASSWORD_URL } = require("../config/passwordResetConfig");
 const { CustomError } = require("../handlers/errorHandlers");
 const { Op } = require("sequelize");
 
@@ -110,17 +111,27 @@ exports.loginUser = async (email, password) => {
 };
 
 exports.generatePasswordReset = async (email) => {
-  const userRecord = User.findOne({ where: { email: email } });
+  const userRecord = await User.findOne({ where: { email: email } });
+
+  const resetToken = crypto.randomBytes(25).toString("hex");
+  const resetExpiry = Date.now() + 1000 * 60 * 60;
 
   if (userRecord) {
-    const resetToken = crypto.randomBytes(25).toString("hex");
-    const resetExpiry = Date.now() + 1000 * 60 * 60;
-
     await User.update(
       { resetPasswordToken: resetToken, resetPasswordExpiry: resetExpiry },
       { where: { email } }
     );
+
+    const resetPasswordUrl = `${RESET_PASSWORD_URL}/${resetToken}`;
+
+    emailHandler.sendEmail({
+      subject: "Reset your TrailScout Password",
+      filename: "resetPasswordEmail",
+      user: { email },
+
+      resetPasswordUrl,
+    });
   }
 
-  return { userRecord, resetToken };
+  return { userRecord };
 };

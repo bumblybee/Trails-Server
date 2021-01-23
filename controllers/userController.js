@@ -1,6 +1,6 @@
 const authService = require("../services/authService");
 const { CustomError } = require("../handlers/errorHandlers");
-const { RESET_PASSWORD_URL } = require("../config/passwordResetConfig");
+
 const COOKIE_CONFIG = require("../config/cookieConfig").COOKIE_CONFIG;
 
 exports.getCurrentUser = async (req, res) => {
@@ -52,21 +52,11 @@ exports.logoutUser = (req, res) => {
 exports.generatePasswordResetLink = async (req, res) => {
   const { email } = req.body;
 
-  const { userRecord, resetToken } = authService.generatePasswordReset(email);
+  const { userRecord } = authService.generatePasswordReset(email);
 
   if (!userRecord) {
-    res.json({ message: "An email has been sent to the address provided." });
+    // TODO: Add logging noting user doesn't exist
     console.log(userRecord);
   }
-  const resetPasswordUrl = `${RESET_PASSWORD_URL}/${resetToken}`;
-
-  emailHandler.sendEmail({
-    subject: "Reset your TrailScout Password",
-    filename: "resetPasswordEmail",
-    user: { email },
-
-    resetPasswordUrl,
-  });
-
   res.json({ message: "An email has been sent to the address provided." });
 };
