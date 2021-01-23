@@ -60,3 +60,18 @@ exports.generatePasswordResetLink = async (req, res) => {
   }
   res.json({ message: "An email has been sent to the address provided." });
 };
+
+exports.resetPassword = async (req, res) => {
+  const { token } = req.params;
+  const { password } = req.body;
+
+  const { userRecord } = authService.passwordReset(token, password);
+
+  res.json({
+    message: "Password Updated",
+
+    id: userRecord.id,
+    email: userRecord.email,
+    username: userRecord.username,
+  });
+};

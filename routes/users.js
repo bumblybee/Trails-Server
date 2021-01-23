@@ -19,7 +19,7 @@ router.post(
 
 router.post(
   "/reset-password/:token",
-  errorWrapper(userController.passwordReset)
+  errorWrapper(userController.resetPassword)
 );
 
 module.exports = router;

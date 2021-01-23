@@ -135,3 +135,22 @@ exports.generatePasswordReset = async (email) => {
 
   return { userRecord };
 };
+
+exports.passwordReset = async (token, password) => {
+  const userRecord = await User.findOne({
+    where: {
+      resetPasswordToken: token,
+      resetPasswordExpiry: { [Op.gt]: Date.now() },
+    },
+  });
+
+  if (!token || !userRecord) {
+    throw new CustomError("auth.noToken", "PasswordResetError", 401);
+  } else {
+    const hashedPassword = await argon2.hash(password);
+
+    await userRecord.update({ password: hashedPassword });
+  }
+
+  return { userRecord };
+};
