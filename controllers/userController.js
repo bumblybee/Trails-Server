@@ -65,7 +65,11 @@ exports.resetPassword = async (req, res) => {
   const { token } = req.params;
   const { password } = req.body;
 
-  const { userRecord } = authService.passwordReset(token, password);
+  const { userRecord } = await authService.passwordReset(token, password);
+
+  if (!token || !userRecord) {
+    throw new CustomError("auth.noToken", "PasswordResetError", 401);
+  }
 
   res.json({
     message: "Password Updated",

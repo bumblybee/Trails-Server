@@ -144,9 +144,7 @@ exports.passwordReset = async (token, password) => {
     },
   });
 
-  if (!token || !userRecord) {
-    throw new CustomError("auth.noToken", "PasswordResetError", 401);
-  } else {
+  if (userRecord) {
     const hashedPassword = await argon2.hash(password);
 
     await userRecord.update({ password: hashedPassword });
