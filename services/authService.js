@@ -1,6 +1,7 @@
 const User = require("../db").User;
 const jwt = require("jsonwebtoken");
 const argon2 = require("argon2");
+const crypto = require("crypto");
 const emailHandler = require("../handlers/emailHandler");
 const { CustomError } = require("../handlers/errorHandlers");
 const { Op } = require("sequelize");
@@ -106,4 +107,20 @@ exports.loginUser = async (email, password) => {
       userData,
     };
   }
+};
+
+exports.generatePasswordReset = async (email) => {
+  const userRecord = User.findOne({ where: { email: email } });
+
+  if (userRecord) {
+    const resetToken = crypto.randomBytes(25).toString("hex");
+    const resetExpiry = Date.now() + 1000 * 60 * 60;
+
+    await User.update(
+      { resetPasswordToken: resetToken, resetPasswordExpiry: resetExpiry },
+      { where: { email } }
+    );
+  }
+
+  return { userRecord, resetToken };
 };

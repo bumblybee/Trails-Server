@@ -12,4 +12,14 @@ router.post("/login", errorWrapper(userController.loginUser));
 
 router.post("/logout", userController.logoutUser);
 
+router.post(
+  "/reset-password",
+  errorWrapper(userController.generatePasswordResetLink)
+);
+
+router.post(
+  "/reset-password/:token",
+  errorWrapper(userController.passwordReset)
+);
+
 module.exports = router;

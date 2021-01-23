@@ -26,7 +26,7 @@ exports.sendEmail = async (options) => {
     const html = await generateHTML(options.filename, options);
 
     const mailOptions = {
-      from: "TrailScout <hesstjune@gmail.com>",
+      from: "TrailScout 🏞 <hesstjune@gmail.com>",
       to: options.user.email,
       subject: options.subject,
       html,
