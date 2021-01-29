@@ -22,4 +22,6 @@ router.post(
   errorWrapper(userController.resetPassword)
 );
 
+router.post("/bookmark/:id", isAuth, userController.bookMarkTrail);
+
 module.exports = router;

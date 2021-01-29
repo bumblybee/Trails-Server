@@ -40,7 +40,7 @@ db.sequelize.sync({ force: forceDbReset }).then(async () => {
   server.listen(port);
   server.on("error", onError);
   server.on("listening", onListening);
-  //TODO: replace \\\" with \" in json file before storing to db
+
   if (forceDbReset === true) {
     const readFile = fs.readFileSync(trailFile);
     let parsedTrails = JSON.parse(readFile);

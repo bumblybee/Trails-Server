@@ -1,4 +1,6 @@
+const Sequelize = require("sequelize");
 const authService = require("../services/authService");
+const User = require("../db").User;
 const { CustomError } = require("../handlers/errorHandlers");
 
 const COOKIE_CONFIG = require("../config/cookieConfig").COOKIE_CONFIG;
@@ -78,4 +80,28 @@ exports.resetPassword = async (req, res) => {
     email: userRecord.email,
     username: userRecord.username,
   });
+};
+
+exports.bookMarkTrail = async (req, res) => {
+  // Ask Jay about getting id from token, or if should include in params
+  const { id: userId } = req.token.data;
+  const trailId = req.params.id;
+
+  const updated = await User.update(
+    {
+      bookmarks: Sequelize.fn(
+        "array_append",
+        Sequelize.col("bookmarks"),
+        trailId
+      ),
+    },
+    {
+      where: { id: userId },
+      attributes: ["username", "bookmarks"],
+      returning: true,
+      plain: true,
+    }
+  );
+
+  res.status(200).json(updated);
 };

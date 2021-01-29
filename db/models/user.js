@@ -41,7 +41,8 @@ module.exports = (sequelize, DataTypes) => {
         field: "reset_password_expiry",
       },
       bookmarks: {
-        type: DataTypes.ARRAY(DataTypes.TEXT),
+        type: DataTypes.ARRAY(DataTypes.INTEGER),
+        unique: true,
         field: "bookmarks",
       },
       createdAt: {
