@@ -37,11 +37,7 @@ exports.loginUser = async (req, res) => {
 
   if (user) {
     res.cookie("_ts", jwt, COOKIE_CONFIG);
-    res.json({
-      id: user.id,
-      username: user.username,
-      email: user.email,
-    });
+    res.json(user);
   } else {
     throw new CustomError("auth.invalidCredentials", "loginError", 401);
   }
@@ -103,5 +99,35 @@ exports.bookMarkTrail = async (req, res) => {
     }
   );
 
-  res.status(200).json(updated);
+  res.status(200).json(updated[1].bookmarks);
+};
+
+exports.removeBookmark = async (req, res) => {
+  const { id: userId } = req.token.data;
+  const trailId = req.params.id;
+  const user = await User.findOne({ where: { id: userId } });
+
+  const index = user.bookmarks.indexOf(Number(trailId));
+  console.log(index);
+
+  const updated = await User.update(
+    {
+      bookmarks: Sequelize.fn(
+        "array_remove",
+        Sequelize.col("bookmarks"),
+        trailId
+      ),
+    },
+    {
+      where: { id: userId },
+      attributes: ["username", "bookmarks"],
+      returning: true,
+      plain: true,
+    }
+  );
+
+  res.json(updated);
+  // const updated = await User.update({
+  //   bookmarks:
+  // })
 };

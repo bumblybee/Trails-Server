@@ -25,7 +25,7 @@ exports.generateJWT = (user) => {
 exports.getUser = async (id) => {
   const user = await User.findOne({
     where: { id },
-    attributes: ["id", "username", "email"],
+    attributes: ["id", "username", "email", "bookmarks"],
   });
 
   if (user) {
@@ -101,6 +101,7 @@ exports.loginUser = async (email, password) => {
       id: userRecord.id,
       username: userRecord.username,
       email: userRecord.email,
+      bookmarks: userRecord.bookmarks,
     };
 
     return {

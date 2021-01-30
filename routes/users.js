@@ -24,4 +24,6 @@ router.post(
 
 router.post("/bookmark/:id", isAuth, userController.bookMarkTrail);
 
+router.post("/remove-bookmark/:id", isAuth, userController.removeBookmark);
+
 module.exports = router;
