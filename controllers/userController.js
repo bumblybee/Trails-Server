@@ -105,10 +105,6 @@ exports.bookMarkTrail = async (req, res) => {
 exports.removeBookmark = async (req, res) => {
   const { id: userId } = req.token.data;
   const trailId = req.params.id;
-  const user = await User.findOne({ where: { id: userId } });
-
-  const index = user.bookmarks.indexOf(Number(trailId));
-  console.log(index);
 
   const updated = await User.update(
     {
@@ -126,8 +122,6 @@ exports.removeBookmark = async (req, res) => {
     }
   );
 
-  res.json(updated);
-  // const updated = await User.update({
-  //   bookmarks:
-  // })
+  // TODO: Check into returning specific attributes from update method
+  res.json(updated[1].bookmarks);
 };
