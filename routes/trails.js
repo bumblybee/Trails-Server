@@ -5,7 +5,9 @@ const { upload } = require("../middleware/multerUpload");
 
 const trailsController = require("../controllers/trailsController");
 
-router.get("/", trailsController.searchTrails);
+router.get("/search", trailsController.searchTrails);
+
+router.get("/:id", trailsController.getSingleTrail);
 
 router.post("/", upload, errorWrapper(trailsController.createTrail));
 

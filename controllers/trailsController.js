@@ -3,6 +3,14 @@ const { CustomError } = require("../handlers/errorHandlers");
 const sequelize = require("sequelize");
 const { Op } = require("sequelize");
 
+exports.getSingleTrail = async (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  const trail = await Trail.findOne({ where: { id: id } });
+
+  res.json(trail);
+};
+
 /* 
 Pagination examples
 -------------------------------
@@ -17,8 +25,6 @@ Project.findAll({ offset: 5, limit: 5 });
 */
 
 exports.searchTrails = async (req, res) => {
-  //TODO: Check using query vs params
-
   const { lng, lat } = req.query;
 
   const location = sequelize.literal(
