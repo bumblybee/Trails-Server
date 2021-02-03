@@ -122,6 +122,5 @@ exports.removeBookmark = async (req, res) => {
     }
   );
 
-  // TODO: Check into returning specific attributes from update method
-  res.json(updated[1].bookmarks);
+  res.status(200).json(updated[1].bookmarks);
 };

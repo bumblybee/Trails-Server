@@ -5,7 +5,7 @@ const { Op } = require("sequelize");
 
 exports.getSingleTrail = async (req, res) => {
   const { id } = req.params;
-  console.log(id);
+
   const trail = await Trail.findOne({ where: { id: id } });
 
   res.json(trail);

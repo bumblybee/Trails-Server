@@ -53,7 +53,7 @@ exports.getHikingByState = async (req, res) => {
   res.json(storedTrails);
 };
 
-exports.seeJSON = (req, res) => {
+exports.viewJSON = (req, res) => {
   const trails = seedService.returnJSON();
   res.json(trails);
 };

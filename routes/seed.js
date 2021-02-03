@@ -6,6 +6,6 @@ const { errorWrapper } = require("../handlers/errorHandlers");
 // router.get("/combined", errorWrapper(seedController.getCombinedTrails));
 // router.get("/biking", errorWrapper(seedController.getBikingByState));
 // router.get("/hiking", errorWrapper(seedController.getHikingByState));
-// router.get("/json", seedController.seeJSON);
+// router.get("/json", seedController.viewJSON);
 
 module.exports = router;
