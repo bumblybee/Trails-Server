@@ -9,6 +9,7 @@ const env = process.env.NODE_ENV || "development";
 
 let sequelize;
 
+// Environment config
 if (env !== "production") {
   sequelize = new Sequelize(
     process.env.DATABASE,
@@ -31,7 +32,7 @@ Trail.belongsTo(User);
 Bookmark.belongsTo(User);
 Bookmark.hasOne(Trail);
 
-// authenticate db and log connection or error
+// Authenticate db and log connection/error
 sequelize
   .authenticate()
   .then(() => console.log("Database connected..."))
