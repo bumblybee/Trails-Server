@@ -40,11 +40,6 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         field: "reset_password_expiry",
       },
-      bookmarks: {
-        type: DataTypes.ARRAY(DataTypes.INTEGER),
-        unique: true,
-        field: "bookmarks",
-      },
       createdAt: {
         type: DataTypes.DATE,
         field: "created_at",

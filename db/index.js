@@ -28,9 +28,11 @@ const Bookmark = BookmarkModel(sequelize, Sequelize);
 
 // Relationships
 User.hasMany(Trail);
+User.hasMany(Bookmark);
 Trail.belongsTo(User);
+Trail.hasMany(Bookmark);
 Bookmark.belongsTo(User);
-Bookmark.hasOne(Trail);
+Bookmark.belongsTo(Trail);
 
 // Authenticate db and log connection/error
 sequelize

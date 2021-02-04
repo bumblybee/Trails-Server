@@ -7,8 +7,9 @@ const cors = require("cors");
 const errorHandlers = require("./handlers/errorHandlers");
 
 var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
-const trailsRouter = require("./routes/trails");
+var userRouter = require("./routes/users");
+const trailRouter = require("./routes/trails");
+const bookmarkRouter = require("./routes/bookmarks");
 const seedRouter = require("./routes/seed");
 
 var app = express();
@@ -33,8 +34,9 @@ app.use(express.static(path.join(__dirname, "uploads")));
 app.use(cookieParser());
 
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
-app.use("/trails", trailsRouter);
+app.use("/users", userRouter);
+app.use("/trails", trailRouter);
+app.use("/bookmarks", bookmarkRouter);
 app.use("/seed", seedRouter);
 
 app.use(errorHandlers.sequelizeErrorHandler);
