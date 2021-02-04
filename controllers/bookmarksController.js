@@ -1,4 +1,6 @@
 const Bookmark = require("../db").Bookmark;
+const { Op } = require("sequelize");
+
 const { CustomError } = require("../handlers/errorHandlers");
 
 exports.createBookmark = async (req, res) => {
@@ -17,4 +19,17 @@ exports.createBookmark = async (req, res) => {
   } else {
     res.status(200).json({ code: "data.unchanged", Bookmark });
   }
+};
+
+exports.removeBookmark = async (req, res) => {
+  const { id: userId } = req.token.data;
+  const { id: trailId } = req.params;
+
+  const deletedBookmark = await Bookmark.destroy({
+    where: { [Op.and]: [{ userId }, { trailId }] },
+    returning: true,
+    plain: true,
+  });
+
+  res.status(200).json({ code: "data.destroyed", deletedBookmark });
 };
