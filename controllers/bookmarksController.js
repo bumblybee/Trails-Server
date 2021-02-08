@@ -3,16 +3,23 @@ const { Op } = require("sequelize");
 
 const { CustomError } = require("../handlers/errorHandlers");
 
+exports.getBookmarks = async (req, res) => {
+  const { id: userId } = req.token.data;
+  const bookmarks = await Bookmark.find({ where: { userId } });
+
+  res.status(200).json({ code: "data.located", bookmarks });
+};
+
 exports.createBookmark = async (req, res) => {
   const { id: userId } = req.token.data;
   const { id: trailId } = req.params;
-  const bookmark = { userId, trailId };
 
   const existentBookmark = await Bookmark.findOne({
-    where: { trailId, userId },
+    where: { [Op.and]: [{ userId }, { trailId }] },
   });
 
   if (!existentBookmark) {
+    const bookmark = { userId, trailId };
     const createdBookmark = await Bookmark.create(bookmark);
 
     res.status(201).json({ code: "data.created", createdBookmark });

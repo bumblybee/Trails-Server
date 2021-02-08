@@ -4,6 +4,8 @@ const bookmarksController = require("../controllers/bookmarksController");
 const { isAuth } = require("../middleware/isAuth");
 const { errorWrapper } = require("../handlers/errorHandlers");
 
+router.get("/", isAuth, bookmarksController.getBookmarks);
+
 router.post(
   "/create/:id",
   isAuth,
