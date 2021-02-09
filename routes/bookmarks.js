@@ -7,11 +7,15 @@ const { errorWrapper } = require("../handlers/errorHandlers");
 router.get("/", isAuth, bookmarksController.getBookmarks);
 
 router.post(
-  "/create/:id",
+  "/create/:userId/:trailId",
   isAuth,
   errorWrapper(bookmarksController.createBookmark)
 );
 
-router.post("/remove/:id", isAuth, bookmarksController.removeBookmark);
+router.post(
+  "/remove/:userId/:trailId",
+  isAuth,
+  bookmarksController.removeBookmark
+);
 
 module.exports = router;
