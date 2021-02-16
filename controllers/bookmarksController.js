@@ -1,4 +1,5 @@
 const Bookmark = require("../db").Bookmark;
+const Trail = require("../db").Trail;
 const { Op } = require("sequelize");
 
 const { CustomError } = require("../handlers/errorHandlers");
@@ -7,6 +8,11 @@ exports.getBookmarks = async (req, res) => {
   const { id } = req.token.data;
   const bookmarks = await Bookmark.findAll({
     where: { userId: id },
+    include: [
+      {
+        model: Trail,
+      },
+    ],
   });
 
   res.status(200).json(bookmarks);

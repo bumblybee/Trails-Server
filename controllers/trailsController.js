@@ -11,6 +11,14 @@ exports.getSingleTrail = async (req, res) => {
   res.json(trail);
 };
 
+exports.getScoutedTrails = async (req, res) => {
+  const { id } = req.params;
+  console.log(id);
+  const trails = await Trail.findAll({ where: { userId: id } });
+
+  res.status(200).json(trails);
+};
+
 /* 
 Pagination examples
 -------------------------------
@@ -53,7 +61,7 @@ exports.searchTrails = async (req, res) => {
       include: [[distance, "distance"]],
     },
     order: distance,
-    limit: 15,
+    limit: 20,
   });
 
   res.json(trails);
@@ -61,8 +69,8 @@ exports.searchTrails = async (req, res) => {
 
 exports.createTrail = async (req, res) => {
   // throw new CustomError("upload.failed", "UploadError", 400);
+  const { id: userId } = req.token.data;
   const {
-    userId,
     name,
     city,
     state,
