@@ -1,8 +1,10 @@
 const Trail = require("../db").Trail;
+const Bookmark = require("../db").Bookmark;
 const { CustomError } = require("../handlers/errorHandlers");
 const sequelize = require("sequelize");
 const { Op } = require("sequelize");
 
+//TODO: Get trails by bookmark : include model Bookmark, find trails where bookmark.userId = userId
 exports.getSingleTrail = async (req, res) => {
   const { id } = req.params;
 
@@ -60,6 +62,7 @@ exports.searchTrails = async (req, res) => {
     attributes: {
       include: [[distance, "distance"]],
     },
+    include: [{ model: Bookmark }],
     order: distance,
     limit: 20,
   });
@@ -83,7 +86,6 @@ exports.createTrail = async (req, res) => {
     description,
     difficulty,
   } = req.body;
-  console.log(req.body);
 
   if (!hiking) hiking = false;
   if (!biking) biking = false;

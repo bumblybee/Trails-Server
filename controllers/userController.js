@@ -9,6 +9,7 @@ exports.getCurrentUser = async (req, res) => {
   const { id } = req.token.data;
 
   const user = await authService.getUser(id);
+
   res.json({ user });
 };
 

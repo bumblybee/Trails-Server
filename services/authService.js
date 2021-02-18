@@ -1,4 +1,7 @@
 const User = require("../db").User;
+const Bookmark = require("../db").Bookmark;
+const Trail = require("../db").Trail;
+
 const jwt = require("jsonwebtoken");
 const argon2 = require("argon2");
 const crypto = require("crypto");
@@ -26,6 +29,7 @@ exports.getUser = async (id) => {
   const user = await User.findOne({
     where: { id },
     attributes: ["id", "username", "email"],
+    include: [{ model: Bookmark }, { model: Trail }],
   });
 
   if (user) {
