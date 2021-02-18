@@ -49,3 +49,11 @@ exports.removeBookmark = async (req, res) => {
       .json({ code: "data.nonexistent", destroyedBookmark, bookmarks });
   }
 };
+
+exports.latestBookmarks = async (req, res) => {
+  const bookmarks = await Bookmark.findAll({
+    order: [["createdAt", "DESC"]],
+    include: Trail,
+  });
+  res.json(bookmarks);
+};

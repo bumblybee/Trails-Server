@@ -6,6 +6,8 @@ const { errorWrapper } = require("../handlers/errorHandlers");
 
 router.get("/", isAuth, bookmarksController.getBookmarks);
 
+router.get("/latest", bookmarksController.latestBookmarks);
+
 router.post(
   "/create/:userId/:trailId",
   isAuth,
