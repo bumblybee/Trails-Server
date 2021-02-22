@@ -53,6 +53,7 @@ exports.signupUser = async (email, username, password) => {
       username,
       email,
       password: hash,
+      role: user,
     };
 
     // Store user in db

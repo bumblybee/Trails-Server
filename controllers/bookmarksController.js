@@ -54,6 +54,7 @@ exports.latestBookmarks = async (req, res) => {
   const bookmarks = await Bookmark.findAll({
     order: [["createdAt", "DESC"]],
     include: Trail,
+    limit: 3,
   });
-  res.json(bookmarks);
+  res.status(200).json(bookmarks);
 };

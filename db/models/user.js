@@ -40,6 +40,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         field: "reset_password_expiry",
       },
+      role: {
+        type: DataTypes.STRING,
+        field: "role",
+      },
       createdAt: {
         type: DataTypes.DATE,
         field: "created_at",
