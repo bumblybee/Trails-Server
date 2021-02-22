@@ -1,7 +1,7 @@
 const User = require("../db").User;
 const Bookmark = require("../db").Bookmark;
 const Trail = require("../db").Trail;
-
+const roles = require("../enums/roles");
 const jwt = require("jsonwebtoken");
 const argon2 = require("argon2");
 const crypto = require("crypto");
@@ -39,6 +39,37 @@ exports.getUser = async (id) => {
   }
 };
 
+exports.createAdminUser = async (username, email, password) => {
+  const hash = await argon2.hash(password);
+
+  const newAdmin = {
+    username,
+    email,
+    password: hash,
+    role: roles.Admin,
+  };
+
+  const adminUser = await User.create(newAdmin);
+
+  const createdAdminUser = {
+    id: adminUser.id,
+    username: adminUser.username,
+    email: adminUser.email,
+    role: adminUser.role,
+  };
+
+  emailHandler.sendEmail({
+    subject: "Welcome to TrailScout!",
+    filename: "welcomeEmail",
+    user: {
+      username,
+      email,
+    },
+  });
+
+  return createdAdminUser;
+};
+
 exports.signupUser = async (email, username, password) => {
   const existingCredentials = await User.findOne({
     where: { [Op.or]: [{ email: email }, { username: username }] },
@@ -53,7 +84,7 @@ exports.signupUser = async (email, username, password) => {
       username,
       email,
       password: hash,
-      role: user,
+      role: roles.User,
     };
 
     // Store user in db

@@ -13,7 +13,7 @@ var debug = require("debug")("trails-server:server");
 var http = require("http");
 
 /* ****database**** */
-
+var authService = require("../services/authService");
 const db = require("../db");
 const Trail = require("../db").Trail;
 const trailFile = "../trails-server/db/json/trails.json";
@@ -35,7 +35,7 @@ var server = http.createServer(app);
  * Sync / seed db on server start. Listen on provided port, on all network interfaces.
  */
 
-let forceDbReset = false;
+let forceDbReset = true;
 db.sequelize.sync({ force: forceDbReset }).then(async () => {
   server.listen(port);
   server.on("error", onError);
@@ -47,7 +47,14 @@ db.sequelize.sync({ force: forceDbReset }).then(async () => {
     await Trail.bulkCreate([...parsedTrails], {
       ignoreDuplicates: true,
     });
-    console.log("JSON data pushed to database");
+
+    await authService.createAdminUser(
+      process.env.ADMIN_USERNAME,
+      process.env.ADMIN_EMAIL,
+      process.env.ADMIN_PASSWORD
+    );
+
+    console.log("Database seeded successfully...");
   }
 });
 
