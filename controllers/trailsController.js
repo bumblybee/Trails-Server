@@ -1,5 +1,7 @@
 const Trail = require("../db").Trail;
 const Bookmark = require("../db").Bookmark;
+const Edit = require("../db").Edit;
+
 const { CustomError } = require("../handlers/errorHandlers");
 const sequelize = require("sequelize");
 const { Op } = require("sequelize");
@@ -106,7 +108,7 @@ exports.createTrail = async (req, res) => {
     length,
     rating,
     description,
-    difficulty: difficulty.toLowerCase(),
+    difficulty,
   };
 
   const trail = await Trail.create(newTrail);
@@ -130,4 +132,25 @@ exports.suggestTrailEdit = async (req, res) => {
     difficulty,
     trailId,
   } = req.body;
+
+  const point = { type: "Point", coordinates: [lng, lat] };
+
+  const suggestedEdit = {
+    name,
+    city,
+    state,
+    lnglat: point,
+    hiking,
+    biking,
+    length,
+    rating,
+    description,
+    difficulty,
+    trailId,
+    userId,
+  };
+
+  const createdEdit = await Edit.create(suggestedEdit);
+
+  res.status(200).json(createdEdit);
 };

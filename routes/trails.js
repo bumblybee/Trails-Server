@@ -12,6 +12,12 @@ router.get("/:id", trailsController.getSingleTrail);
 
 router.get("/scouted/:id", isAuth, trailsController.getScoutedTrails);
 
+router.post(
+  "/suggest-edit",
+  isAuth,
+  errorWrapper(trailsController.suggestTrailEdit)
+);
+
 router.post("/", [upload, isAuth], errorWrapper(trailsController.createTrail));
 
 module.exports = router;
