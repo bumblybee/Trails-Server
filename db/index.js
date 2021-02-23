@@ -34,7 +34,7 @@ User.hasMany(Bookmark);
 User.hasMany(Edit);
 Trail.belongsTo(User);
 Trail.hasMany(Bookmark);
-Trail.hasMany(edit);
+Trail.hasMany(Edit);
 Bookmark.belongsTo(User);
 Bookmark.belongsTo(Trail);
 Edit.belongsTo(User);

@@ -6,57 +6,38 @@ module.exports = (sequelize, DataTypes) => {
     {
       name: {
         type: DataTypes.STRING,
-        allowNull: false,
         unique: true,
         field: "name",
       },
       city: {
         type: DataTypes.STRING,
-        allowNull: false,
         field: "city",
       },
       state: {
         type: DataTypes.STRING,
-        allowNull: false,
         field: "state",
       },
       lnglat: {
         type: DataTypes.GEOMETRY("POINT"),
-        allowNull: false,
       },
       hiking: {
         type: DataTypes.BOOLEAN,
-        allowNull: false,
         field: "hiking",
       },
       biking: {
         type: DataTypes.BOOLEAN,
-        allowNull: false,
         field: "biking",
-      },
-      image: {
-        type: DataTypes.STRING,
-        field: "image",
       },
       difficulty: {
         type: DataTypes.STRING,
-        allowNull: true,
         field: "difficulty",
       },
       length: {
         type: DataTypes.DECIMAL,
-        allowNull: true,
         field: "length",
-      },
-      rating: {
-        type: DataTypes.DECIMAL,
-        allowNull: false,
-        field: "rating",
-        validate: { min: 0, max: 5 },
       },
       description: {
         type: DataTypes.TEXT,
-        allowNull: false,
         field: "description",
       },
       createdAt: {
@@ -74,7 +55,7 @@ module.exports = (sequelize, DataTypes) => {
       closed: {
         type: DataTypes.BOOLEAN,
         field: "closed",
-        default: false,
+        defaultValue: false,
       },
     },
     {
