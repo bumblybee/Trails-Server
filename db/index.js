@@ -4,6 +4,7 @@ const Sequelize = require("sequelize");
 const UserModel = require("./models/user.js");
 const TrailModel = require("./models/trail");
 const BookmarkModel = require("./models/bookmark");
+const EditModel = require("./models/edit");
 
 const env = process.env.NODE_ENV || "development";
 
@@ -25,14 +26,19 @@ if (env !== "production") {
 const User = UserModel(sequelize, Sequelize);
 const Trail = TrailModel(sequelize, Sequelize);
 const Bookmark = BookmarkModel(sequelize, Sequelize);
+const Edit = EditModel(sequelize, Sequelize);
 
 // Relationships
 User.hasMany(Trail);
 User.hasMany(Bookmark);
+User.hasMany(Edit);
 Trail.belongsTo(User);
 Trail.hasMany(Bookmark);
+Trail.hasMany(edit);
 Bookmark.belongsTo(User);
 Bookmark.belongsTo(Trail);
+Edit.belongsTo(User);
+Edit.belongsTo(Trail);
 
 // Authenticate db and log connection/error
 sequelize
@@ -46,4 +52,5 @@ module.exports = {
   User,
   Trail,
   Bookmark,
+  Edit,
 };

@@ -113,3 +113,21 @@ exports.createTrail = async (req, res) => {
 
   res.status(201).json(trail);
 };
+
+exports.suggestTrailEdit = async (req, res) => {
+  const { id: userId } = req.token.data;
+  const {
+    name,
+    city,
+    state,
+    lat,
+    lng,
+    hiking,
+    biking,
+    length,
+    rating,
+    description,
+    difficulty,
+    trailId,
+  } = req.body;
+};
