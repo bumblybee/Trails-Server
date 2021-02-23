@@ -6,7 +6,6 @@ module.exports = (sequelize, DataTypes) => {
     {
       name: {
         type: DataTypes.STRING,
-        unique: true,
         field: "name",
       },
       city: {
