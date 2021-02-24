@@ -152,5 +152,21 @@ exports.suggestTrailEdit = async (req, res) => {
 
   const createdEdit = await Edit.create(suggestedEdit);
 
+  const uneditedTrail = await Trail.findOne({ where: { id: trailId } });
+  //send email with suggestedEdit and uneditedTrail
+  const changes = {};
+  const uneditedData = uneditedTrail.dataValues;
+  for (const key in uneditedData) {
+    if (uneditedData[key] !== suggestedEdit[key]) {
+      changes[key] = {
+        original: uneditedData[key],
+        edit: suggestedEdit[key],
+      };
+    }
+
+    console.log(changes);
+  }
+
+  console.log(createdEdit);
   res.status(200).json(createdEdit);
 };
