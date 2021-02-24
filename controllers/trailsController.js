@@ -1,7 +1,8 @@
 const Trail = require("../db").Trail;
 const Bookmark = require("../db").Bookmark;
 const Edit = require("../db").Edit;
-
+const emailHandler = require("../handlers/emailHandler");
+const authService = require("../services/authService");
 const { CustomError } = require("../handlers/errorHandlers");
 const sequelize = require("sequelize");
 const { Op } = require("sequelize");
@@ -156,17 +157,34 @@ exports.suggestTrailEdit = async (req, res) => {
   //send email with suggestedEdit and uneditedTrail
   const changes = {};
   const uneditedData = uneditedTrail.dataValues;
-  for (const key in uneditedData) {
-    if (uneditedData[key] !== suggestedEdit[key]) {
+
+  for (const key in suggestedEdit) {
+    if (
+      suggestedEdit[key] !== uneditedData[key] &&
+      key !== "lnglat" && [key] &&
+      key !== "userId" &&
+      key !== "trailId"
+    ) {
       changes[key] = {
         original: uneditedData[key],
         edit: suggestedEdit[key],
       };
     }
-
-    console.log(changes);
   }
 
-  console.log(createdEdit);
+  for (const key in changes) {
+    console.log(key, changes[key]);
+  }
+  const user = await authService.getUser(userId);
+
+  emailHandler.sendEmail({
+    subject: "We've Recieved your Suggestions",
+    filename: "editedTrailEmail",
+    user: {
+      username: user.username,
+      email: user.email,
+    },
+    changes,
+  });
   res.status(200).json(createdEdit);
 };
