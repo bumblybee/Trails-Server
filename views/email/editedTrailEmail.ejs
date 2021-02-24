@@ -83,11 +83,11 @@
   <body>
     <div class="container">
       <h1>
-        <a href="http://localhost:3000"><span>TrailScout</span></a> Trail Update
-        Request
+        <a href="http://localhost:3000"><span>TrailScout</span></a> Request to
+        Updated Trail
       </h1>
 
-      <p>Below is a summary of your requested changes:</p>
+      <p>Summary of Requested Changes</p>
       <div>
         <ul>
           <% for(const key in changes) { %>
@@ -95,11 +95,11 @@
             <h2><%= key %></h2>
             <div class="comparison">
               <div>
-                <p>Current Entry</p>
+                <p>Current</p>
                 <%= changes[key].original %>
               </div>
               <div>
-                <p>Suggested Changes</p>
+                <p>Changes</p>
                 <%= changes[key].edit %>
               </div>
             </div>
@@ -110,10 +110,9 @@
       </div>
       <div>
         <p>
-          These suggestions will be reviewed by our team and the original
-          creator before any updates are made. We'll be in touch with the
-          results soon. Thanks for helping us keep TrailScout accurate and up to
-          date!
+          Suggestions will be reviewed by our team before any changes are made.
+          We'll be in touch soon with the results. Thanks for helping us keep
+          TrailScout accurate and up to date!
         </p>
       </div>
       <p>

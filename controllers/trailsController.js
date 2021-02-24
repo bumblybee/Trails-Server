@@ -154,7 +154,7 @@ exports.suggestTrailEdit = async (req, res) => {
   const createdEdit = await Edit.create(suggestedEdit);
 
   const uneditedTrail = await Trail.findOne({ where: { id: trailId } });
-  //send email with suggestedEdit and uneditedTrail
+
   const changes = {};
   const uneditedData = uneditedTrail.dataValues;
 
@@ -176,7 +176,7 @@ exports.suggestTrailEdit = async (req, res) => {
     console.log(key, changes[key]);
   }
   const user = await authService.getUser(userId);
-
+  // TODO: Pass a flag to denote original creator or requester
   emailHandler.sendEmail({
     subject: "We've Recieved your Suggestions",
     filename: "editedTrailEmail",
