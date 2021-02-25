@@ -151,7 +151,7 @@ exports.suggestTrailEdit = async (req, res) => {
     userId,
   };
 
-  const createdEdit = await Edit.create(suggestedEdit);
+  const createdSuggestion = await Edit.create(suggestedEdit);
 
   const uneditedTrail = await Trail.findOne({ where: { id: trailId } });
 
@@ -189,5 +189,53 @@ exports.suggestTrailEdit = async (req, res) => {
     changes,
   });
 
-  res.status(200).json(createdEdit);
+  res.status(200).json(createdSuggestion);
+};
+
+exports.editTrail = async (req, res) => {
+  const { id: userId } = req.token.data;
+  const {
+    name,
+    city,
+    state,
+    lat,
+    lng,
+    hiking,
+    biking,
+    length,
+    rating,
+    description,
+    difficulty,
+    trailId,
+  } = req.body;
+
+  const point = { type: "Point", coordinates: [lng, lat] };
+
+  const editDetails = {
+    name,
+    city,
+    state,
+    lnglat: point,
+    hiking,
+    biking,
+    length,
+    rating,
+    description,
+    difficulty,
+    trailId,
+    userId,
+    closed: true,
+    closedBy: userId,
+  };
+
+  const editedTrail = await Trail.update(
+    { editDetails },
+    {
+      where: { id: trailId },
+      returning: true,
+      plain: true,
+    }
+  );
+
+  res.status(201).json(editedTrail);
 };

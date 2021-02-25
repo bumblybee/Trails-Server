@@ -56,6 +56,10 @@ module.exports = (sequelize, DataTypes) => {
         field: "closed",
         defaultValue: false,
       },
+      closedBy: {
+        type: DataTypes.UUID,
+        field: "closed_by",
+      },
     },
     {
       timestamps: true,
