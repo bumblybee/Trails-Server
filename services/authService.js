@@ -28,7 +28,7 @@ exports.generateJWT = (user) => {
 exports.getUser = async (id) => {
   const user = await User.findOne({
     where: { id },
-    attributes: ["id", "username", "email"],
+    attributes: ["id", "username", "email", "role"],
     include: [{ model: Bookmark }, { model: Trail }],
   });
 
@@ -138,6 +138,7 @@ exports.loginUser = async (email, password) => {
       username: userRecord.username,
       email: userRecord.email,
       bookmarks: userRecord.bookmarks,
+      role: userRecord.role,
     };
 
     return {
