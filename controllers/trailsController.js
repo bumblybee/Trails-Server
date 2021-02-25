@@ -159,12 +159,7 @@ exports.suggestTrailEdit = async (req, res) => {
   const uneditedData = uneditedTrail.dataValues;
 
   for (const key in suggestedEdit) {
-    if (
-      suggestedEdit[key] !== uneditedData[key] &&
-      key !== "lnglat" && [key] &&
-      key !== "userId" &&
-      key !== "trailId"
-    ) {
+    if (suggestedEdit[key] !== uneditedData[key] && key !== "lnglat") {
       changes[key] = {
         original: uneditedData[key],
         edit: suggestedEdit[key],
@@ -172,19 +167,27 @@ exports.suggestTrailEdit = async (req, res) => {
     }
   }
 
-  for (const key in changes) {
-    console.log(key, changes[key]);
-  }
   const user = await authService.getUser(userId);
-  // TODO: Pass a flag to denote original creator or requester
+  // TODO: Include relevant data in admin email - maybe do send trailId and userId, but exclude if not admin... Two separate email sends
   emailHandler.sendEmail({
     subject: "We've Recieved your Suggestions",
-    filename: "editedTrailEmail",
+    filename: "suggestedEditsUserEmail",
     user: {
       username: user.username,
       email: user.email,
     },
     changes,
   });
+
+  emailHandler.sendEmail({
+    subject: "New Edit Request",
+    filename: "suggestedEditsAdminEmail",
+    user: {
+      username: user.username,
+      email: process.env.ADMIN_EMAIL,
+    },
+    changes,
+  });
+
   res.status(200).json(createdEdit);
 };

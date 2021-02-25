@@ -59,8 +59,8 @@
       .comparison p {
         color: #b1ce7c;
         font-weight: bold;
-        margin-top: 0.5rem;
-        margin-bottom: 0.25rem;
+
+        margin-bottom: 0.5rem;
       }
 
       .comparison div {
@@ -84,13 +84,21 @@
     <div class="container">
       <h1>
         <a href="http://localhost:3000"><span>TrailScout</span></a> Request to
-        Updated Trail
+        Edit Trail
       </h1>
 
       <p>Summary of Requested Changes</p>
       <div>
         <ul>
-          <% for(const key in changes) { %>
+          <% for(const key in changes) { %> <% if (key === "trailId" || key ===
+          "userId") { %>
+          <li>
+            <div>
+              <h2><%= key %></h2>
+              <%= changes[key].edit %>
+            </div>
+          </li>
+          <% } else { %>
           <li>
             <h2><%= key %></h2>
             <div class="comparison">
@@ -104,15 +112,15 @@
               </div>
             </div>
           </li>
+          <% } %>
           <br />
           <% } %>
         </ul>
       </div>
       <div>
         <p>
-          Suggestions will be reviewed by our team before any changes are made.
-          We'll be in touch soon with the results. Thanks for helping us keep
-          TrailScout accurate and up to date!
+          Please review the above suggestions and update the database
+          accordingly.
         </p>
       </div>
       <p>

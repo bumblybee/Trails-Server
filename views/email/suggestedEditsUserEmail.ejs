@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome</title>
+    <style>
+      .container {
+        width: 80%;
+        padding: 1rem;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        color: #34423b;
+      }
+
+      p {
+        line-height: 1.4;
+        font-size: 1.1rem;
+        color: #34423b;
+      }
+
+      span,
+      h2 {
+        color: #fe7762;
+      }
+
+      a {
+        text-decoration-color: #fe7762;
+      }
+
+      h1 > a {
+        text-decoration: none;
+      }
+
+      ul {
+        border: 1px solid #333;
+        border-radius: 6px;
+      }
+
+      li {
+        list-style-type: none;
+      }
+
+      h2 {
+        text-transform: capitalize;
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+
+      .comparison {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .comparison p {
+        color: #b1ce7c;
+        font-weight: bold;
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .comparison div {
+        margin-right: 1rem;
+        margin-top: 0;
+      }
+
+      @media only screen and(max-width: 900px) {
+        .container {
+          width: 100%;
+          padding: 0.5rem 0 0 1rem;
+        }
+
+        h1 {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <a href="http://localhost:3000"><span>TrailScout</span></a> Request to
+        Update Trail
+      </h1>
+
+      <p>Summary of Requested Changes</p>
+      <div>
+        <ul>
+          <% for(const key in changes) { %> <% if (key !== "trailId" && key !==
+          "userId") { %>
+          <li>
+            <h2><%= key %></h2>
+            <div class="comparison">
+              <div>
+                <p>Current</p>
+                <%= changes[key].original %>
+              </div>
+              <div>
+                <p>Changes</p>
+                <%= changes[key].edit %>
+              </div>
+            </div>
+          </li>
+          <% } %>
+          <br />
+          <% } %>
+        </ul>
+      </div>
+      <div>
+        <p>
+          Suggestions will be reviewed by our team before any changes are made.
+          We'll be in touch soon with the results. Thanks for helping us keep
+          TrailScout accurate and up to date!
+        </p>
+      </div>
+      <p>
+        Head over to
+        <a href="http://localhost:3000"><span>TrailScout</span></a>
+        to discover your next adventure!
+      </p>
+      <p>Trek on! 🚵 🥾 🏞</p>
+    </div>
+  </body>
+</html>
