@@ -10,6 +10,7 @@ var indexRouter = require("./routes/index");
 var userRouter = require("./routes/users");
 const trailRouter = require("./routes/trails");
 const bookmarkRouter = require("./routes/bookmarks");
+const editRouter = require("./routes/edit");
 const seedRouter = require("./routes/seed");
 
 var app = express();
@@ -37,6 +38,7 @@ app.use("/", indexRouter);
 app.use("/users", userRouter);
 app.use("/trails", trailRouter);
 app.use("/bookmarks", bookmarkRouter);
+app.use("/edit", editRouter);
 app.use("/seed", seedRouter);
 
 app.use(errorHandlers.sequelizeErrorHandler);

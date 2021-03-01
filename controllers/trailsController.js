@@ -224,18 +224,19 @@ exports.editTrail = async (req, res) => {
     difficulty,
     trailId,
     userId,
-    closed: true,
-    closedBy: userId,
   };
 
-  const editedTrail = await Trail.update(
-    { editDetails },
-    {
-      where: { id: trailId },
-      returning: true,
-      plain: true,
-    }
-  );
+  const closeDetails = { closed: true, closedBy: userId };
+
+  const editedTrail = await Trail.update(editDetails, {
+    where: { id: trailId },
+    returning: true,
+    plain: true,
+  });
+
+  const close = await Edit.update(closeDetails, {
+    where: { [Op.and]: [{ trailId }] },
+  });
 
   res.status(201).json(editedTrail);
 };
