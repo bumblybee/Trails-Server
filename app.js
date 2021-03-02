@@ -19,6 +19,12 @@ var app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Set static file to get images from
+app.use(express.static(path.join(__dirname, "uploads")));
+
 // TODO: Remove heroku server after up and running
 app.use(
   cors({
@@ -32,11 +38,7 @@ app.use(
 );
 
 app.use(logger("dev"));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
-// Set static file to get images from
-app.use(express.static(path.join(__dirname, "uploads")));
 app.use(cookieParser());
 
 app.use("/", indexRouter);
