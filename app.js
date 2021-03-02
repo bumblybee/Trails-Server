@@ -16,19 +16,20 @@ const seedRouter = require("./routes/seed");
 var app = express();
 
 // TODO: Remove heroku server after up and running
-app.use(
-  cors({
-    origin: ["http://localhost:3000", "https://trailscout.herokuapp.com/"],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: ["http://localhost:3000", "https://trailscout.herokuapp.com/"],
+//     credentials: true,
+//   })
+// );
 
 app.use(function (req, res, next) {
   // Website you wish to allow to connect
-  res.setHeader("Access-Control-Allow-Origin", [
+  res.setHeader(
+    "Access-Control-Allow-Origin",
     "http://localhost:3000",
-    "https://trailscout.herokuapp.com/",
-  ]);
+    "https://trailscout.herokuapp.com/"
+  );
 
   // Request methods you wish to allow
   res.setHeader(
