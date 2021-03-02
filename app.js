@@ -19,9 +19,14 @@ var app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+// TODO: Remove heroku server after up and running
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://trailscout.herokuapp.com"],
+    origin: [
+      "http://localhost:3000",
+      "https://trailscout.herokuapp.com",
+      "https://trailscout-server.herokuapp.com",
+    ],
     credentials: true,
   })
 );
