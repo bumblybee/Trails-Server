@@ -15,6 +15,14 @@ const seedRouter = require("./routes/seed");
 
 var app = express();
 
+// TODO: Remove heroku server after up and running
+app.use(
+  cors({
+    origin: ["http://localhost:3000", "https://trailscout.herokuapp.com/"],
+    credentials: true,
+  })
+);
+
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -23,22 +31,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Set static file to get images from
-app.use(express.static(path.join(__dirname, "uploads")));
-
-// TODO: Remove heroku server after up and running
-app.use(
-  cors({
-    origin: [
-      "http://localhost:3000",
-      "https://trailscout.herokuapp.com",
-      "https://trailscout-server.herokuapp.com",
-    ],
-    credentials: true,
-  })
-);
-
-app.use(logger("dev"));
-
+// app.use(express.static(path.join(__dirname, "uploads")));
+const morganLogStyle = app.get("env") === "development" ? "dev" : "common";
+app.use(logger(morganLogStyle));
 app.use(cookieParser());
 
 app.use("/", indexRouter);
