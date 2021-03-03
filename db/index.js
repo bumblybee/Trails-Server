@@ -21,7 +21,9 @@ if (env !== "production") {
 } else {
   sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: "postgres",
-    ssl: true,
+    dialectOptions: {
+      ssl: true,
+    },
   });
 }
 
