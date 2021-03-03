@@ -18,7 +18,7 @@ var app = express();
 // TODO: Remove heroku server after up and running
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://trailscout.herokuapp.com/"],
+    origin: ["http://localhost:3000", "https://trailscout.herokuapp.com"],
     credentials: true,
   })
 );
