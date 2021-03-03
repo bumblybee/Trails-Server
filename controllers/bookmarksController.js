@@ -15,7 +15,11 @@ exports.getBookmarks = async (req, res) => {
     ],
   });
 
-  res.status(200).json(bookmarks);
+  if (id && bookmarks) {
+    res.status(200).json(bookmarks);
+  } else {
+    res.status(401);
+  }
 };
 
 exports.createBookmark = async (req, res) => {
