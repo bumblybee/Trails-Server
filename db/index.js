@@ -19,7 +19,11 @@ if (env !== "production") {
     { dialect: "postgres", logging: false }
   );
 } else {
-  sequelize = new Sequelize(process.env.DATABASE_URL);
+  sequelize = new Sequelize({
+    connectionString: process.env.DATABASE_URL,
+
+    ssl: { rejectUnauthorized: false },
+  });
 }
 
 // Link models to db
