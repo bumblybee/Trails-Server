@@ -41,21 +41,21 @@ db.sequelize.sync({ force: forceDbReset }).then(async () => {
   server.on("error", onError);
   server.on("listening", onListening);
 
-  if (forceDbReset === true) {
-    const readFile = fs.readFileSync(trailFile);
-    let parsedTrails = JSON.parse(readFile);
-    await Trail.bulkCreate([...parsedTrails], {
-      ignoreDuplicates: true,
-    });
+  // if (forceDbReset === true) {
+  const readFile = fs.readFileSync(trailFile);
+  let parsedTrails = JSON.parse(readFile);
+  await Trail.bulkCreate([...parsedTrails], {
+    ignoreDuplicates: true,
+  });
 
-    await authService.createAdminUser(
-      process.env.ADMIN_USERNAME,
-      process.env.ADMIN_EMAIL,
-      process.env.ADMIN_PASSWORD
-    );
+  await authService.createAdminUser(
+    process.env.ADMIN_USERNAME,
+    process.env.ADMIN_EMAIL,
+    process.env.ADMIN_PASSWORD
+  );
 
-    console.log("Database seeded successfully...");
-  }
+  console.log("Database seeded successfully...");
+  // }
 });
 
 /**
