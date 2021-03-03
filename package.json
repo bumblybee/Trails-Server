@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "set NODE_ENV=development&&node ./bin/www",
-    "prod-start": "set NODE_ENV=production&&node ./bin/www"
+    "prod-start": "set NODE_ENV=production&&node ./bin/www",
+    "postdeploy": "psql -c \"create extension postgis\" $DATABASE_URL"
   },
   "engines": {
     "node": "12.x"
