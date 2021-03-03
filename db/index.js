@@ -19,10 +19,8 @@ if (env !== "production") {
     { dialect: "postgres", logging: false }
   );
 } else {
-  sequelize = new Sequelize({
-    connectionString: process.env.DATABASE_URL,
+  sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: "postgres",
-    dialectOptions: { ssl: true },
   });
 }
 
