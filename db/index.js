@@ -22,7 +22,7 @@ if (env !== "production") {
   sequelize = new Sequelize({
     connectionString: process.env.DATABASE_URL,
 
-    ssl: { rejectUnauthorized: false },
+    ssl: { require: true, rejectUnauthorized: false },
   });
 }
 
