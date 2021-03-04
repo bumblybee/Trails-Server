@@ -17,7 +17,6 @@ var http = require("http");
 var authService = require("../services/authService");
 const db = require("../db");
 const Trail = require("../db").Trail;
-// const trailFile = "../trails-server/db/json/trails.json";
 const trailFile = path.join(__dirname, "../db/json/trails.json");
 
 /**
@@ -37,7 +36,7 @@ var server = http.createServer(app);
  * Sync / seed db on server start. Listen on provided port, on all network interfaces.
  */
 
-let forceDbReset = true;
+let forceDbReset = false;
 db.sequelize
   .sync({ force: forceDbReset })
   .then(async () => {
