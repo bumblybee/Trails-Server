@@ -35,8 +35,8 @@ exports.developmentErrors = (err, req, res, next) => {
 };
 
 exports.productionErrors = (err, req, res, next) => {
-  if (err === "argument str must be a string") {
-    res.status(401).json({ error: user.unauthorized });
+  if (err.message === "argument str must be a string") {
+    res.status(401).json({ error: "user.unauthorized" });
   } else {
     res.status(err.status || 500).json({ error: err.message });
   }
