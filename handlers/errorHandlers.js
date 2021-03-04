@@ -35,7 +35,11 @@ exports.developmentErrors = (err, req, res, next) => {
 };
 
 exports.productionErrors = (err, req, res, next) => {
-  res.status(err.status || 500).json({ error: err.message });
+  if (err === "argument str must be a string") {
+    res.status(401).json({ error: user.unauthorized });
+  } else {
+    res.status(err.status || 500).json({ error: err.message });
+  }
 };
 
 exports.notFound = (req, res, next) => {
