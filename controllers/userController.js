@@ -13,7 +13,6 @@ exports.getCurrentUser = async (req, res) => {
   res.json({ user });
 };
 
-// TODO: Not throwing right error when hosted and user already exists
 exports.signupUser = async (req, res) => {
   const { email, username, password } = req.body;
 
