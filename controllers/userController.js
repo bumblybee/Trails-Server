@@ -10,7 +10,11 @@ exports.getCurrentUser = async (req, res) => {
 
   const user = await authService.getUser(id);
 
-  res.json({ user });
+  if (user) {
+    res.json({ user });
+  } else {
+    res.status(401).json({ code: "user.unauthorized" });
+  }
 };
 
 exports.signupUser = async (req, res) => {
