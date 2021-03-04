@@ -35,7 +35,7 @@ exports.developmentErrors = (err, req, res, next) => {
 };
 
 exports.productionErrors = (err, req, res, next) => {
-  res.status(err.status || 500).json({ error: err.message, error });
+  res.status(err.status || 500).json({ error: err.message });
 };
 
 exports.notFound = (req, res, next) => {
