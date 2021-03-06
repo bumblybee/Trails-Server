@@ -17,6 +17,7 @@ var http = require("http");
 var authService = require("../services/authService");
 const db = require("../db");
 const Trail = require("../db").Trail;
+const Bookmark = require("../db").Bookmark;
 const trailFile = path.join(__dirname, "../db/json/trails.json");
 
 /**
@@ -36,7 +37,7 @@ var server = http.createServer(app);
  * Sync / seed db on server start. Listen on provided port, on all network interfaces.
  */
 
-let forceDbReset = false;
+let forceDbReset = true;
 db.sequelize
   .sync({ force: forceDbReset })
   .then(async () => {
@@ -50,6 +51,12 @@ db.sequelize
       await Trail.bulkCreate([...parsedTrails], {
         ignoreDuplicates: true,
       });
+
+      await Bookmark.bulkCreate([
+        { userId: null, trailId: 1302 },
+        { userId: null, trailId: 1041 },
+        { userId: null, trailId: 707 },
+      ]);
 
       await authService.createAdminUser(
         process.env.ADMIN_USERNAME,
