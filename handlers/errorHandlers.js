@@ -7,23 +7,6 @@ exports.errorWrapper = (fn) => {
   };
 };
 
-// exports.multerErrorWrapper = (upload) => {
-//   return function (req, res, next) {
-//     return upload(req, res, function (err) {
-//       if (err instanceof MulterError) {
-//         const errorDetails = {
-//           error: err.message,
-//           status: err.status || 500,
-//           stack: err.stack,
-//         };
-//         res.json(err);
-//       } else if (err) {
-//         res.json(err);
-//       } else next();
-//     });
-//   };
-// };
-
 exports.developmentErrors = (err, req, res, next) => {
   err.stack = err.stack || "";
   const errorDetails = {

@@ -18,7 +18,7 @@ exports.getSingleTrail = async (req, res) => {
 
 exports.getScoutedTrails = async (req, res) => {
   const { id } = req.params;
-  console.log(id);
+
   const trails = await Trail.findAll({ where: { userId: id } });
 
   res.status(200).json(trails);
@@ -168,9 +168,9 @@ exports.suggestTrailEdit = async (req, res) => {
   }
 
   const user = await authService.getUser(userId);
-  // TODO: Include relevant data in admin email - maybe do send trailId and userId, but exclude if not admin... Two separate email sends
+  // TODO: Include relevant data in admin email - maybe also send trailId and userId, but exclude if not admin email... Two separate email sends
   emailHandler.sendEmail({
-    subject: "We've Recieved your Suggestions",
+    subject: "We've Received your Suggestions",
     filename: "suggestedEditsUserEmail",
     user: {
       username: user.username,
@@ -234,6 +234,7 @@ exports.editTrail = async (req, res) => {
     plain: true,
   });
 
+  // Need to get original creator user id and pass
   const close = await Edit.update(closeDetails, {
     where: { [Op.and]: [{ trailId }] },
   });

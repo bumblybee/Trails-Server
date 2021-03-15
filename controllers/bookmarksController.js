@@ -5,7 +5,7 @@ const { Op } = require("sequelize");
 const { CustomError } = require("../handlers/errorHandlers");
 
 exports.getBookmarks = async (req, res) => {
-  const { id } = req.token.data;
+  const { id } = req.params;
   const bookmarks = await Bookmark.findAll({
     where: { userId: id },
     include: [

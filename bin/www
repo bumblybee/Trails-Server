@@ -53,7 +53,7 @@ db.sequelize
       });
 
       await Bookmark.bulkCreate([
-        { userId: null, trailId: 1302 },
+        { userId: null, trailId: 1324 },
         { userId: null, trailId: 1041 },
         { userId: null, trailId: 707 },
       ]);
