@@ -4,9 +4,9 @@ const bookmarksController = require("../controllers/bookmarksController");
 const { isAuth } = require("../middleware/isAuth");
 const { errorWrapper } = require("../handlers/errorHandlers");
 
-router.get("/:id", isAuth, bookmarksController.getBookmarks);
-
 router.get("/latest", bookmarksController.latestBookmarks);
+
+router.get("/", isAuth, bookmarksController.getBookmarks);
 
 router.post(
   "/create/:userId/:trailId",

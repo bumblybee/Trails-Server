@@ -136,6 +136,7 @@ exports.suggestTrailEdit = async (req, res) => {
 
   const point = { type: "Point", coordinates: [lng, lat] };
 
+  // ? Compare differences in suggestion and stored trail ?
   const suggestedEdit = {
     name,
     city,
