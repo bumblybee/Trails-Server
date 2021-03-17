@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suggested Trail Edit</title>
+    <title>Suggestions Received</title>
     <style>
       .container {
         width: 80%;
@@ -40,6 +40,7 @@
         border: 1px solid #333;
         border-radius: 6px;
         padding-bottom: 1rem;
+        width: 67%;
       }
 
       li {
@@ -54,7 +55,7 @@
 
       .comparison {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
       }
 
       .comparison p {
@@ -64,9 +65,12 @@
         margin-bottom: 0.5rem;
       }
 
-      .comparison div {
-        margin-right: 1rem;
-        margin-top: 0;
+      .comparison > div {
+        width: 90%;
+      }
+
+      .closing {
+        width: 75%;
       }
 
       @media only screen and(max-width: 900px) {
@@ -84,50 +88,30 @@
   <body>
     <div class="container">
       <h1>
-        <a href="http://localhost:3000"><span>TrailScout</span></a> Request to
-        Edit Trail
+        Your
+        <a href="http://localhost:3000"><span>TrailScout</span></a> Suggestions
+        have been Received
       </h1>
 
       <p>Summary of Requested Changes</p>
       <div>
         <ul>
-          <% for(const key in differences) { %> <% if (key === "trailId" || key
-          === "userId") { %>
-          <li>
-            <div>
-              <h2><%= key %></h2>
-              <%= differences[key].edit %>
-            </div>
-          </li>
-          <% } else { %>
+          <% for(const key in differences) { %> <% if (key !== "trailId" && key
+          !== "userId" && differences[key].edit !== undefined) { %>
           <li>
             <h2><%= key %></h2>
             <div class="comparison">
-              <div>
-                <p>Current</p>
-                <%= differences[key].original %>
-              </div>
-              <div>
-                <p>Changes</p>
-                <%= differences[key].edit %>
-              </div>
+              <div><%= differences[key].edit %></div>
             </div>
           </li>
-          <% } %>
           <br />
-          <% } %>
-          <li>
-            <div>
-              <h2>Username</h2>
-              <%= user.username %>
-            </div>
-          </li>
+          <% } %> <% } %>
         </ul>
       </div>
       <div>
-        <p>
-          Please review the above suggestions and update the database
-          accordingly.
+        <p class="closing">
+          Your suggestions are being reviewed. Thank you for helping us keep
+          TrailScout up to date and accurate!
         </p>
       </div>
       <p>

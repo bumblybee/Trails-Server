@@ -157,6 +157,17 @@ exports.suggestTrailEdit = async (req, res) => {
   const differences = determineDifferences(suggestedEdit, originalTrail);
 
   const user = await authService.getUser(userId);
+  console.log(differences);
+  // Admin email
+  emailHandler.sendEmail({
+    subject: "New Edit Request",
+    filename: "suggestedEditsAdminEmail",
+    user: {
+      username: user.username,
+      email: process.env.ADMIN_EMAIL,
+    },
+    differences,
+  });
 
   // User email
   emailHandler.sendEmail({
@@ -165,18 +176,6 @@ exports.suggestTrailEdit = async (req, res) => {
     user: {
       username: user.username,
       email: user.email,
-    },
-    differences,
-    user,
-  });
-
-  // Admin email
-  emailHandler.sendEmail({
-    subject: "New Edit Request",
-    filename: "suggestedEditsAdminEmail",
-    user: {
-      username: user.username,
-      email: process.env.ADMIN_EMAIL,
     },
     differences,
   });
