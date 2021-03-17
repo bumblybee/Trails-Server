@@ -39,6 +39,7 @@
       ul {
         border: 1px solid #333;
         border-radius: 6px;
+        padding-bottom: 1rem;
       }
 
       li {
@@ -90,12 +91,12 @@
       <p>Summary of Requested Changes</p>
       <div>
         <ul>
-          <% for(const key in changes) { %> <% if (key === "trailId" || key ===
-          "userId") { %>
+          <% for(const key in differences) { %> <% if (key === "trailId" || key
+          === "userId") { %>
           <li>
             <div>
               <h2><%= key %></h2>
-              <%= changes[key].edit %>
+              <%= differences[key].edit %>
             </div>
           </li>
           <% } else { %>
@@ -104,17 +105,23 @@
             <div class="comparison">
               <div>
                 <p>Current</p>
-                <%= changes[key].original %>
+                <%= differences[key].original %>
               </div>
               <div>
                 <p>Changes</p>
-                <%= changes[key].edit %>
+                <%= differences[key].edit %>
               </div>
             </div>
           </li>
           <% } %>
           <br />
           <% } %>
+          <li>
+            <div>
+              <h2>Username</h2>
+              <%= user.username %>
+            </div>
+          </li>
         </ul>
       </div>
       <div>

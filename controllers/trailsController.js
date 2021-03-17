@@ -154,18 +154,7 @@ exports.suggestTrailEdit = async (req, res) => {
 
   const originalTrail = await Trail.findOne({ where: { id: trailId } });
 
-  const changes = {};
-  const originalData = originalTrail.dataValues;
-
-  // Todo: Break into separate function
-  for (const key in suggestedEdit) {
-    if (suggestedEdit[key] !== originalData[key] && key !== "lnglat") {
-      changes[key] = {
-        original: originalData[key],
-        edit: suggestedEdit[key],
-      };
-    }
-  }
+  const differences = determineDifferences(suggestedEdit, originalTrail);
 
   const user = await authService.getUser(userId);
 
@@ -177,7 +166,8 @@ exports.suggestTrailEdit = async (req, res) => {
       username: user.username,
       email: user.email,
     },
-    changes,
+    differences,
+    user,
   });
 
   // Admin email
@@ -188,8 +178,23 @@ exports.suggestTrailEdit = async (req, res) => {
       username: user.username,
       email: process.env.ADMIN_EMAIL,
     },
-    changes,
+    differences,
   });
 
   res.status(200).json(createdSuggestion);
 };
+
+function determineDifferences(suggestedEdit, originalTrail) {
+  const diff = {};
+  const originalData = originalTrail.dataValues;
+
+  for (const key in suggestedEdit) {
+    if (suggestedEdit[key] !== originalData[key] && key !== "lnglat") {
+      diff[key] = {
+        original: originalData[key],
+        edit: suggestedEdit[key],
+      };
+    }
+  }
+  return diff;
+}
