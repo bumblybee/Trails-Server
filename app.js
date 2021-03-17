@@ -10,7 +10,7 @@ var indexRouter = require("./routes/index");
 var userRouter = require("./routes/users");
 const trailRouter = require("./routes/trails");
 const bookmarkRouter = require("./routes/bookmarks");
-const editRouter = require("./routes/edit");
+const editRouter = require("./routes/edits");
 const seedRouter = require("./routes/seed");
 
 var app = express();

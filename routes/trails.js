@@ -21,12 +21,6 @@ router.post(
   errorWrapper(trailsController.suggestTrailEdit)
 );
 
-router.put(
-  "/edit",
-  isAuth,
-  authRole(roles.Admin),
-  errorWrapper(trailsController.editTrail)
-);
 router.post("/", [upload, isAuth], errorWrapper(trailsController.createTrail));
 
 module.exports = router;

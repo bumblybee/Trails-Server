@@ -7,7 +7,6 @@ const { CustomError } = require("../handlers/errorHandlers");
 const sequelize = require("sequelize");
 const { Op } = require("sequelize");
 
-//TODO: Get trails by bookmark : include model Bookmark, find trails where bookmark.userId = userId
 exports.getSingleTrail = async (req, res) => {
   const { id } = req.params;
 
@@ -153,22 +152,24 @@ exports.suggestTrailEdit = async (req, res) => {
 
   const createdSuggestion = await Edit.create(suggestedEdit);
 
-  const uneditedTrail = await Trail.findOne({ where: { id: trailId } });
+  const originalTrail = await Trail.findOne({ where: { id: trailId } });
 
   const changes = {};
-  const uneditedData = uneditedTrail.dataValues;
+  const originalData = originalTrail.dataValues;
 
+  // Todo: Break into separate function
   for (const key in suggestedEdit) {
-    if (suggestedEdit[key] !== uneditedData[key] && key !== "lnglat") {
+    if (suggestedEdit[key] !== originalData[key] && key !== "lnglat") {
       changes[key] = {
-        original: uneditedData[key],
+        original: originalData[key],
         edit: suggestedEdit[key],
       };
     }
   }
 
   const user = await authService.getUser(userId);
-  // TODO: Include relevant data in admin email - maybe also send trailId and userId, but exclude if not admin email... Two separate email sends
+
+  // User email
   emailHandler.sendEmail({
     subject: "We've Received your Suggestions",
     filename: "suggestedEditsUserEmail",
@@ -179,6 +180,7 @@ exports.suggestTrailEdit = async (req, res) => {
     changes,
   });
 
+  // Admin email
   emailHandler.sendEmail({
     subject: "New Edit Request",
     filename: "suggestedEditsAdminEmail",
@@ -190,54 +192,4 @@ exports.suggestTrailEdit = async (req, res) => {
   });
 
   res.status(200).json(createdSuggestion);
-};
-
-exports.editTrail = async (req, res) => {
-  const { id: userId } = req.token.data;
-  const {
-    name,
-    city,
-    state,
-    lat,
-    lng,
-    hiking,
-    biking,
-    length,
-    rating,
-    description,
-    difficulty,
-    trailId,
-  } = req.body;
-
-  const point = { type: "Point", coordinates: [lng, lat] };
-
-  const editDetails = {
-    name,
-    city,
-    state,
-    lnglat: point,
-    hiking,
-    biking,
-    length,
-    rating,
-    description,
-    difficulty,
-    trailId,
-    userId,
-  };
-
-  const closeDetails = { closed: true, closedBy: userId };
-
-  const editedTrail = await Trail.update(editDetails, {
-    where: { id: trailId },
-    returning: true,
-    plain: true,
-  });
-
-  // Need to get original creator user id and pass
-  const close = await Edit.update(closeDetails, {
-    where: { [Op.and]: [{ trailId }] },
-  });
-
-  res.status(201).json(editedTrail);
 };
