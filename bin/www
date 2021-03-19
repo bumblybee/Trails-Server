@@ -37,7 +37,7 @@ var server = http.createServer(app);
  * Sync / seed db on server start. Listen on provided port, on all network interfaces.
  */
 
-let forceDbReset = false;
+let forceDbReset = true;
 db.sequelize
   .sync({ force: forceDbReset })
   .then(async () => {
