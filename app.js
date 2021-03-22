@@ -1,8 +1,8 @@
-var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 const helmet = require("helmet");
+const compression = require("compression");
 var logger = require("morgan");
 const cors = require("cors");
 const errorHandlers = require("./handlers/errorHandlers");
@@ -24,6 +24,7 @@ app.use(
 );
 
 app.use(helmet());
+app.use(compression());
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
