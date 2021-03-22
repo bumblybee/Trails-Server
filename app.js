@@ -2,6 +2,7 @@ var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
+const helmet = require("helmet");
 var logger = require("morgan");
 const cors = require("cors");
 const errorHandlers = require("./handlers/errorHandlers");
@@ -21,6 +22,8 @@ app.use(
     credentials: true,
   })
 );
+
+app.use(helmet());
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
