@@ -28,7 +28,14 @@ exports.createBookmark = async (req, res) => {
   const bookmark = { userId, trailId };
   const createdBookmark = await Bookmark.create(bookmark);
 
-  const bookmarks = await Bookmark.findAll({ where: { userId } });
+  const bookmarks = await Bookmark.findAll({
+    where: { userId },
+    include: [
+      {
+        model: Trail,
+      },
+    ],
+  });
 
   res.status(201).json({ code: "data.created", createdBookmark, bookmarks });
 };
@@ -41,7 +48,14 @@ exports.removeBookmark = async (req, res) => {
     returning: true,
     plain: true,
   });
-  const bookmarks = await Bookmark.findAll({ where: { userId } });
+  const bookmarks = await Bookmark.findAll({
+    where: { userId },
+    include: [
+      {
+        model: Trail,
+      },
+    ],
+  });
 
   if (destroyedBookmark) {
     res

@@ -29,7 +29,17 @@ exports.getUser = async (id) => {
   const user = await User.findOne({
     where: { id },
     attributes: ["id", "username", "email", "role"],
-    include: [{ model: Bookmark }, { model: Trail }],
+    include: [
+      {
+        model: Bookmark,
+        include: [
+          {
+            model: Trail,
+          },
+        ],
+      },
+      { model: Trail },
+    ],
   });
 
   if (user) {
