@@ -18,7 +18,11 @@ var app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://trailscout.herokuapp.com"],
+    origin: [
+      "http://localhost:3000",
+      "https://trailscout.herokuapp.com",
+      "https://trailscout.herokuapp.com",
+    ],
     credentials: true,
   })
 );

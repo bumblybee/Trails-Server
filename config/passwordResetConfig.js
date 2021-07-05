@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // if (process.env.NODE_ENV === "production") {
-//   resetPasswordUrl = "https://challengeboard.xyz/reset-password";
+//   resetPasswordUrl = "https://trailscout.herokuapp.com/reset-password";
 // }
 
 exports.RESET_PASSWORD_URL = resetPasswordUrl;
