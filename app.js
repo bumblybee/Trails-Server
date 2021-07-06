@@ -21,7 +21,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://trailscout.herokuapp.com",
-      "https://trailscout.herokuapp.com",
+      "https://www.trailscout.xyz",
     ],
     credentials: true,
   })
